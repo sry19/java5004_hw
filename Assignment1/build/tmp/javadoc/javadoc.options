@@ -1,0 +1,8 @@
+-classpath '/Users/ruoyunsun/IdeaProjects/cs5004ruoyunsun/Assignment1/build/classes/java/main:/Users/ruoyunsun/IdeaProjects/cs5004ruoyunsun/Assignment1/build/resources/main'
+-d '/Users/ruoyunsun/IdeaProjects/cs5004ruoyunsun/Assignment1/build/docs/javadoc'
+-doctitle 'Assignment1 1.0-SNAPSHOT API'
+-quiet 
+-windowtitle 'Assignment1 1.0-SNAPSHOT API'
+'/Users/ruoyunsun/IdeaProjects/cs5004ruoyunsun/Assignment1/src/main/java/problem1/Vehicle.java'
+'/Users/ruoyunsun/IdeaProjects/cs5004ruoyunsun/Assignment1/src/main/java/problem2/Time.java'
+'/Users/ruoyunsun/IdeaProjects/cs5004ruoyunsun/Assignment1/src/main/java/problem2/Runner.java'

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Time.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Assignment1</a> &gt; <a href="index.source.html" class="el_package">problem2</a> &gt; <span class="el_source">Time.java</span></div><h1>Time.java</h1><pre class="source lang-java linenums">package problem2;
 
+/**
+ * Time is a simple object that has an hour, a minute and a second.
+ */
 public class Time {
     private int hours;
     private int minutes;
@@ -12,11 +15,11 @@ public class Time {
      * @param minutes current minutes
      * @param seconds current seconds
      */
-<span class="fc" id="L15">    public Time (int hours, int minutes, int seconds){</span>
-<span class="fc" id="L16">        this.hours = this.isValidHour(hours);</span>
-<span class="fc" id="L17">        this.minutes = this.isValidMinute(minutes);</span>
-<span class="fc" id="L18">        this.seconds = this.isValidSecond(seconds);</span>
-<span class="fc" id="L19">    }</span>
+<span class="nc" id="L18">    public Time (int hours, int minutes, int seconds){</span>
+<span class="nc" id="L19">        this.hours = this.isValidHour(hours);</span>
+<span class="nc" id="L20">        this.minutes = this.isValidMinute(minutes);</span>
+<span class="nc" id="L21">        this.seconds = this.isValidSecond(seconds);</span>
+<span class="nc" id="L22">    }</span>
 
     /**
      * check if the hour is valid
@@ -24,10 +27,10 @@ public class Time {
      * @return hours
      */
     private int isValidHour (int hours) {
-<span class="pc bpc" id="L27" title="2 of 4 branches missed.">        if (0 &lt;= hours &amp;&amp; hours &lt;= 23) {</span>
-<span class="nc" id="L28">            return hours;</span>
+<span class="nc bnc" id="L30" title="All 4 branches missed.">        if (0 &lt;= hours &amp;&amp; hours &lt;= 23) {</span>
+<span class="nc" id="L31">            return hours;</span>
         } else {
-<span class="fc" id="L30">            return MIN_VAL;</span>
+<span class="nc" id="L33">            return MIN_VAL;</span>
         }
     }
 
@@ -37,10 +40,10 @@ public class Time {
      * @return minutes
      */
     private int isValidMinute (int minutes){
-<span class="pc bpc" id="L40" title="2 of 4 branches missed.">        if (0 &lt;= minutes &amp;&amp; minutes &lt;= 59) {</span>
-<span class="fc" id="L41">            return minutes;</span>
+<span class="nc bnc" id="L43" title="All 4 branches missed.">        if (0 &lt;= minutes &amp;&amp; minutes &lt;= 59) {</span>
+<span class="nc" id="L44">            return minutes;</span>
         } else {
-<span class="nc" id="L43">            return MIN_VAL;</span>
+<span class="nc" id="L46">            return MIN_VAL;</span>
         }
     }
 
@@ -50,10 +53,10 @@ public class Time {
      * @return seconds
      */
     private int isValidSecond (int seconds) {
-<span class="pc bpc" id="L53" title="2 of 4 branches missed.">        if (0 &lt;= seconds &amp;&amp; seconds &lt;= 59) {</span>
-<span class="nc" id="L54">            return seconds;</span>
+<span class="nc bnc" id="L56" title="All 4 branches missed.">        if (0 &lt;= seconds &amp;&amp; seconds &lt;= 59) {</span>
+<span class="nc" id="L57">            return seconds;</span>
         } else {
-<span class="fc" id="L56">            return MIN_VAL;</span>
+<span class="nc" id="L59">            return MIN_VAL;</span>
         }
     }
 
@@ -62,7 +65,7 @@ public class Time {
      * @return hours
      */
     public Integer getHours() {
-<span class="fc" id="L65">        return this.hours;</span>
+<span class="nc" id="L68">        return this.hours;</span>
     }
 
     /**
@@ -70,7 +73,7 @@ public class Time {
      * @return minutes
      */
     public Integer getMinutes() {
-<span class="fc" id="L73">        return this.minutes;</span>
+<span class="nc" id="L76">        return this.minutes;</span>
     }
 
     /**
@@ -78,7 +81,7 @@ public class Time {
      * @return seconds
      */
     public Integer getSeconds() {
-<span class="fc" id="L81">        return this.seconds;</span>
+<span class="nc" id="L84">        return this.seconds;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

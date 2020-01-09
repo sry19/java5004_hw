@@ -17,7 +17,7 @@ public class Vehicle {
     }
     /**
     * Returns the VIN of the Vehicle.
-    * the VIN of the Vehicle.
+    * @return the VIN of the Vehicle.
     */
     public Integer getVIN() {
         return this.VIN;
@@ -32,6 +32,7 @@ public class Vehicle {
 
     /**
     * Sets the VIN of the Vehicle.
+     * @param VIN the new VIN of the Vehicle
     */
     public void setVIN(Integer VIN) {
         this.VIN = VIN;
@@ -39,6 +40,7 @@ public class Vehicle {
 
     /**
     * Sets the licensePlate of the Vehicle.
+    * @param licensePlate the new licensePlate of the Vehicle
     */
     public void setLicensePlate(String licensePlate) {
         this.licensePlate = licensePlate;
