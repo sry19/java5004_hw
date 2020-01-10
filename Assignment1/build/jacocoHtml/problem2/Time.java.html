@@ -7,7 +7,10 @@ public class Time {
     private int hours;
     private int minutes;
     private int seconds;
-    private static final int MIN_VAL = 0;
+    private static final int MINVAL = 0;
+    private static final int MAXHOUR = 23;
+    private static final int MAXMIN = 59;
+    private static final int MAXSEC = 59;
 
     /**
      * constructor that creates a time instance
@@ -15,11 +18,11 @@ public class Time {
      * @param minutes current minutes
      * @param seconds current seconds
      */
-<span class="fc" id="L18">    public Time (int hours, int minutes, int seconds){</span>
-<span class="fc" id="L19">        this.hours = this.isValidHour(hours);</span>
-<span class="fc" id="L20">        this.minutes = this.isValidMinute(minutes);</span>
-<span class="fc" id="L21">        this.seconds = this.isValidSecond(seconds);</span>
-<span class="fc" id="L22">    }</span>
+<span class="fc" id="L21">    public Time (int hours, int minutes, int seconds){</span>
+<span class="fc" id="L22">        this.hours = this.isValidHour(hours);</span>
+<span class="fc" id="L23">        this.minutes = this.isValidMinute(minutes);</span>
+<span class="fc" id="L24">        this.seconds = this.isValidSecond(seconds);</span>
+<span class="fc" id="L25">    }</span>
 
     /**
      * check if the hour is valid
@@ -27,10 +30,10 @@ public class Time {
      * @return hours
      */
     private int isValidHour (int hours) {
-<span class="fc bfc" id="L30" title="All 4 branches covered.">        if (0 &lt;= hours &amp;&amp; hours &lt;= 23) {</span>
-<span class="fc" id="L31">            return hours;</span>
+<span class="fc bfc" id="L33" title="All 4 branches covered.">        if (MINVAL &lt;= hours &amp;&amp; hours &lt;= MAXHOUR) {</span>
+<span class="fc" id="L34">            return hours;</span>
         } else {
-<span class="fc" id="L33">            return MIN_VAL;</span>
+<span class="fc" id="L36">            return MINVAL;</span>
         }
     }
 
@@ -40,10 +43,10 @@ public class Time {
      * @return minutes
      */
     private int isValidMinute (int minutes){
-<span class="fc bfc" id="L43" title="All 4 branches covered.">        if (0 &lt;= minutes &amp;&amp; minutes &lt;= 59) {</span>
-<span class="fc" id="L44">            return minutes;</span>
+<span class="fc bfc" id="L46" title="All 4 branches covered.">        if (MINVAL &lt;= minutes &amp;&amp; minutes &lt;= MAXMIN) {</span>
+<span class="fc" id="L47">            return minutes;</span>
         } else {
-<span class="fc" id="L46">            return MIN_VAL;</span>
+<span class="fc" id="L49">            return MINVAL;</span>
         }
     }
 
@@ -53,10 +56,10 @@ public class Time {
      * @return seconds
      */
     private int isValidSecond (int seconds) {
-<span class="fc bfc" id="L56" title="All 4 branches covered.">        if (0 &lt;= seconds &amp;&amp; seconds &lt;= 59) {</span>
-<span class="fc" id="L57">            return seconds;</span>
+<span class="fc bfc" id="L59" title="All 4 branches covered.">        if (MINVAL &lt;= seconds &amp;&amp; seconds &lt;= MAXSEC) {</span>
+<span class="fc" id="L60">            return seconds;</span>
         } else {
-<span class="fc" id="L59">            return MIN_VAL;</span>
+<span class="fc" id="L62">            return MINVAL;</span>
         }
     }
 
@@ -65,7 +68,7 @@ public class Time {
      * @return hours
      */
     public Integer getHours() {
-<span class="fc" id="L68">        return this.hours;</span>
+<span class="fc" id="L71">        return this.hours;</span>
     }
 
     /**
@@ -73,7 +76,7 @@ public class Time {
      * @return minutes
      */
     public Integer getMinutes() {
-<span class="fc" id="L76">        return this.minutes;</span>
+<span class="fc" id="L79">        return this.minutes;</span>
     }
 
     /**
@@ -81,7 +84,7 @@ public class Time {
      * @return seconds
      */
     public Integer getSeconds() {
-<span class="fc" id="L84">        return this.seconds;</span>
+<span class="fc" id="L87">        return this.seconds;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

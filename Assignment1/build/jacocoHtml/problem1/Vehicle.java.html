@@ -4,7 +4,7 @@
 * Vehicle is a simple object that has a unique Vehicle Identification Number (VIN), and corresponding license plate.
 */
 public class Vehicle {
-    private Integer vIN;
+    private Integer vin;
     private String licensePlate;
     private Owner owner;
 
@@ -16,7 +16,7 @@ public class Vehicle {
      * @param owner - the owner of the vehicle
      */
 <span class="fc" id="L18">    public Vehicle(Integer vIN, String licensePlate, Owner owner) {</span>
-<span class="fc" id="L19">        this.vIN = vIN;</span>
+<span class="fc" id="L19">        this.vin = vIN;</span>
 <span class="fc" id="L20">        this.licensePlate = licensePlate;</span>
 <span class="fc" id="L21">        this.owner = owner;</span>
 <span class="fc" id="L22">    }</span>
@@ -28,7 +28,7 @@ public class Vehicle {
      */
     public Integer getVIN() {
         // return VIN
-<span class="fc" id="L31">        return this.vIN;</span>
+<span class="fc" id="L31">        return this.vin;</span>
     }
 
     /**
@@ -53,11 +53,11 @@ public class Vehicle {
     /**
      * Sets the VIN of the Vehicle.
      *
-     * @param vIN the new VIN of the Vehicle
+     * @param vin the new VIN of the Vehicle
      */
-    public void setVIN(Integer vIN) {
+    public void setVIN(Integer vin) {
         // set a new VIN
-<span class="fc" id="L60">        this.vIN = vIN;</span>
+<span class="fc" id="L60">        this.vin = vin;</span>
 <span class="fc" id="L61">    }</span>
 
     /**

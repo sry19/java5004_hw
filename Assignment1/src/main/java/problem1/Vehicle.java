@@ -4,7 +4,7 @@ package problem1;
 * Vehicle is a simple object that has a unique Vehicle Identification Number (VIN), and corresponding license plate.
 */
 public class Vehicle {
-    private Integer vIN;
+    private Integer vin;
     private String licensePlate;
     private Owner owner;
 
@@ -16,7 +16,7 @@ public class Vehicle {
      * @param owner - the owner of the vehicle
      */
     public Vehicle(Integer vIN, String licensePlate, Owner owner) {
-        this.vIN = vIN;
+        this.vin = vIN;
         this.licensePlate = licensePlate;
         this.owner = owner;
     }
@@ -28,7 +28,7 @@ public class Vehicle {
      */
     public Integer getVIN() {
         // return VIN
-        return this.vIN;
+        return this.vin;
     }
 
     /**
@@ -53,11 +53,11 @@ public class Vehicle {
     /**
      * Sets the VIN of the Vehicle.
      *
-     * @param vIN the new VIN of the Vehicle
+     * @param vin the new VIN of the Vehicle
      */
-    public void setVIN(Integer vIN) {
+    public void setVIN(Integer vin) {
         // set a new VIN
-        this.vIN = vIN;
+        this.vin = vin;
     }
 
     /**

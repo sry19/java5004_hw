@@ -7,7 +7,10 @@ public class Time {
     private int hours;
     private int minutes;
     private int seconds;
-    private static final int MIN_VAL = 0;
+    private static final int MINVAL = 0;
+    private static final int MAXHOUR = 23;
+    private static final int MAXMIN = 59;
+    private static final int MAXSEC = 59;
 
     /**
      * constructor that creates a time instance
@@ -27,10 +30,10 @@ public class Time {
      * @return hours
      */
     private int isValidHour (int hours) {
-        if (0 <= hours && hours <= 23) {
+        if (MINVAL <= hours && hours <= MAXHOUR) {
             return hours;
         } else {
-            return MIN_VAL;
+            return MINVAL;
         }
     }
 
@@ -40,10 +43,10 @@ public class Time {
      * @return minutes
      */
     private int isValidMinute (int minutes){
-        if (0 <= minutes && minutes <= 59) {
+        if (MINVAL <= minutes && minutes <= MAXMIN) {
             return minutes;
         } else {
-            return MIN_VAL;
+            return MINVAL;
         }
     }
 
@@ -53,10 +56,10 @@ public class Time {
      * @return seconds
      */
     private int isValidSecond (int seconds) {
-        if (0 <= seconds && seconds <= 59) {
+        if (MINVAL <= seconds && seconds <= MAXSEC) {
             return seconds;
         } else {
-            return MIN_VAL;
+            return MINVAL;
         }
     }
 

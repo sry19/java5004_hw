@@ -8,6 +8,10 @@ public class Runner {
     private String team;
     private Time startTime;
     private Time endTime;
+    private static int MINVAL = 0;
+    private static int MAXMIN = 60;
+    private static int MAXSEC = 60;
+    private static int MAXHOUR = 24;
 
     /**
      * constructor that creates a runner
@@ -33,18 +37,18 @@ public class Runner {
         int diffseconds = this.endTime.getSeconds() - this.startTime.getSeconds();
 
         //if the difference of seconds is negative
-        if (diffseconds< 0) {
-            diffseconds += 60;
+        if (diffseconds< MINVAL) {
+            diffseconds += MAXSEC;
             diffminutes -= 1;
         }
         //if the difference of minutes is negative
-        if (diffminutes < 0) {
-            diffminutes += 60;
+        if (diffminutes < MINVAL) {
+            diffminutes += MAXMIN;
             diffhour -= 1;
         }
         //if the difference of hours is negative
-        if (diffhour < 0) {
-            diffhour += 24;
+        if (diffhour < MINVAL) {
+            diffhour += MAXHOUR;
         }
         // return a new time instance
         return new Time(diffhour,diffminutes,diffseconds);

@@ -7,8 +7,8 @@ public class Owner {
     private String firstName;
     private String lastName;
     private String phoneNum;
-<span class="fc" id="L10">    private int phoneLen = 10;</span>
-<span class="fc" id="L11">    private char zero = '0';</span>
+<span class="fc" id="L10">    private static int PHONELEN = 10;</span>
+<span class="fc" id="L11">    private static char ZERO = '0';</span>
 
     /**
      * Constructor that creates a new owner
@@ -29,16 +29,16 @@ public class Owner {
      */
     private String isValidPhoneNum(String phoneNum) {
 <span class="fc" id="L31">        int len = phoneNum.length();</span>
-<span class="fc bfc" id="L32" title="All 2 branches covered.">        if (len &lt; phoneLen) {</span>
-<span class="fc" id="L33">            int diff = phoneLen - len;</span>
+<span class="fc bfc" id="L32" title="All 2 branches covered.">        if (len &lt; PHONELEN) {</span>
+<span class="fc" id="L33">            int diff = PHONELEN - len;</span>
 <span class="fc" id="L34">            char[] inc = new char[diff];</span>
 <span class="fc bfc" id="L35" title="All 2 branches covered.">            for (int i = 0;i &lt; diff ; i++) {</span>
-<span class="fc" id="L36">                inc[i] = zero;</span>
+<span class="fc" id="L36">                inc[i] = ZERO;</span>
             }
 <span class="fc" id="L38">            return String.valueOf(inc) + phoneNum;</span>
         }
-<span class="fc bfc" id="L40" title="All 2 branches covered.">        else if (len &gt; phoneLen) {</span>
-<span class="fc" id="L41">            return phoneNum.substring(0,phoneLen);</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">        else if (len &gt; PHONELEN) {</span>
+<span class="fc" id="L41">            return phoneNum.substring(0,PHONELEN);</span>
         }
         else {
 <span class="fc" id="L44">            return phoneNum;</span>

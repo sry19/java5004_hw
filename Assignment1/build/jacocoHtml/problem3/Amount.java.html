@@ -6,8 +6,8 @@
 public class Amount {
     private int dollars;
     private int cents;
-<span class="fc" id="L9">    private int maxVal = 99;</span>
-<span class="fc" id="L10">    private int minVal = 0;</span>
+<span class="fc" id="L9">    private int MAXVAL = 99;</span>
+<span class="fc" id="L10">    private int MINVAL = 0;</span>
 
     /**
      * Constructor that creates an amount
@@ -41,8 +41,8 @@ public class Amount {
      * @return the number of dollars
      */
     private int isValidDollars(int dollars) {
-<span class="fc bfc" id="L44" title="All 2 branches covered.">        if (dollars &lt; minVal) {</span>
-<span class="fc" id="L45">            return minVal;</span>
+<span class="fc bfc" id="L44" title="All 2 branches covered.">        if (dollars &lt; MINVAL) {</span>
+<span class="fc" id="L45">            return MINVAL;</span>
         }
         else{
 <span class="fc" id="L48">            return dollars;</span>
@@ -55,15 +55,15 @@ public class Amount {
      * @return the number of cents
      */
     private int isValidCents(int cents) {
-<span class="fc bfc" id="L58" title="All 4 branches covered.">        if (cents &gt;= minVal &amp;&amp; cents &lt;= maxVal) {</span>
+<span class="fc bfc" id="L58" title="All 4 branches covered.">        if (cents &gt;= MINVAL &amp;&amp; cents &lt;= MAXVAL) {</span>
 <span class="fc" id="L59">            return cents;</span>
         }
-<span class="fc bfc" id="L61" title="All 2 branches covered.">        else if (cents &lt; minVal) {</span>
-<span class="fc" id="L62">            return minVal;</span>
+<span class="fc bfc" id="L61" title="All 2 branches covered.">        else if (cents &lt; MINVAL) {</span>
+<span class="fc" id="L62">            return MINVAL;</span>
         }
         else {
-<span class="fc" id="L65">            this.dollars = this.dollars+ cents /(maxVal+1);</span>
-<span class="fc" id="L66">            return cents % (maxVal + 1);</span>
+<span class="fc" id="L65">            this.dollars = this.dollars+ cents /(MAXVAL+1);</span>
+<span class="fc" id="L66">            return cents % (MAXVAL + 1);</span>
         }
     }
 }
