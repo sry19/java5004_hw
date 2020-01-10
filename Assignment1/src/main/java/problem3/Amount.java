@@ -6,8 +6,8 @@ package problem3;
 public class Amount {
     private int dollars;
     private int cents;
-    private int MAX_VAL = 99;
-    private int MIN_VAL = 0;
+    private int maxVal = 99;
+    private int minVal = 0;
 
     /**
      * Constructor that creates an amount
@@ -41,8 +41,8 @@ public class Amount {
      * @return the number of dollars
      */
     private int isValidDollars(int dollars) {
-        if (dollars < MIN_VAL) {
-            return MIN_VAL;
+        if (dollars < minVal) {
+            return minVal;
         }
         else{
             return dollars;
@@ -55,15 +55,15 @@ public class Amount {
      * @return the number of cents
      */
     private int isValidCents(int cents) {
-        if (cents >= MIN_VAL && cents <= MAX_VAL) {
+        if (cents >= minVal && cents <= maxVal) {
             return cents;
         }
-        else if (cents < MIN_VAL) {
-            return 0;
+        else if (cents < minVal) {
+            return minVal;
         }
         else {
-            this.dollars = this.dollars+ cents /(MAX_VAL+1);
-            return cents % (MAX_VAL + 1);
+            this.dollars = this.dollars+ cents /(maxVal+1);
+            return cents % (maxVal + 1);
         }
     }
 }

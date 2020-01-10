@@ -7,7 +7,8 @@ public class Owner {
     private String firstName;
     private String lastName;
     private String phoneNum;
-<span class="fc" id="L10">    private int PHONE_LEN = 10;</span>
+<span class="fc" id="L10">    private int phoneLen = 10;</span>
+<span class="fc" id="L11">    private char zero = '0';</span>
 
     /**
      * Constructor that creates a new owner
@@ -15,11 +16,11 @@ public class Owner {
      * @param lastName last name of the owner
      * @param phoneNum phone number which has 10 characters
      */
-<span class="fc" id="L18">    public Owner(String firstName,String lastName,String phoneNum){</span>
-<span class="fc" id="L19">        this.firstName = firstName;</span>
-<span class="fc" id="L20">        this.lastName = lastName;</span>
-<span class="fc" id="L21">        this.phoneNum = this.isValidPhoneNum(phoneNum);</span>
-<span class="fc" id="L22">    }</span>
+<span class="fc" id="L19">    public Owner(String firstName,String lastName,String phoneNum){</span>
+<span class="fc" id="L20">        this.firstName = firstName;</span>
+<span class="fc" id="L21">        this.lastName = lastName;</span>
+<span class="fc" id="L22">        this.phoneNum = this.isValidPhoneNum(phoneNum);</span>
+<span class="fc" id="L23">    }</span>
 
     /**
      * check if the phone number consists of 10 characters
@@ -27,20 +28,20 @@ public class Owner {
      * @return phone number consisting of 10 characters
      */
     private String isValidPhoneNum(String phoneNum) {
-<span class="fc" id="L30">        int len = phoneNum.length();</span>
-<span class="fc bfc" id="L31" title="All 2 branches covered.">        if (len &lt; PHONE_LEN) {</span>
-<span class="fc" id="L32">            int diff = PHONE_LEN - len;</span>
-<span class="fc" id="L33">            char[] inc = new char[diff];</span>
-<span class="fc bfc" id="L34" title="All 2 branches covered.">            for (int i = 0;i &lt; diff ; i++) {</span>
-<span class="fc" id="L35">                inc[i] = '0';</span>
+<span class="fc" id="L31">        int len = phoneNum.length();</span>
+<span class="fc bfc" id="L32" title="All 2 branches covered.">        if (len &lt; phoneLen) {</span>
+<span class="fc" id="L33">            int diff = phoneLen - len;</span>
+<span class="fc" id="L34">            char[] inc = new char[diff];</span>
+<span class="fc bfc" id="L35" title="All 2 branches covered.">            for (int i = 0;i &lt; diff ; i++) {</span>
+<span class="fc" id="L36">                inc[i] = zero;</span>
             }
-<span class="fc" id="L37">            return String.valueOf(inc) + phoneNum;</span>
+<span class="fc" id="L38">            return String.valueOf(inc) + phoneNum;</span>
         }
-<span class="fc bfc" id="L39" title="All 2 branches covered.">        else if (len &gt; PHONE_LEN) {</span>
-<span class="fc" id="L40">            return phoneNum.substring(0,10);</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">        else if (len &gt; phoneLen) {</span>
+<span class="fc" id="L41">            return phoneNum.substring(0,phoneLen);</span>
         }
         else {
-<span class="fc" id="L43">            return phoneNum;</span>
+<span class="fc" id="L44">            return phoneNum;</span>
         }
     }
 
@@ -49,7 +50,7 @@ public class Owner {
      * @return first name
      */
     public String getFirstName() {
-<span class="fc" id="L52">        return this.firstName;</span>
+<span class="fc" id="L53">        return this.firstName;</span>
     }
 
     /**
@@ -57,7 +58,7 @@ public class Owner {
      * @return last name
      */
     public String getLastName() {
-<span class="fc" id="L60">        return this.lastName;</span>
+<span class="fc" id="L61">        return this.lastName;</span>
     }
 
     /**
@@ -65,7 +66,7 @@ public class Owner {
      * @return phone number
      */
     public String getPhoneNum() {
-<span class="fc" id="L68">        return this.phoneNum;</span>
+<span class="fc" id="L69">        return this.phoneNum;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

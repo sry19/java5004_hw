@@ -2,56 +2,5 @@
 <pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
-    version="6.8.0" timestamp="2020-01-10T11:07:26.272">
-<file name="/Users/ruoyunsun/IdeaProjects/cs5004ruoyunsun/Assignment1/src/main/java/problem1/Owner.java">
-<violation beginline="10" endline="10" begincolumn="17" endcolumn="25" rule="VariableNamingConventions" ruleset="Code Style" package="problem1" class="Owner" variable="PHONE_LEN" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#variablenamingconventions" priority="1">
-Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'PHONE_LEN' is not final.
-</violation>
-<violation beginline="10" endline="10" begincolumn="17" endcolumn="25" rule="FieldNamingConventions" ruleset="Code Style" package="problem1" class="Owner" variable="PHONE_LEN" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#fieldnamingconventions" priority="1">
-The field name 'PHONE_LEN' doesn't match '[a-z][a-zA-Z0-9]*'
-</violation>
-<violation beginline="10" endline="10" begincolumn="17" endcolumn="25" rule="VariableNamingConventions" ruleset="Code Style" package="problem1" class="Owner" variable="PHONE_LEN" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#variablenamingconventions" priority="1">
-Variables should start with a lowercase character, 'PHONE_LEN' starts with uppercase character.
-</violation>
-</file>
-<file name="/Users/ruoyunsun/IdeaProjects/cs5004ruoyunsun/Assignment1/src/main/java/problem1/Vehicle.java">
-<violation beginline="7" endline="7" begincolumn="21" endcolumn="23" rule="FieldNamingConventions" ruleset="Code Style" package="problem1" class="Vehicle" variable="VIN" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#fieldnamingconventions" priority="1">
-The field name 'VIN' doesn't match '[a-z][a-zA-Z0-9]*'
-</violation>
-<violation beginline="7" endline="7" begincolumn="21" endcolumn="23" rule="VariableNamingConventions" ruleset="Code Style" package="problem1" class="Vehicle" variable="VIN" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#variablenamingconventions" priority="1">
-Variables should start with a lowercase character, 'VIN' starts with uppercase character.
-</violation>
-<violation beginline="18" endline="18" begincolumn="28" endcolumn="30" rule="FormalParameterNamingConventions" ruleset="Code Style" package="problem1" class="Vehicle" method="Vehicle" variable="VIN" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
-The method parameter name 'VIN' doesn't match '[a-z][a-zA-Z0-9]*'
-</violation>
-<violation beginline="18" endline="18" begincolumn="28" endcolumn="30" rule="VariableNamingConventions" ruleset="Code Style" package="problem1" class="Vehicle" method="Vehicle" variable="VIN" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#variablenamingconventions" priority="1">
-Variables should start with a lowercase character, 'VIN' starts with uppercase character.
-</violation>
-<violation beginline="58" endline="58" begincolumn="32" endcolumn="34" rule="FormalParameterNamingConventions" ruleset="Code Style" package="problem1" class="Vehicle" method="setVIN" variable="VIN" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
-The method parameter name 'VIN' doesn't match '[a-z][a-zA-Z0-9]*'
-</violation>
-<violation beginline="58" endline="58" begincolumn="32" endcolumn="34" rule="VariableNamingConventions" ruleset="Code Style" package="problem1" class="Vehicle" method="setVIN" variable="VIN" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#variablenamingconventions" priority="1">
-Variables should start with a lowercase character, 'VIN' starts with uppercase character.
-</violation>
-</file>
-<file name="/Users/ruoyunsun/IdeaProjects/cs5004ruoyunsun/Assignment1/src/main/java/problem3/Amount.java">
-<violation beginline="9" endline="9" begincolumn="17" endcolumn="23" rule="VariableNamingConventions" ruleset="Code Style" package="problem3" class="Amount" variable="MAX_VAL" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#variablenamingconventions" priority="1">
-Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'MAX_VAL' is not final.
-</violation>
-<violation beginline="9" endline="9" begincolumn="17" endcolumn="23" rule="FieldNamingConventions" ruleset="Code Style" package="problem3" class="Amount" variable="MAX_VAL" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#fieldnamingconventions" priority="1">
-The field name 'MAX_VAL' doesn't match '[a-z][a-zA-Z0-9]*'
-</violation>
-<violation beginline="9" endline="9" begincolumn="17" endcolumn="23" rule="VariableNamingConventions" ruleset="Code Style" package="problem3" class="Amount" variable="MAX_VAL" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#variablenamingconventions" priority="1">
-Variables should start with a lowercase character, 'MAX_VAL' starts with uppercase character.
-</violation>
-<violation beginline="10" endline="10" begincolumn="17" endcolumn="23" rule="VariableNamingConventions" ruleset="Code Style" package="problem3" class="Amount" variable="MIN_VAL" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#variablenamingconventions" priority="1">
-Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'MIN_VAL' is not final.
-</violation>
-<violation beginline="10" endline="10" begincolumn="17" endcolumn="23" rule="FieldNamingConventions" ruleset="Code Style" package="problem3" class="Amount" variable="MIN_VAL" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#fieldnamingconventions" priority="1">
-The field name 'MIN_VAL' doesn't match '[a-z][a-zA-Z0-9]*'
-</violation>
-<violation beginline="10" endline="10" begincolumn="17" endcolumn="23" rule="VariableNamingConventions" ruleset="Code Style" package="problem3" class="Amount" variable="MIN_VAL" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#variablenamingconventions" priority="1">
-Variables should start with a lowercase character, 'MIN_VAL' starts with uppercase character.
-</violation>
-</file>
+    version="6.8.0" timestamp="2020-01-10T11:42:32.412">
 </pmd>

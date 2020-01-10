@@ -7,7 +7,8 @@ public class Owner {
     private String firstName;
     private String lastName;
     private String phoneNum;
-    private int PHONE_LEN = 10;
+    private int phoneLen = 10;
+    private char zero = '0';
 
     /**
      * Constructor that creates a new owner
@@ -28,16 +29,16 @@ public class Owner {
      */
     private String isValidPhoneNum(String phoneNum) {
         int len = phoneNum.length();
-        if (len < PHONE_LEN) {
-            int diff = PHONE_LEN - len;
+        if (len < phoneLen) {
+            int diff = phoneLen - len;
             char[] inc = new char[diff];
             for (int i = 0;i < diff ; i++) {
-                inc[i] = '0';
+                inc[i] = zero;
             }
             return String.valueOf(inc) + phoneNum;
         }
-        else if (len > PHONE_LEN) {
-            return phoneNum.substring(0,10);
+        else if (len > phoneLen) {
+            return phoneNum.substring(0,phoneLen);
         }
         else {
             return phoneNum;
