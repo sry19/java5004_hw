@@ -55,12 +55,15 @@ public class Amount {
      * @return the number of cents
      */
     private int isValidCents(int cents) {
-<span class="pc bpc" id="L58" title="1 of 4 branches missed.">        if (cents &gt;= MIN_VAL &amp;&amp; cents &lt;= MAX_VAL) {</span>
+<span class="fc bfc" id="L58" title="All 4 branches covered.">        if (cents &gt;= MIN_VAL &amp;&amp; cents &lt;= MAX_VAL) {</span>
 <span class="fc" id="L59">            return cents;</span>
         }
+<span class="fc bfc" id="L61" title="All 2 branches covered.">        else if (cents &lt; MIN_VAL) {</span>
+<span class="fc" id="L62">            return 0;</span>
+        }
         else {
-<span class="fc" id="L62">            this.dollars = this.dollars+ cents /(MAX_VAL+1);</span>
-<span class="fc" id="L63">            return cents % (MAX_VAL + 1);</span>
+<span class="fc" id="L65">            this.dollars = this.dollars+ cents /(MAX_VAL+1);</span>
+<span class="fc" id="L66">            return cents % (MAX_VAL + 1);</span>
         }
     }
 }

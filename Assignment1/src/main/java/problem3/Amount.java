@@ -58,6 +58,9 @@ public class Amount {
         if (cents >= MIN_VAL && cents <= MAX_VAL) {
             return cents;
         }
+        else if (cents < MIN_VAL) {
+            return 0;
+        }
         else {
             this.dollars = this.dollars+ cents /(MAX_VAL+1);
             return cents % (MAX_VAL + 1);

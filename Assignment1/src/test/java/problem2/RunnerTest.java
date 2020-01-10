@@ -10,11 +10,19 @@ public class RunnerTest {
     Time startTime;
     Time endTime;
 
+    Runner runner1;
+    Time startTime1;
+    Time endTime1;
+
     @Before
     public void setUp() throws Exception {
         startTime = new Time(14,47,57);
         endTime = new Time(23,30,24);
         runner = new Runner("Amy", "GoHusky", startTime, endTime);
+
+        startTime1 = new Time(14,47,57);
+        endTime1 = new Time(13,50,58);
+        runner1 = new Runner("Emma", "GoHuskies", startTime1, endTime1);
     }
 
     @Test
@@ -22,6 +30,10 @@ public class RunnerTest {
         assertEquals((Integer) 27, runner.getDuration().getSeconds());
         assertEquals((Integer) 42, runner.getDuration().getMinutes());
         assertEquals((Integer) 8, runner.getDuration().getHours());
+
+        assertEquals((Integer) 1, runner1.getDuration().getSeconds());
+        assertEquals((Integer) 3, runner1.getDuration().getMinutes());
+        assertEquals((Integer) 23, runner1.getDuration().getHours());
     }
 
     @Test

@@ -33,18 +33,18 @@ public class Runner {
 <span class="fc" id="L33">        int diffseconds = this.endTime.getSeconds() - this.startTime.getSeconds();</span>
 
         //if the difference of seconds is negative
-<span class="pc bpc" id="L36" title="1 of 2 branches missed.">        if (diffseconds&lt; 0) {</span>
+<span class="fc bfc" id="L36" title="All 2 branches covered.">        if (diffseconds&lt; 0) {</span>
 <span class="fc" id="L37">            diffseconds += 60;</span>
 <span class="fc" id="L38">            diffminutes -= 1;</span>
         }
         //if the difference of minutes is negative
-<span class="pc bpc" id="L41" title="1 of 2 branches missed.">        if (diffminutes &lt; 0) {</span>
+<span class="fc bfc" id="L41" title="All 2 branches covered.">        if (diffminutes &lt; 0) {</span>
 <span class="fc" id="L42">            diffminutes += 60;</span>
 <span class="fc" id="L43">            diffhour -= 1;</span>
         }
         //if the difference of hours is negative
-<span class="pc bpc" id="L46" title="1 of 2 branches missed.">        if (diffhour &lt; 0) {</span>
-<span class="nc" id="L47">            diffhour += 23;</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">        if (diffhour &lt; 0) {</span>
+<span class="fc" id="L47">            diffhour += 24;</span>
         }
         // return a new time instance
 <span class="fc" id="L50">        return new Time(diffhour,diffminutes,diffseconds);</span>

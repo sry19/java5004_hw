@@ -44,7 +44,7 @@ public class Runner {
         }
         //if the difference of hours is negative
         if (diffhour < 0) {
-            diffhour += 23;
+            diffhour += 24;
         }
         // return a new time instance
         return new Time(diffhour,diffminutes,diffseconds);
