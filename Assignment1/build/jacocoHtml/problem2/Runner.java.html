@@ -28,9 +28,9 @@ public class Runner {
      * @return the total time that the runner took to complete the marathon
      */
     public Time getDuration() {
-<span class="nc" id="L31">        Integer diffhour =this.endTime.getHours() - this.startTime.getHours();</span>
-<span class="nc" id="L32">        Integer diffminutes = this.endTime.getMinutes() - this.startTime.getMinutes();</span>
-<span class="nc" id="L33">        Integer diffseconds = this.endTime.getSeconds() - this.startTime.getSeconds();</span>
+<span class="nc" id="L31">        int diffhour =this.endTime.getHours() - this.startTime.getHours();</span>
+<span class="nc" id="L32">        int diffminutes = this.endTime.getMinutes() - this.startTime.getMinutes();</span>
+<span class="nc" id="L33">        int diffseconds = this.endTime.getSeconds() - this.startTime.getSeconds();</span>
 
 <span class="nc bnc" id="L35" title="All 2 branches missed.">        if (diffseconds&lt; 0) {</span>
 <span class="nc" id="L36">            diffseconds += 60;</span>
@@ -44,6 +44,22 @@ public class Runner {
 <span class="nc" id="L44">            diffhour += 23;</span>
         }
 <span class="nc" id="L46">        return new Time(diffhour,diffminutes,diffseconds);</span>
+    }
+
+    public String getName() {
+<span class="nc" id="L50">        return this.name;</span>
+    }
+
+    public String getTeam() {
+<span class="nc" id="L54">        return this.team;</span>
+    }
+
+    public Time getStartTime() {
+<span class="nc" id="L58">        return this.startTime;</span>
+    }
+
+    public Time getEndTime() {
+<span class="nc" id="L62">        return this.endTime;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Amount.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Assignment1</a> &gt; <a href="index.source.html" class="el_package">problem3</a> &gt; <span class="el_source">Amount.java</span></div><h1>Amount.java</h1><pre class="source lang-java linenums">package problem3;
+
+/**
+ * Amount is a simple object that has a dollar counter and a cent counter.
+ */
+public class Amount {
+    private int dollars;
+    private int cents;
+<span class="fc" id="L9">    private int MAX_VAL = 99;</span>
+<span class="fc" id="L10">    private int MIN_VAL = 0;</span>
+
+    /**
+     * Constructor that creates an amount
+     * @param dollars count the number of dollars
+     * @param cents count the number of cents
+     */
+<span class="fc" id="L17">    public Amount(int dollars,int cents){</span>
+<span class="fc" id="L18">        this.dollars = this.isValidDollars(dollars);</span>
+<span class="fc" id="L19">        this.cents = this.isValidCents(cents);</span>
+<span class="fc" id="L20">    }</span>
+
+    /**
+     * return the number of dollars
+     * @return the number of dollars
+     */
+    public int getDollars() {
+<span class="fc" id="L27">        return this.dollars;</span>
+    }
+
+    /**
+     * return the number of cents
+     * @return the number of cents
+     */
+    public int getCents() {
+<span class="fc" id="L35">        return this.cents;</span>
+    }
+
+    /**
+     * check if the number of dollars is valid
+     * @param dollars the number of dollars
+     * @return the number of dollars
+     */
+    private int isValidDollars(int dollars) {
+<span class="pc bpc" id="L44" title="1 of 2 branches missed.">        if (dollars &lt; MIN_VAL) {</span>
+<span class="nc" id="L45">            return MIN_VAL;</span>
+        }
+        else{
+<span class="fc" id="L48">            return dollars;</span>
+        }
+    }
+
+    /**
+     * check if the number of cents is valid
+     * @param cents the number of cents
+     * @return the number of cents
+     */
+    private int isValidCents(int cents) {
+<span class="pc bpc" id="L58" title="1 of 4 branches missed.">        if (cents &gt;= MIN_VAL &amp;&amp; cents &lt;= MAX_VAL) {</span>
+<span class="fc" id="L59">            return cents;</span>
+        }
+        else {
+<span class="fc" id="L62">            this.dollars = this.dollars+ cents /(MAX_VAL+1);</span>
+<span class="fc" id="L63">            return cents % (MAX_VAL + 1);</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

@@ -1,5 +1,4 @@
 package problem1;
-import java.util.Arrays;
 
 /**
  * Owner is a simple object that has a unique first name, last name and phone number.

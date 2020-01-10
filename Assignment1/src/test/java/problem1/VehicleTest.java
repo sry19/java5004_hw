@@ -7,10 +7,12 @@ import static org.junit.Assert.*;
 
 public class VehicleTest {
     Vehicle vehicle;
+    Owner owner;
 
     @Before
     public void setUp() throws Exception {
-        vehicle = new Vehicle(163, "abs");
+        owner = new Owner("Amy","Brown","3489");
+        vehicle = new Vehicle(163, "abs", owner);
     }
 
     @Test
@@ -21,6 +23,11 @@ public class VehicleTest {
     @Test
     public void getLicensePlate() {
         assertEquals("abs",vehicle.getLicensePlate());
+    }
+
+    @Test
+    public void getOwner() {
+        assertEquals(owner, vehicle.getOwner());
     }
 
     @Test

@@ -28,9 +28,9 @@ public class Runner {
      * @return the total time that the runner took to complete the marathon
      */
     public Time getDuration() {
-        Integer diffhour =this.endTime.getHours() - this.startTime.getHours();
-        Integer diffminutes = this.endTime.getMinutes() - this.startTime.getMinutes();
-        Integer diffseconds = this.endTime.getSeconds() - this.startTime.getSeconds();
+        int diffhour =this.endTime.getHours() - this.startTime.getHours();
+        int diffminutes = this.endTime.getMinutes() - this.startTime.getMinutes();
+        int diffseconds = this.endTime.getSeconds() - this.startTime.getSeconds();
 
         if (diffseconds< 0) {
             diffseconds += 60;
@@ -44,5 +44,21 @@ public class Runner {
             diffhour += 23;
         }
         return new Time(diffhour,diffminutes,diffseconds);
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public String getTeam() {
+        return this.team;
+    }
+
+    public Time getStartTime() {
+        return this.startTime;
+    }
+
+    public Time getEndTime() {
+        return this.endTime;
     }
 }

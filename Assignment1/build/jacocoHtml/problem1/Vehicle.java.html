@@ -6,44 +6,65 @@
 public class Vehicle {
     private Integer VIN;
     private String licensePlate;
+    private Owner owner;
+
     /**
-    * Constructor that creates a new vehicle object with the specified VIN and * license plate.
-    * @param VIN - VIN of the new Vehicle object.
-    * @param licensePlate - license plate of the new Vehicle.
-    */
-<span class="nc" id="L14">    public Vehicle (Integer VIN, String licensePlate) {</span>
-<span class="nc" id="L15">        this.VIN = VIN;</span>
-<span class="nc" id="L16">        this.licensePlate = licensePlate;</span>
-<span class="nc" id="L17">    }</span>
+     * Constructor that creates a new vehicle object with the specified VIN and * license plate.
+     *
+     * @param VIN          - VIN of the new Vehicle object.
+     * @param licensePlate - license plate of the new Vehicle.
+     */
+<span class="nc" id="L17">    public Vehicle(Integer VIN, String licensePlate, Owner owner) {</span>
+<span class="nc" id="L18">        this.VIN = VIN;</span>
+<span class="nc" id="L19">        this.licensePlate = licensePlate;</span>
+<span class="nc" id="L20">        this.owner = owner;</span>
+<span class="nc" id="L21">    }</span>
+
     /**
-    * Returns the VIN of the Vehicle.
-    * @return the VIN of the Vehicle.
-    */
+     * Returns the VIN of the Vehicle.
+     *
+     * @return the VIN of the Vehicle.
+     */
     public Integer getVIN() {
-<span class="nc" id="L23">        return this.VIN;</span>
+<span class="nc" id="L29">        return this.VIN;</span>
     }
+
     /**
-    * Returns the licensePlate of the Vehicle.*
-    * @return the licensePlate of the Vehicle.
-    */
+     * Returns the licensePlate of the Vehicle.*
+     *
+     * @return the licensePlate of the Vehicle.
+     */
     public String getLicensePlate() {
-<span class="nc" id="L30">        return this.licensePlate;</span>
+<span class="nc" id="L38">        return this.licensePlate;</span>
     }
 
     /**
-    * Sets the VIN of the Vehicle.
-     * @param VIN the new VIN of the Vehicle
-    */
-    public void setVIN(Integer VIN) {
-<span class="nc" id="L38">        this.VIN = VIN;</span>
-<span class="nc" id="L39">    }</span>
+     * return the owner
+     *
+     * @return owner
+     */
+    public Owner getOwner() {
+<span class="nc" id="L47">        return this.owner;</span>
+    }
 
     /**
-    * Sets the licensePlate of the Vehicle.
-    * @param licensePlate the new licensePlate of the Vehicle
-    */
+     * Sets the VIN of the Vehicle.
+     *
+     * @param VIN the new VIN of the Vehicle
+     */
+    public void setVIN(Integer VIN) {
+<span class="nc" id="L56">        this.VIN = VIN;</span>
+<span class="nc" id="L57">    }</span>
+
+    /**
+     * Sets the licensePlate of the Vehicle.
+     *
+     * @param licensePlate the new licensePlate of the Vehicle
+     */
     public void setLicensePlate(String licensePlate) {
-<span class="nc" id="L46">        this.licensePlate = licensePlate;</span>
-<span class="nc" id="L47">    }</span>
-        }
+<span class="nc" id="L65">        this.licensePlate = licensePlate;</span>
+<span class="nc" id="L66">    }</span>
+}
+
+
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
