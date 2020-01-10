@@ -13,12 +13,13 @@ public class Vehicle {
      *
      * @param VIN          - VIN of the new Vehicle object.
      * @param licensePlate - license plate of the new Vehicle.
+     * @param owner - the owner of the vehicle
      */
-<span class="nc" id="L17">    public Vehicle(Integer VIN, String licensePlate, Owner owner) {</span>
-<span class="nc" id="L18">        this.VIN = VIN;</span>
-<span class="nc" id="L19">        this.licensePlate = licensePlate;</span>
-<span class="nc" id="L20">        this.owner = owner;</span>
-<span class="nc" id="L21">    }</span>
+<span class="fc" id="L18">    public Vehicle(Integer VIN, String licensePlate, Owner owner) {</span>
+<span class="fc" id="L19">        this.VIN = VIN;</span>
+<span class="fc" id="L20">        this.licensePlate = licensePlate;</span>
+<span class="fc" id="L21">        this.owner = owner;</span>
+<span class="fc" id="L22">    }</span>
 
     /**
      * Returns the VIN of the Vehicle.
@@ -26,7 +27,8 @@ public class Vehicle {
      * @return the VIN of the Vehicle.
      */
     public Integer getVIN() {
-<span class="nc" id="L29">        return this.VIN;</span>
+        // return VIN
+<span class="fc" id="L31">        return this.VIN;</span>
     }
 
     /**
@@ -35,7 +37,8 @@ public class Vehicle {
      * @return the licensePlate of the Vehicle.
      */
     public String getLicensePlate() {
-<span class="nc" id="L38">        return this.licensePlate;</span>
+        // return license plate
+<span class="fc" id="L41">        return this.licensePlate;</span>
     }
 
     /**
@@ -44,7 +47,7 @@ public class Vehicle {
      * @return owner
      */
     public Owner getOwner() {
-<span class="nc" id="L47">        return this.owner;</span>
+<span class="fc" id="L50">        return this.owner;</span>
     }
 
     /**
@@ -53,8 +56,9 @@ public class Vehicle {
      * @param VIN the new VIN of the Vehicle
      */
     public void setVIN(Integer VIN) {
-<span class="nc" id="L56">        this.VIN = VIN;</span>
-<span class="nc" id="L57">    }</span>
+        // set a new VIN
+<span class="fc" id="L60">        this.VIN = VIN;</span>
+<span class="fc" id="L61">    }</span>
 
     /**
      * Sets the licensePlate of the Vehicle.
@@ -62,8 +66,9 @@ public class Vehicle {
      * @param licensePlate the new licensePlate of the Vehicle
      */
     public void setLicensePlate(String licensePlate) {
-<span class="nc" id="L65">        this.licensePlate = licensePlate;</span>
-<span class="nc" id="L66">    }</span>
+        // set a new license plate
+<span class="fc" id="L70">        this.licensePlate = licensePlate;</span>
+<span class="fc" id="L71">    }</span>
 }
 
 

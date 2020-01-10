@@ -15,11 +15,11 @@ public class Time {
      * @param minutes current minutes
      * @param seconds current seconds
      */
-<span class="nc" id="L18">    public Time (int hours, int minutes, int seconds){</span>
-<span class="nc" id="L19">        this.hours = this.isValidHour(hours);</span>
-<span class="nc" id="L20">        this.minutes = this.isValidMinute(minutes);</span>
-<span class="nc" id="L21">        this.seconds = this.isValidSecond(seconds);</span>
-<span class="nc" id="L22">    }</span>
+<span class="fc" id="L18">    public Time (int hours, int minutes, int seconds){</span>
+<span class="fc" id="L19">        this.hours = this.isValidHour(hours);</span>
+<span class="fc" id="L20">        this.minutes = this.isValidMinute(minutes);</span>
+<span class="fc" id="L21">        this.seconds = this.isValidSecond(seconds);</span>
+<span class="fc" id="L22">    }</span>
 
     /**
      * check if the hour is valid
@@ -27,10 +27,10 @@ public class Time {
      * @return hours
      */
     private int isValidHour (int hours) {
-<span class="nc bnc" id="L30" title="All 4 branches missed.">        if (0 &lt;= hours &amp;&amp; hours &lt;= 23) {</span>
-<span class="nc" id="L31">            return hours;</span>
+<span class="pc bpc" id="L30" title="1 of 4 branches missed.">        if (0 &lt;= hours &amp;&amp; hours &lt;= 23) {</span>
+<span class="fc" id="L31">            return hours;</span>
         } else {
-<span class="nc" id="L33">            return MIN_VAL;</span>
+<span class="fc" id="L33">            return MIN_VAL;</span>
         }
     }
 
@@ -40,10 +40,10 @@ public class Time {
      * @return minutes
      */
     private int isValidMinute (int minutes){
-<span class="nc bnc" id="L43" title="All 4 branches missed.">        if (0 &lt;= minutes &amp;&amp; minutes &lt;= 59) {</span>
-<span class="nc" id="L44">            return minutes;</span>
+<span class="pc bpc" id="L43" title="1 of 4 branches missed.">        if (0 &lt;= minutes &amp;&amp; minutes &lt;= 59) {</span>
+<span class="fc" id="L44">            return minutes;</span>
         } else {
-<span class="nc" id="L46">            return MIN_VAL;</span>
+<span class="fc" id="L46">            return MIN_VAL;</span>
         }
     }
 
@@ -53,10 +53,10 @@ public class Time {
      * @return seconds
      */
     private int isValidSecond (int seconds) {
-<span class="nc bnc" id="L56" title="All 4 branches missed.">        if (0 &lt;= seconds &amp;&amp; seconds &lt;= 59) {</span>
-<span class="nc" id="L57">            return seconds;</span>
+<span class="pc bpc" id="L56" title="1 of 4 branches missed.">        if (0 &lt;= seconds &amp;&amp; seconds &lt;= 59) {</span>
+<span class="fc" id="L57">            return seconds;</span>
         } else {
-<span class="nc" id="L59">            return MIN_VAL;</span>
+<span class="fc" id="L59">            return MIN_VAL;</span>
         }
     }
 
@@ -65,7 +65,7 @@ public class Time {
      * @return hours
      */
     public Integer getHours() {
-<span class="nc" id="L68">        return this.hours;</span>
+<span class="fc" id="L68">        return this.hours;</span>
     }
 
     /**
@@ -73,7 +73,7 @@ public class Time {
      * @return minutes
      */
     public Integer getMinutes() {
-<span class="nc" id="L76">        return this.minutes;</span>
+<span class="fc" id="L76">        return this.minutes;</span>
     }
 
     /**
@@ -81,7 +81,7 @@ public class Time {
      * @return seconds
      */
     public Integer getSeconds() {
-<span class="nc" id="L84">        return this.seconds;</span>
+<span class="fc" id="L84">        return this.seconds;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

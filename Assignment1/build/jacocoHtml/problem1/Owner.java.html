@@ -7,7 +7,7 @@ public class Owner {
     private String firstName;
     private String lastName;
     private String phoneNum;
-<span class="nc" id="L10">    private int PHONE_LEN = 10;</span>
+<span class="fc" id="L10">    private int PHONE_LEN = 10;</span>
 
     /**
      * Constructor that creates a new owner
@@ -15,11 +15,11 @@ public class Owner {
      * @param lastName last name of the owner
      * @param phoneNum phone number which has 10 characters
      */
-<span class="nc" id="L18">    public Owner(String firstName,String lastName,String phoneNum){</span>
-<span class="nc" id="L19">        this.firstName = firstName;</span>
-<span class="nc" id="L20">        this.lastName = lastName;</span>
-<span class="nc" id="L21">        this.phoneNum = this.isValidPhoneNum(phoneNum);</span>
-<span class="nc" id="L22">    }</span>
+<span class="fc" id="L18">    public Owner(String firstName,String lastName,String phoneNum){</span>
+<span class="fc" id="L19">        this.firstName = firstName;</span>
+<span class="fc" id="L20">        this.lastName = lastName;</span>
+<span class="fc" id="L21">        this.phoneNum = this.isValidPhoneNum(phoneNum);</span>
+<span class="fc" id="L22">    }</span>
 
     /**
      * check if the phone number consists of 10 characters
@@ -27,17 +27,17 @@ public class Owner {
      * @return phone number consisting of 10 characters
      */
     private String isValidPhoneNum(String phoneNum) {
-<span class="nc" id="L30">        int len = phoneNum.length();</span>
-<span class="nc bnc" id="L31" title="All 2 branches missed.">        if (len &lt; PHONE_LEN) {</span>
-<span class="nc" id="L32">            int diff = PHONE_LEN - len;</span>
-<span class="nc" id="L33">            char[] inc = new char[diff];</span>
-<span class="nc bnc" id="L34" title="All 2 branches missed.">            for (int i = 0;i &lt; diff ; i++) {</span>
-<span class="nc" id="L35">                inc[i] = '0';</span>
+<span class="fc" id="L30">        int len = phoneNum.length();</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">        if (len &lt; PHONE_LEN) {</span>
+<span class="fc" id="L32">            int diff = PHONE_LEN - len;</span>
+<span class="fc" id="L33">            char[] inc = new char[diff];</span>
+<span class="fc bfc" id="L34" title="All 2 branches covered.">            for (int i = 0;i &lt; diff ; i++) {</span>
+<span class="fc" id="L35">                inc[i] = '0';</span>
             }
-<span class="nc" id="L37">            return String.valueOf(inc) + phoneNum;</span>
+<span class="fc" id="L37">            return String.valueOf(inc) + phoneNum;</span>
         }
-<span class="nc bnc" id="L39" title="All 2 branches missed.">        else if (len &gt; PHONE_LEN) {</span>
-<span class="nc" id="L40">            return phoneNum.substring(0,10);</span>
+<span class="pc bpc" id="L39" title="1 of 2 branches missed.">        else if (len &gt; PHONE_LEN) {</span>
+<span class="fc" id="L40">            return phoneNum.substring(0,10);</span>
         }
         else {
 <span class="nc" id="L43">            return phoneNum;</span>
@@ -49,7 +49,7 @@ public class Owner {
      * @return first name
      */
     public String getFirstName() {
-<span class="nc" id="L52">        return this.firstName;</span>
+<span class="fc" id="L52">        return this.firstName;</span>
     }
 
     /**
@@ -57,7 +57,7 @@ public class Owner {
      * @return last name
      */
     public String getLastName() {
-<span class="nc" id="L60">        return this.lastName;</span>
+<span class="fc" id="L60">        return this.lastName;</span>
     }
 
     /**
@@ -65,7 +65,7 @@ public class Owner {
      * @return phone number
      */
     public String getPhoneNum() {
-<span class="nc" id="L68">        return this.phoneNum;</span>
+<span class="fc" id="L68">        return this.phoneNum;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

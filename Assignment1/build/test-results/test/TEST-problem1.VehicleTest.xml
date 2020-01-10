@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="problem1.VehicleTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-01-10T08:12:24" hostname="RuoyundeMacBook-Pro.local" time="0.002">
+  <properties/>
+  <testcase name="getVIN" classname="problem1.VehicleTest" time="0.001"/>
+  <testcase name="getLicensePlate" classname="problem1.VehicleTest" time="0.0"/>
+  <testcase name="setVIN" classname="problem1.VehicleTest" time="0.0"/>
+  <testcase name="setLicensePlate" classname="problem1.VehicleTest" time="0.0"/>
+  <testcase name="getOwner" classname="problem1.VehicleTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

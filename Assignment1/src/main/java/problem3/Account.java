@@ -23,9 +23,12 @@ public class Account {
      * @return a new account
      */
     public Account deposit(Amount amount) {
+        // the total cents
         int cents = this.amount.getCents() + amount.getCents();
+        // the total dollars
         int dollars = this.amount.getDollars() + amount.getDollars();
         Amount newAmount = new Amount(dollars,cents);
+        // return a new account
         return new Account(this.holder,newAmount);
     }
 
@@ -35,9 +38,12 @@ public class Account {
      * @return a new account
      */
     public Account withdraw(Amount amount){
+        // the total cents
         int cents = this.amount.getCents() - amount.getCents();
+        // the total dollars
         int dollars = this.amount.getDollars() - amount.getDollars();
         Amount newAmount = new Amount(dollars,cents);
+        // return a new account
         return new Account(this.holder,newAmount);
     }
 

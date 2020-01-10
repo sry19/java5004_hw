@@ -16,50 +16,54 @@ public class Runner {
      * @param startTime the start time of marathon
      * @param endTime the end time of marathon
      */
-<span class="nc" id="L19">    public Runner (String name, String team, Time startTime, Time endTime){</span>
-<span class="nc" id="L20">        this.name = name;</span>
-<span class="nc" id="L21">        this.team = team;</span>
-<span class="nc" id="L22">        this.startTime = startTime;</span>
-<span class="nc" id="L23">        this.endTime = endTime;</span>
-<span class="nc" id="L24">    }</span>
+<span class="fc" id="L19">    public Runner (String name, String team, Time startTime, Time endTime){</span>
+<span class="fc" id="L20">        this.name = name;</span>
+<span class="fc" id="L21">        this.team = team;</span>
+<span class="fc" id="L22">        this.startTime = startTime;</span>
+<span class="fc" id="L23">        this.endTime = endTime;</span>
+<span class="fc" id="L24">    }</span>
 
     /**
      * return the total time that the runner took to complete the marathon
      * @return the total time that the runner took to complete the marathon
      */
     public Time getDuration() {
-<span class="nc" id="L31">        int diffhour =this.endTime.getHours() - this.startTime.getHours();</span>
-<span class="nc" id="L32">        int diffminutes = this.endTime.getMinutes() - this.startTime.getMinutes();</span>
-<span class="nc" id="L33">        int diffseconds = this.endTime.getSeconds() - this.startTime.getSeconds();</span>
+<span class="fc" id="L31">        int diffhour =this.endTime.getHours() - this.startTime.getHours();</span>
+<span class="fc" id="L32">        int diffminutes = this.endTime.getMinutes() - this.startTime.getMinutes();</span>
+<span class="fc" id="L33">        int diffseconds = this.endTime.getSeconds() - this.startTime.getSeconds();</span>
 
-<span class="nc bnc" id="L35" title="All 2 branches missed.">        if (diffseconds&lt; 0) {</span>
-<span class="nc" id="L36">            diffseconds += 60;</span>
-<span class="nc" id="L37">            diffminutes -= 1;</span>
+        //if the difference of seconds is negative
+<span class="pc bpc" id="L36" title="1 of 2 branches missed.">        if (diffseconds&lt; 0) {</span>
+<span class="fc" id="L37">            diffseconds += 60;</span>
+<span class="fc" id="L38">            diffminutes -= 1;</span>
         }
-<span class="nc bnc" id="L39" title="All 2 branches missed.">        if (diffminutes &lt; 0) {</span>
-<span class="nc" id="L40">            diffminutes += 60;</span>
-<span class="nc" id="L41">            diffhour -= 1;</span>
+        //if the difference of minutes is negative
+<span class="pc bpc" id="L41" title="1 of 2 branches missed.">        if (diffminutes &lt; 0) {</span>
+<span class="fc" id="L42">            diffminutes += 60;</span>
+<span class="fc" id="L43">            diffhour -= 1;</span>
         }
-<span class="nc bnc" id="L43" title="All 2 branches missed.">        if (diffhour &lt; 0) {</span>
-<span class="nc" id="L44">            diffhour += 23;</span>
+        //if the difference of hours is negative
+<span class="pc bpc" id="L46" title="1 of 2 branches missed.">        if (diffhour &lt; 0) {</span>
+<span class="nc" id="L47">            diffhour += 23;</span>
         }
-<span class="nc" id="L46">        return new Time(diffhour,diffminutes,diffseconds);</span>
+        // return a new time instance
+<span class="fc" id="L50">        return new Time(diffhour,diffminutes,diffseconds);</span>
     }
 
     public String getName() {
-<span class="nc" id="L50">        return this.name;</span>
+<span class="fc" id="L54">        return this.name;</span>
     }
 
     public String getTeam() {
-<span class="nc" id="L54">        return this.team;</span>
+<span class="fc" id="L58">        return this.team;</span>
     }
 
     public Time getStartTime() {
-<span class="nc" id="L58">        return this.startTime;</span>
+<span class="fc" id="L62">        return this.startTime;</span>
     }
 
     public Time getEndTime() {
-<span class="nc" id="L62">        return this.endTime;</span>
+<span class="fc" id="L66">        return this.endTime;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

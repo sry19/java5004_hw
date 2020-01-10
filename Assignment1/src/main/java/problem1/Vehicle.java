@@ -13,6 +13,7 @@ public class Vehicle {
      *
      * @param VIN          - VIN of the new Vehicle object.
      * @param licensePlate - license plate of the new Vehicle.
+     * @param owner - the owner of the vehicle
      */
     public Vehicle(Integer VIN, String licensePlate, Owner owner) {
         this.VIN = VIN;
@@ -26,6 +27,7 @@ public class Vehicle {
      * @return the VIN of the Vehicle.
      */
     public Integer getVIN() {
+        // return VIN
         return this.VIN;
     }
 
@@ -35,6 +37,7 @@ public class Vehicle {
      * @return the licensePlate of the Vehicle.
      */
     public String getLicensePlate() {
+        // return license plate
         return this.licensePlate;
     }
 
@@ -53,6 +56,7 @@ public class Vehicle {
      * @param VIN the new VIN of the Vehicle
      */
     public void setVIN(Integer VIN) {
+        // set a new VIN
         this.VIN = VIN;
     }
 
@@ -62,6 +66,7 @@ public class Vehicle {
      * @param licensePlate the new licensePlate of the Vehicle
      */
     public void setLicensePlate(String licensePlate) {
+        // set a new license plate
         this.licensePlate = licensePlate;
     }
 }

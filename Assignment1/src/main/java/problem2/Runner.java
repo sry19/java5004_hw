@@ -32,17 +32,21 @@ public class Runner {
         int diffminutes = this.endTime.getMinutes() - this.startTime.getMinutes();
         int diffseconds = this.endTime.getSeconds() - this.startTime.getSeconds();
 
+        //if the difference of seconds is negative
         if (diffseconds< 0) {
             diffseconds += 60;
             diffminutes -= 1;
         }
+        //if the difference of minutes is negative
         if (diffminutes < 0) {
             diffminutes += 60;
             diffhour -= 1;
         }
+        //if the difference of hours is negative
         if (diffhour < 0) {
             diffhour += 23;
         }
+        // return a new time instance
         return new Time(diffhour,diffminutes,diffseconds);
     }
 

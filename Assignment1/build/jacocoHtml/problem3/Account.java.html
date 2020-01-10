@@ -23,10 +23,13 @@ public class Account {
      * @return a new account
      */
     public Account deposit(Amount amount) {
-<span class="fc" id="L26">        int cents = this.amount.getCents() + amount.getCents();</span>
-<span class="fc" id="L27">        int dollars = this.amount.getDollars() + amount.getDollars();</span>
-<span class="fc" id="L28">        Amount newAmount = new Amount(dollars,cents);</span>
-<span class="fc" id="L29">        return new Account(this.holder,newAmount);</span>
+        // the total cents
+<span class="fc" id="L27">        int cents = this.amount.getCents() + amount.getCents();</span>
+        // the total dollars
+<span class="fc" id="L29">        int dollars = this.amount.getDollars() + amount.getDollars();</span>
+<span class="fc" id="L30">        Amount newAmount = new Amount(dollars,cents);</span>
+        // return a new account
+<span class="fc" id="L32">        return new Account(this.holder,newAmount);</span>
     }
 
     /**
@@ -35,10 +38,13 @@ public class Account {
      * @return a new account
      */
     public Account withdraw(Amount amount){
-<span class="fc" id="L38">        int cents = this.amount.getCents() - amount.getCents();</span>
-<span class="fc" id="L39">        int dollars = this.amount.getDollars() - amount.getDollars();</span>
-<span class="fc" id="L40">        Amount newAmount = new Amount(dollars,cents);</span>
-<span class="fc" id="L41">        return new Account(this.holder,newAmount);</span>
+        // the total cents
+<span class="fc" id="L42">        int cents = this.amount.getCents() - amount.getCents();</span>
+        // the total dollars
+<span class="fc" id="L44">        int dollars = this.amount.getDollars() - amount.getDollars();</span>
+<span class="fc" id="L45">        Amount newAmount = new Amount(dollars,cents);</span>
+        // return a new account
+<span class="fc" id="L47">        return new Account(this.holder,newAmount);</span>
     }
 
     /**
@@ -46,7 +52,7 @@ public class Account {
      * @return the account's holder
      */
     public Holder getHolder() {
-<span class="fc" id="L49">        return this.holder;</span>
+<span class="fc" id="L55">        return this.holder;</span>
     }
 
     /**
@@ -54,7 +60,7 @@ public class Account {
      * @return the account's amount
      */
     public Amount getAmount() {
-<span class="fc" id="L57">        return this.amount;</span>
+<span class="fc" id="L63">        return this.amount;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
