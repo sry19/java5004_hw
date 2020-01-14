@@ -1,9 +1,0 @@
--classpath '/Users/ruoyunsun/IdeaProjects/cs5004ruoyunsun/Lab1/build/classes/java/main:/Users/ruoyunsun/IdeaProjects/cs5004ruoyunsun/Lab1/build/resources/main'
--d '/Users/ruoyunsun/IdeaProjects/cs5004ruoyunsun/Lab1/build/docs/javadoc'
--doctitle 'Lab1 1.0-SNAPSHOT API'
--quiet 
--windowtitle 'Lab1 1.0-SNAPSHOT API'
-'/Users/ruoyunsun/IdeaProjects/cs5004ruoyunsun/Lab1/src/main/java/Email.java'
-'/Users/ruoyunsun/IdeaProjects/cs5004ruoyunsun/Lab1/src/main/java/Author.java'
-'/Users/ruoyunsun/IdeaProjects/cs5004ruoyunsun/Lab1/src/main/java/Address.java'
-'/Users/ruoyunsun/IdeaProjects/cs5004ruoyunsun/Lab1/src/main/java/Person.java'
