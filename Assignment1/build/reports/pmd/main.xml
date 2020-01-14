@@ -2,7 +2,7 @@
 <pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
-    version="6.8.0" timestamp="2020-01-10T12:10:37.221">
+    version="6.8.0" timestamp="2020-01-13T22:39:42.062">
 <file name="/Users/ruoyunsun/IdeaProjects/cs5004ruoyunsun/Assignment1/src/main/java/problem1/Owner.java">
 <violation beginline="10" endline="10" begincolumn="24" endcolumn="31" rule="FieldNamingConventions" ruleset="Code Style" package="problem1" class="Owner" variable="PHONELEN" externalInfoUrl="https://pmd.github.io/pmd-6.8.0/pmd_rules_java_codestyle.html#fieldnamingconventions" priority="1">
 The static field name 'PHONELEN' doesn't match '[a-z][a-zA-Z0-9]*'

@@ -31,9 +31,9 @@ public class RunnerTest {
         assertEquals((Integer) 42, runner.getDuration().getMinutes());
         assertEquals((Integer) 8, runner.getDuration().getHours());
 
-        assertEquals((Integer) 1, runner1.getDuration().getSeconds());
-        assertEquals((Integer) 3, runner1.getDuration().getMinutes());
-        assertEquals((Integer) 23, runner1.getDuration().getHours());
+        assertEquals((Integer) 0, runner1.getDuration().getSeconds());
+        assertEquals((Integer) 0, runner1.getDuration().getMinutes());
+        assertEquals((Integer) 0, runner1.getDuration().getHours());
     }
 
     @Test
@@ -55,5 +55,7 @@ public class RunnerTest {
     public void getEndTime() {
         assertEquals(endTime,runner.getEndTime());
     }
+
+
 
 }

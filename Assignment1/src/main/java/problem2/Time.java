@@ -7,6 +7,8 @@ public class Time {
     private int hours;
     private int minutes;
     private int seconds;
+    private static final int HOURTOSEC = 3600;
+    private static final int MINUTETOSEC = 60;
     private static final int MINVAL = 0;
     private static final int MAXHOUR = 23;
     private static final int MAXMIN = 59;
@@ -19,9 +21,9 @@ public class Time {
      * @param seconds current seconds
      */
     public Time (int hours, int minutes, int seconds){
-        this.hours = this.isValidHour(hours);
-        this.minutes = this.isValidMinute(minutes);
         this.seconds = this.isValidSecond(seconds);
+        this.minutes = this.isValidMinute(minutes);
+        this.hours = this.isValidHour(hours);
     }
 
     /**
@@ -32,10 +34,12 @@ public class Time {
     private int isValidHour (int hours) {
         if (MINVAL <= hours && hours <= MAXHOUR) {
             return hours;
-        } else {
+        } else if (hours < MINVAL){
             return MINVAL;
+        } else {
+            return MAXHOUR;
+            }
         }
-    }
 
     /**
      * check if the minute is valid
@@ -45,10 +49,13 @@ public class Time {
     private int isValidMinute (int minutes){
         if (MINVAL <= minutes && minutes <= MAXMIN) {
             return minutes;
-        } else {
+        } else if (minutes < MINVAL){
             return MINVAL;
+        } else {
+            return MAXMIN;
+            }
         }
-    }
+
 
     /**
      * check if the second is valid
@@ -58,8 +65,10 @@ public class Time {
     private int isValidSecond (int seconds) {
         if (MINVAL <= seconds && seconds <= MAXSEC) {
             return seconds;
-        } else {
+        } else if (seconds < MINVAL){
             return MINVAL;
+        } else {
+            return MAXSEC;
         }
     }
 
@@ -85,5 +94,38 @@ public class Time {
      */
     public Integer getSeconds() {
         return this.seconds;
+    }
+
+    /**
+     * return the total seconds of time
+     * @return the total seconds of time
+     */
+    private int convertToSecond() {
+        return seconds + minutes*MINUTETOSEC + hours*HOURTOSEC;
+    }
+
+    /**
+     * return a Time using seconds
+     * @param totalSecond
+     * @return return a Time using seconds
+     */
+    private Time convertToTime(int totalSecond) {
+        int h = totalSecond / HOURTOSEC;
+        int m = (totalSecond % HOURTOSEC) / MINUTETOSEC;
+        int s = (totalSecond % HOURTOSEC) % MINUTETOSEC;
+        return new Time(h, m, s);
+    }
+
+    /**
+     * return a duration of time
+     * @param endTime the end time of marathon
+     * @return the duration of time
+     */
+    public Time getDuration(Time endTime) {
+        int diff =  endTime.convertToSecond() - this.convertToSecond();
+        if (diff < 0) {
+            diff = 0;
+        }
+        return this.convertToTime(diff);
     }
 }

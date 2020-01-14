@@ -32,40 +32,38 @@ public class Runner {
      * @return the total time that the runner took to complete the marathon
      */
     public Time getDuration() {
-        int diffhour =this.endTime.getHours() - this.startTime.getHours();
-        int diffminutes = this.endTime.getMinutes() - this.startTime.getMinutes();
-        int diffseconds = this.endTime.getSeconds() - this.startTime.getSeconds();
-
-        //if the difference of seconds is negative
-        if (diffseconds< MINVAL) {
-            diffseconds += MAXSEC;
-            diffminutes -= 1;
-        }
-        //if the difference of minutes is negative
-        if (diffminutes < MINVAL) {
-            diffminutes += MAXMIN;
-            diffhour -= 1;
-        }
-        //if the difference of hours is negative
-        if (diffhour < MINVAL) {
-            diffhour += MAXHOUR;
-        }
         // return a new time instance
-        return new Time(diffhour,diffminutes,diffseconds);
+        return this.startTime.getDuration(this.endTime);
     }
 
+    /**
+     * return the name of the runner
+     * @return the name of the runner
+     */
     public String getName() {
         return this.name;
     }
 
+    /**
+     * return the team of the runner
+     * @return the team of the runner
+     */
     public String getTeam() {
         return this.team;
     }
 
+    /**
+     * return the start time of the runner
+     * @return the start time of the runner
+     */
     public Time getStartTime() {
         return this.startTime;
     }
 
+    /**
+     * return the end time of the runner
+     * @return the end time of the runner
+     */
     public Time getEndTime() {
         return this.endTime;
     }
