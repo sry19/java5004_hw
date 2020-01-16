@@ -24,16 +24,24 @@ public class Runner extends Athlete{
 
   /**
    * return the best 5k time
-   * @return
+   * @return the best 5k time
    */
   public Double getBest5kTime() {
     return this.best5kTime;
   }
 
+  /**
+   * return half marathon time
+   * @return half marathon time
+   */
   public Double getHalfMarathonTime() {
     return this.halfMarathonTime;
   }
 
+  /**
+   * return favourite running event
+   * @return favourite running event
+   */
   public String getFavRunningEvent() {
     return this.favRunningEvent;
   }

@@ -25,16 +25,29 @@ public class Rectangle extends AbstractShape {
     this.height = height;
   }
 
+  /**
+   * return area
+   * @return area
+   */
   @Override
   public double area() {
     return this.width * this.height;
   }
 
+  /**
+   * return perimeter
+   * @return perimeter
+   */
   @Override
   public double perimeter() {
     return 2 * (this.width + this.height);
   }
 
+  /**
+   *
+   * @param factor factor of resizing
+   * @return resized rectangle
+   */
   @Override
   public Shape resize(double factor) {
     double sqrtFactor = Math.sqrt(factor);
@@ -45,6 +58,10 @@ public class Rectangle extends AbstractShape {
         sqrtFactor * this.height);
   }
 
+  /**
+   * return a string representing a rectangle
+   * @return  a string representing a rectangle
+   */
   public String toString() {
     return String.format("Rectangle: LL corner (%.3f,%.3f) width %.3f height " +
             "%.3f",
@@ -52,6 +69,11 @@ public class Rectangle extends AbstractShape {
             .height);
   }
 
+  /**
+   * return True if two objects are equal,False otherwise
+   * @param o
+   * @return True if two objects are equal,False otherwise
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -67,6 +89,10 @@ public class Rectangle extends AbstractShape {
         Double.compare(rectangle.reference.getY(), reference.getY()) == 0;
   }
 
+  /**
+   * return hashcode
+   * @return hashcode
+   */
   @Override
   public int hashCode() {
     return Objects.hash(width, height,reference.getX(),reference.getY());
