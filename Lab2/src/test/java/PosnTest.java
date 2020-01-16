@@ -37,6 +37,8 @@ public class PosnTest {
   @Test
   public void testEquals() {
     assertTrue(posn1.equals(posn2));
+    assertTrue(posn1.equals(posn1));
+    assertFalse(posn1.equals(name));
     assertFalse(posn1.equals(null));
     assertFalse(posn1.equals(posn3));
     assertFalse(posn1.equals(posn4));

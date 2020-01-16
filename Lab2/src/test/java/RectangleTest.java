@@ -4,7 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class RectangleTest {
-
+  Name name;
   Rectangle rectangle;
   Rectangle rectangle2;
   Rectangle rectangle3;
@@ -16,6 +16,7 @@ public class RectangleTest {
     rectangle = new Rectangle(3.0,4.0,5.0,6.0);
     rectangle2 = new Rectangle(3.0,4.0,5.0,6.0);
     rectangle3 = new Rectangle(3.0,4.0,9.0,6.0);
+    name = new Name("a","b","c");
   }
 
   @Test(expected = IllegalArgumentException.class)
@@ -52,8 +53,10 @@ public class RectangleTest {
 
   @Test
   public void testEquals() {
+    assertTrue(rectangle.equals(rectangle));
     assertTrue(rectangle.equals(rectangle2));
     assertFalse(rectangle.equals(rectangle3));
+    assertFalse(rectangle.equals(name));
   }
 
   @Test
