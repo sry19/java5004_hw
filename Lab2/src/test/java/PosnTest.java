@@ -9,6 +9,8 @@ public class PosnTest {
   Posn posn2;
   Posn posn3;
   Posn posn4;
+  Posn posn5;
+  Posn posn6;
   Name name;
   private Integer CORRECT_X = 3;
   private Integer WRONG_X = 4;
@@ -21,6 +23,8 @@ public class PosnTest {
     posn2 = new Posn(CORRECT_X,CORRECT_Y);
     posn3 = new Posn(WRONG_X,CORRECT_Y);
     posn4 = new Posn(CORRECT_X,WRONG_Y );
+    posn5 = new Posn(null,CORRECT_Y);
+    posn6 = new Posn(CORRECT_X,null);
     name = new Name("Amy","n/a","Brown");
   }
 
@@ -43,6 +47,8 @@ public class PosnTest {
     assertFalse(posn1.equals(posn3));
     assertFalse(posn1.equals(posn4));
     assertFalse(posn1.equals(name));
+    assertFalse(posn1.equals(posn5));
+    assertFalse(posn1.equals(posn6));
   }
 
   @Test
@@ -50,6 +56,8 @@ public class PosnTest {
     assertEquals(posn1.hashCode(),posn2.hashCode());
     assertNotEquals(posn1.hashCode(),posn3.hashCode());
     assertNotEquals(posn1.hashCode(),posn4.hashCode());
+    assertNotEquals(posn1.hashCode(),posn5.hashCode());
+    assertNotEquals(posn1.hashCode(),posn6.hashCode());
   }
 
   @Test

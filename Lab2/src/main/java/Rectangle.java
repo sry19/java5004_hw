@@ -71,7 +71,7 @@ public class Rectangle extends AbstractShape {
 
   /**
    * return True if two objects are equal,False otherwise
-   * @param o
+   * @param o the compared object
    * @return True if two objects are equal,False otherwise
    */
   @Override
