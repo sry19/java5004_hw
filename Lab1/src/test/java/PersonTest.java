@@ -5,20 +5,20 @@ import static org.junit.Assert.*;
 
 public class PersonTest {
 
-    Person aPerson;
+  Person aPerson;
 
-    @Before
-    public void setUp() throws Exception {
-        aPerson = new Person("Amy", "Brown");
-    }
+  @Before
+  public void setUp() throws Exception {
+    aPerson = new Person("Amy", "Brown");
+  }
 
-    @Test
-    public void getFirstName() {
-        assertEquals("Amy", aPerson.getFirstName());
-    }
+  @Test
+  public void getFirstName() {
+    assertEquals("Amy", aPerson.getFirstName());
+  }
 
-    @Test
-    public void getLastName() {
-        assertEquals("Brown", aPerson.getLastName());
-    }
+  @Test
+  public void getLastName() {
+    assertEquals("Brown", aPerson.getLastName());
+  }
 }

@@ -60,22 +60,21 @@ jacocoTestCoverageVerification {
 }
 
 
-
 test {
     useJUnit()
 
     maxHeapSize = '1G'
 }
 
-tasks.withType(Pmd){
-    reports{
-        xml.enabled=true
-        html.enabled=true
+tasks.withType(Pmd) {
+    reports {
+        xml.enabled = true
+        html.enabled = true
     }
 }
 pmd {
     ignoreFailures = true
-    pmdTest.enabled=true
+    pmdTest.enabled = true
     ruleSets = [
             "category/java/bestpractices.xml",
             "category/java/errorprone.xml",
@@ -99,7 +98,7 @@ task docs(type: Javadoc) {
 check.dependsOn jacocoTestCoverageVerification
 jacocoTestReport.mustRunAfter test
 
-task doAll{
+task doAll {
     dependsOn test
     dependsOn check
     dependsOn javadoc
