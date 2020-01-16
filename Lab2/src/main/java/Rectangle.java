@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 /**
  * This class represents a rectangle.  It defines all the operations mandated by
  * the Shape interface
@@ -14,11 +16,13 @@ public class Rectangle extends AbstractShape {
    * @param width  width of this rectangle
    * @param height height of this rectangle
    */
-  public Rectangle(double x, double y, double width, double height) {
+  public Rectangle(double x, double y, double width, double height) throws IllegalArgumentException{
     super(new Point2D(x, y));
-
-      this.width = width;
-      this.height = height;
+    if (width <= 0 || height <= 0) {
+      throw new IllegalArgumentException("message");
+    }
+    this.width = width;
+    this.height = height;
   }
 
   @Override
@@ -46,5 +50,25 @@ public class Rectangle extends AbstractShape {
             "%.3f",
         this.reference.getX(), this.reference.getY(), this.width, this
             .height);
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    Rectangle rectangle = (Rectangle) o;
+    return Double.compare(rectangle.width, width) == 0 &&
+        Double.compare(rectangle.height, height) == 0 && Double.compare(rectangle.reference.getX(),
+        reference.getX()) == 0 &&
+        Double.compare(rectangle.reference.getY(), reference.getY()) == 0;
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(width, height,reference.getX(),reference.getY());
   }
 }
