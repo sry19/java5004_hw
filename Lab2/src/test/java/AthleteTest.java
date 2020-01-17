@@ -5,13 +5,13 @@ import org.junit.Test;
 
 public class AthleteTest {
 
-  Athlete athlete;
-  Name athletename;
+  private Athlete athlete;
+  private Name athletename;
 
   @Before
   public void setUp() throws Exception {
-    athletename = new Name("amy","J.","Brown");
-    athlete = new Athlete(athletename,4.0,17.0,"husky");
+    athletename = new Name("amy", "J.", "Brown");
+    athlete = new Athlete(athletename, 4.0, 17.0, "husky");
   }
 
   @Test
@@ -21,16 +21,16 @@ public class AthleteTest {
 
   @Test
   public void getHeight() {
-    assertEquals((Double)4.0,athlete.getHeight());
+    assertEquals((Double) 4.0, athlete.getHeight());
   }
 
   @Test
   public void getWeight() {
-    assertEquals((Double) 17.0,athlete.getWeight());
+    assertEquals((Double) 17.0, athlete.getWeight());
   }
 
   @Test
   public void getLeague() {
-    assertEquals("husky",athlete.getLeague());
+    assertEquals("husky", athlete.getLeague());
   }
 }
