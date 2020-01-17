@@ -9,12 +9,12 @@ public class Athlete {
   private String league;
 
   /*
-  * Constructs a new athlete, based upon all of the provided input parameters.
-  * @param athletesName - object Name, containing athlete's first, middle and last name
-  * @param height - athlete's height, expressed as a Double in cm (e.g., 6'2'' is recorded as 187.96cm)
-  * @param weight - athlete's weigh, expressed as a Double in pounds (e.g. 125, 155, 200 pounds)
-  * @param league - athelete's league, expressed as String
-  * @return - object Athlete
+   * Constructs a new athlete, based upon all of the provided input parameters.
+   * @param athletesName - object Name, containing athlete's first, middle and last name
+   * @param height - athlete's height, expressed as a Double in cm (e.g., 6'2'' is recorded as 187.96cm)
+   * @param weight - athlete's weigh, expressed as a Double in pounds (e.g. 125, 155, 200 pounds)
+   * @param league - athelete's league, expressed as String
+   * @return - object Athlete
    */
   public Athlete(Name athletesName, Double height, Double weight, String league) {
     this.athletesName = athletesName;

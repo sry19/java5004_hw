@@ -1,22 +1,23 @@
 import java.util.Objects;
 
 /**
- * This class represents a rectangle.  It defines all the operations mandated by
- * the Shape interface
+ * This class represents a rectangle.  It defines all the operations mandated by the Shape
+ * interface
  */
 public class Rectangle extends AbstractShape {
+
   private double width, height;
 
   /**
-   * Constructs a rectangle object with the given location of its lower-left
-   * corner and dimensions
+   * Constructs a rectangle object with the given location of its lower-left corner and dimensions
    *
    * @param x      x coordinate of the lower-left corner of this rectangle
    * @param y      y coordinate of the lower-left corner of this rectangle
    * @param width  width of this rectangle
    * @param height height of this rectangle
    */
-  public Rectangle(double x, double y, double width, double height) throws IllegalArgumentException{
+  public Rectangle(double x, double y, double width, double height)
+      throws IllegalArgumentException {
     super(new Point2D(x, y));
     if (width <= 0 || height <= 0) {
       throw new IllegalArgumentException("message");
@@ -27,6 +28,7 @@ public class Rectangle extends AbstractShape {
 
   /**
    * return area
+   *
    * @return area
    */
   @Override
@@ -36,6 +38,7 @@ public class Rectangle extends AbstractShape {
 
   /**
    * return perimeter
+   *
    * @return perimeter
    */
   @Override
@@ -44,7 +47,6 @@ public class Rectangle extends AbstractShape {
   }
 
   /**
-   *
    * @param factor factor of resizing
    * @return resized rectangle
    */
@@ -60,7 +62,8 @@ public class Rectangle extends AbstractShape {
 
   /**
    * return a string representing a rectangle
-   * @return  a string representing a rectangle
+   *
+   * @return a string representing a rectangle
    */
   public String toString() {
     return String.format("Rectangle: LL corner (%.3f,%.3f) width %.3f height " +
@@ -71,6 +74,7 @@ public class Rectangle extends AbstractShape {
 
   /**
    * return True if two objects are equal,False otherwise
+   *
    * @param o the compared object
    * @return True if two objects are equal,False otherwise
    */
@@ -91,10 +95,11 @@ public class Rectangle extends AbstractShape {
 
   /**
    * return hashcode
+   *
    * @return hashcode
    */
   @Override
   public int hashCode() {
-    return Objects.hash(width, height,reference.getX(),reference.getY());
+    return Objects.hash(width, height, reference.getX(), reference.getY());
   }
 }
