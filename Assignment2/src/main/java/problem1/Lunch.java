@@ -12,7 +12,7 @@ public class Lunch extends Event{
    * constructor that creates a lunch event
    * @param clientName the name of the client
    * @param numOfAttendees the number of attendees
-   * @throws IllegalArgumentException
+   * @throws IllegalArgumentException invalid input exception
    */
   public Lunch(String clientName, int numOfAttendees) throws IllegalArgumentException {
     super(clientName, numOfAttendees);

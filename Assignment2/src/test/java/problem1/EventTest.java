@@ -6,13 +6,14 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class EventTest {
+
   private String amy = "Amy";
   private int amyevent = 10;
   Event event1;
 
   @Before
   public void setUp() throws Exception {
-    event1 = new Event(amy,amyevent);
+    event1 = new Event(amy, amyevent);
   }
 
   @Test

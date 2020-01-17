@@ -11,7 +11,17 @@ public class DinnerTest {
 
   @Before
   public void setUp() throws Exception {
-    dinner1 = new Dinner("A",40);
+    dinner1 = new Dinner("A", 40);
+  }
+
+  @Test(expected = IllegalArgumentException.class)
+  public void invalidMinAttendees() {
+    Dinner dinner2 = new Dinner("A", 3);
+  }
+
+  @Test(expected = IllegalArgumentException.class)
+  public void invalidMaxAttendees() {
+    Dinner dinner3 = new Dinner("B", 60);
   }
 
   @Test
@@ -21,6 +31,6 @@ public class DinnerTest {
 
   @Test
   public void getVegetarian() {
-    assertEquals(8,dinner1.getVegetarian());
+    assertEquals(8, dinner1.getVegetarian());
   }
 }

@@ -15,12 +15,17 @@ public class LunchTest {
   }
 
   @Test(expected = IllegalArgumentException.class)
-  public void invalidAttendees() {
+  public void invalidMinAttendees() {
     Lunch lunch1 = new Lunch("A", 5);
-    Lunch lunch2 = new Lunch("B",100);
   }
+
+  @Test(expected = IllegalArgumentException.class)
+  public void invalidMaxAttendees() {
+    Lunch lunch2 = new Lunch("B", 100);
+  }
+
   @Test
   public void getSandwiches() {
-    assertEquals(53,lunch3.getSandwiches());
+    assertEquals(53, lunch3.getSandwiches());
   }
 }

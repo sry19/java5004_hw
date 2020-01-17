@@ -16,7 +16,7 @@ public class Dinner extends Event {
    *
    * @param clientName     the name of the client
    * @param numOfAttendees the number of attendees
-   * @throws IllegalArgumentException
+   * @throws IllegalArgumentException invalid input exception
    */
   public Dinner(String clientName, int numOfAttendees) throws IllegalArgumentException {
     super(clientName, numOfAttendees);
