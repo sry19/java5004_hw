@@ -101,10 +101,10 @@ public class MailItem {
       return false;
     }
     MailItem mailItem = (MailItem) o;
-    return width.equals(mailItem.width) &&
-        height.equals(mailItem.height) &&
-        depth.equals(mailItem.depth) &&
-        recipient.equals(mailItem.recipient);
+    return this.width.equals(mailItem.width) &&
+        this.height.equals(mailItem.height) &&
+        this.depth.equals(mailItem.depth) &&
+        this.recipient.equals(mailItem.recipient);
   }
 
   /**
@@ -114,6 +114,6 @@ public class MailItem {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(width, height, depth, recipient);
+    return Objects.hash(this.width, this.height, this.depth, this.recipient);
   }
 }

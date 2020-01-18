@@ -65,8 +65,8 @@ public class Dinner extends Event {
       return false;
     }
     Dinner dinner = (Dinner) o;
-    return nonVegetarian == dinner.nonVegetarian &&
-        vegetarian == dinner.vegetarian && dinner.getClientName() == this.getClientName() &&
+    return this.nonVegetarian == dinner.nonVegetarian &&
+        this.vegetarian == dinner.vegetarian && dinner.getClientName() == this.getClientName() &&
         dinner.getNumOfAttendees() == this.getNumOfAttendees();
   }
 
@@ -77,7 +77,7 @@ public class Dinner extends Event {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(nonVegetarian, vegetarian, this.getClientName(),
+    return Objects.hash(this.nonVegetarian, this.vegetarian, this.getClientName(),
         this.getNumOfAttendees());
   }
 }

@@ -24,11 +24,27 @@ public class ScheduleTest {
     assertEquals(lunch1, schedule1.getLunch());
   }
 
+  @Test(expected = EventCannotBookedException.class)
+  public void invalidBookingLunch() throws EventCannotBookedException {
+    Lunch lunch1 = new Lunch("A", 30);
+    Lunch lunch2 = new Lunch("B", 40);
+    schedule1.bookingLunch(lunch1);
+    schedule1.bookingLunch(lunch2);
+  }
+
   @Test
   public void bookingDinner() throws NoEventException, EventCannotBookedException {
     Dinner dinner1 = new Dinner("A", 30);
     schedule1.bookingDinner(dinner1);
     assertEquals(dinner1, schedule1.getDinner());
+  }
+
+  @Test(expected = EventCannotBookedException.class)
+  public void invalidBookingDinner() throws EventCannotBookedException {
+    Dinner dinner1 = new Dinner("A", 30);
+    Dinner dinner2 = new Dinner("B", 40);
+    schedule1.bookingDinner(dinner1);
+    schedule1.bookingDinner(dinner2);
   }
 
   @Test

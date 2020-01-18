@@ -53,7 +53,8 @@ public class Lunch extends Event {
       return false;
     }
     Lunch lunch = (Lunch) o;
-    return sandwiches == lunch.sandwiches && this.getNumOfAttendees() == lunch.getNumOfAttendees()
+    return this.sandwiches == lunch.sandwiches && this.getNumOfAttendees() == lunch
+        .getNumOfAttendees()
         && this.getClientName() == lunch.getClientName();
   }
 
@@ -64,6 +65,6 @@ public class Lunch extends Event {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(sandwiches, this.getClientName(), this.getNumOfAttendees());
+    return Objects.hash(this.sandwiches, this.getClientName(), this.getNumOfAttendees());
   }
 }

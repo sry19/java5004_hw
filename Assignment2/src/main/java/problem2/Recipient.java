@@ -39,9 +39,9 @@ public class Recipient {
       return false;
     }
     Recipient recipient = (Recipient) o;
-    return firstName.equals(recipient.firstName) &&
-        lastName.equals(recipient.lastName) &&
-        emailAddress.equals(recipient.emailAddress);
+    return this.firstName.equals(recipient.firstName) &&
+        this.lastName.equals(recipient.lastName) &&
+        this.emailAddress.equals(recipient.emailAddress);
   }
 
   /**
@@ -51,6 +51,6 @@ public class Recipient {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(firstName, lastName, emailAddress);
+    return Objects.hash(this.firstName, this.lastName, this.emailAddress);
   }
 }
