@@ -56,4 +56,28 @@ public class ScheduleTest {
   public void getDinnerBooked() {
     assertEquals(false,schedule1.getDinnerBooked());
   }
+
+  @Test
+  public void getLunch() throws EventCannotBookedException, NoEventException {
+    Lunch lunch1 = new Lunch("A", 30);
+    schedule1.bookingLunch(lunch1);
+    assertEquals(lunch1,schedule1.getLunch());
+  }
+
+  @Test
+  public void getDinner() throws EventCannotBookedException, NoEventException {
+    Dinner dinner1 = new Dinner("A", 30);
+    schedule1.bookingDinner(dinner1);
+    assertEquals(dinner1,schedule1.getDinner());
+  }
+
+  @Test(expected = NoEventException.class)
+  public void invalidGetLunch() throws EventCannotBookedException, NoEventException {
+    schedule1.getLunch();
+  }
+
+  @Test(expected = NoEventException.class)
+  public void invalidGetDinner() throws EventCannotBookedException, NoEventException {
+    schedule1.getDinner();
+  }
 }
