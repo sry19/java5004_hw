@@ -86,6 +86,12 @@ public class MailItem {
     return this.recipient;
   }
 
+  /**
+   * overrides the equals method
+   *
+   * @param o an object
+   * @return true if they are equal, false otherwise
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -101,6 +107,11 @@ public class MailItem {
         recipient.equals(mailItem.recipient);
   }
 
+  /**
+   * overrides the hashcode method
+   *
+   * @return hashcode
+   */
   @Override
   public int hashCode() {
     return Objects.hash(width, height, depth, recipient);

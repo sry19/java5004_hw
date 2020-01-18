@@ -1,5 +1,8 @@
 package problem1;
 
+/**
+ * The type Schedule.
+ */
 public class Schedule {
 
   private boolean lunchBooked;
@@ -7,26 +10,28 @@ public class Schedule {
   private Lunch lunch;
   private Dinner dinner;
 
-//  /**
-//   * constructor that creates a schedule
-//   */
-//  public Schedule() {
-//    this.lunch = new Lunch("empty", 15);
-//    this.dinner = new Dinner("empty", 10);
-//  }
+  /**
+   * constructor that creates a schedule
+   */
+  public Schedule() {
+    this.lunch = null;
+    this.dinner = null;
+    this.lunchBooked = false;
+    this.dinnerBooked = false;
+  }
 
   /**
    * books a lunch event
    *
    * @param lunch a lunch event
-   * @throws IllegalArgumentException invalid input exception
+   * @throws EventCannotBookedException the event cannot booked exception
    */
-  public void bookingLunch(Lunch lunch) throws IllegalArgumentException {
+  public void bookingLunch(Lunch lunch) throws EventCannotBookedException {
     if (!this.lunchBooked) {
       this.lunchBooked = true;
       this.lunch = lunch;
     } else {
-      throw new IllegalArgumentException("This event cannot be added to the schedule");
+      throw new EventCannotBookedException();
     }
   }
 
@@ -34,58 +39,60 @@ public class Schedule {
    * books a dinner event
    *
    * @param dinner a dinner event
-   * @throws IllegalArgumentException invalid input exception
+   * @throws EventCannotBookedException the event cannot booked exception
    */
-  public void bookingDinner(Dinner dinner) throws IllegalArgumentException {
+  public void bookingDinner(Dinner dinner) throws EventCannotBookedException {
     if (!this.dinnerBooked) {
       this.dinnerBooked = true;
       this.dinner = dinner;
     } else {
-      throw new IllegalArgumentException("This event cannot be added to the schedule");
+      throw new EventCannotBookedException();
     }
   }
 
   /**
-   * return the updated schedule
+   * Gets lunch booked.
    *
-   * @param e an event
-   * @throws IllegalArgumentException invalid input exception
+   * @return the lunch booked
    */
-  public void updateSchedule(Object e) throws IllegalArgumentException {
-    if (!this.lunchBooked && e.getClass() == lunch.getClass()) {
-      this.lunchBooked = true;
-      this.lunch = (Lunch) e;
-    } else if (!this.dinnerBooked && e.getClass() == dinner.getClass()) {
-      this.dinnerBooked = true;
-      this.dinner = (Dinner) e;
-    } else {
-      throw new IllegalArgumentException("This event cannot be added to the schedule");
-    }
-  }
-
-  public boolean isLunchBooked() {
+  public boolean getLunchBooked() {
     return this.lunchBooked;
   }
 
-  public boolean isDinnerBooked() {
+  /**
+   * Gets dinner booked.
+   *
+   * @return the dinner booked
+   */
+  public boolean getDinnerBooked() {
     return this.dinnerBooked;
   }
 
-  public Lunch getLunch() throws IllegalArgumentException{
-    if (lunchBooked) {
+  /**
+   * Gets lunch.
+   *
+   * @return the lunch
+   * @throws NoEventException the no event exception
+   */
+  public Lunch getLunch() throws NoEventException {
+    if (this.lunchBooked) {
       return this.lunch;
-    }
-    else {
-      throw new IllegalArgumentException("Lunch event is not booked");
+    } else {
+      throw new NoEventException();
     }
   }
 
-  public Dinner getDinner() throws IllegalArgumentException{
-    if (dinnerBooked) {
+  /**
+   * Gets dinner.
+   *
+   * @return the dinner
+   * @throws NoEventException the no event exception
+   */
+  public Dinner getDinner() throws NoEventException {
+    if (this.dinnerBooked) {
       return this.dinner;
-    }
-    else{
-      throw new IllegalArgumentException("Dinner event is not booked");
+    } else {
+      throw new NoEventException();
     }
   }
 }

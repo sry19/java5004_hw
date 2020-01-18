@@ -1,7 +1,11 @@
 package problem1;
 
 import java.lang.Math;
+import java.util.Objects;
 
+/**
+ * The type Dinner.
+ */
 public class Dinner extends Event {
 
   private long nonVegetarian;
@@ -44,5 +48,36 @@ public class Dinner extends Event {
    */
   public long getVegetarian() {
     return this.vegetarian;
+  }
+
+  /**
+   * overrides the equals method
+   *
+   * @param o an object
+   * @return true if they are equal, false otherwise
+   */
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    Dinner dinner = (Dinner) o;
+    return nonVegetarian == dinner.nonVegetarian &&
+        vegetarian == dinner.vegetarian && dinner.getClientName() == this.getClientName() &&
+        dinner.getNumOfAttendees() == this.getNumOfAttendees();
+  }
+
+  /**
+   * overrides the hashcode method
+   *
+   * @return hashcode
+   */
+  @Override
+  public int hashCode() {
+    return Objects.hash(nonVegetarian, vegetarian, this.getClientName(),
+        this.getNumOfAttendees());
   }
 }
