@@ -3,11 +3,8 @@ package problem2;
 /**
  * The type Locker.
  */
-public class Locker {
+public class Locker extends Cube {
 
-  private Integer maxWidth;
-  private Integer maxHeight;
-  private Integer maxDepth;
   private MailItem mailItem;
 
   /**
@@ -17,31 +14,10 @@ public class Locker {
    * @param maxHeight the max height
    * @param maxDepth  the max depth
    */
-  public Locker(Integer maxWidth, Integer maxHeight, Integer maxDepth) {
-    if (isValidInput(maxWidth, maxHeight, maxDepth)) {
-      this.maxWidth = maxWidth;
-      this.maxHeight = maxHeight;
-      this.maxDepth = maxDepth;
-    } else {
-      throw new IllegalArgumentException("inputs are invalid");
-    }
-  }
-
-  /**
-   * tests if inputs are valid
-   *
-   * @param width  the width
-   * @param height the height
-   * @param depth  the depth
-   * @return true if inputs are valid, false otherwise
-   */
-  private boolean isValidInput(Integer width, Integer height, Integer depth) {
-    final int MIN_LENGTH = 1;
-    if (width >= MIN_LENGTH && height >= MIN_LENGTH && depth >= MIN_LENGTH) {
-      return true;
-    } else {
-      return false;
-    }
+  public Locker(Integer maxWidth, Integer maxHeight, Integer maxDepth)
+      throws IllegalArgumentException {
+    super(maxWidth, maxHeight, maxDepth);
+    this.mailItem = null;
   }
 
   /**
@@ -53,8 +29,8 @@ public class Locker {
   public void addMail(MailItem mailItem) throws Exception {
     if (this.mailItem != null) {
       throw new LockerOccupiedException();
-    } else if (mailItem.getWidth() > this.maxWidth || mailItem.getHeight() > this.maxHeight
-        || mailItem.getDepth() > this.maxDepth) {
+    } else if (mailItem.getWidth() > this.getWidth() || mailItem.getHeight() > this.getHeight()
+        || mailItem.getDepth() > this.getDepth()) {
       throw new ExceedDimensionException();
     } else {
       this.mailItem = mailItem;
@@ -84,7 +60,7 @@ public class Locker {
    * @return the max width
    */
   public Integer getMaxWidth() {
-    return this.maxWidth;
+    return this.getWidth();
   }
 
   /**
@@ -93,7 +69,7 @@ public class Locker {
    * @return the max height
    */
   public Integer getMaxHeight() {
-    return this.maxHeight;
+    return this.getHeight();
   }
 
   /**
@@ -102,7 +78,7 @@ public class Locker {
    * @return the max depth
    */
   public Integer getMaxDepth() {
-    return this.maxDepth;
+    return this.getDepth();
   }
 
   /**

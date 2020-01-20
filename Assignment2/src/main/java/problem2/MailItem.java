@@ -5,11 +5,8 @@ import java.util.Objects;
 /**
  * The type Mail item.
  */
-public class MailItem {
+public class MailItem extends Cube {
 
-  private Integer width;
-  private Integer height;
-  private Integer depth;
   private Recipient recipient;
 
   /**
@@ -23,58 +20,8 @@ public class MailItem {
    */
   public MailItem(Integer width, Integer height, Integer depth, Recipient recipient)
       throws IllegalArgumentException {
-    if (isValidInput(width, height, depth)) {
-      this.width = width;
-      this.height = height;
-      this.depth = depth;
-      this.recipient = recipient;
-    } else {
-      throw new IllegalArgumentException("inputs are invalid");
-    }
-  }
-
-  /**
-   * tests if inputs are valid
-   *
-   * @param width  the width
-   * @param height the height
-   * @param depth  the depth
-   * @return true if inputs are valid, false otherwise
-   */
-  private boolean isValidInput(Integer width, Integer height, Integer depth) {
-    final int MIN_LENGTH = 1;
-    if (width >= MIN_LENGTH && height >= MIN_LENGTH && depth >= MIN_LENGTH) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
-  /**
-   * Gets width.
-   *
-   * @return the width
-   */
-  public Integer getWidth() {
-    return this.width;
-  }
-
-  /**
-   * Gets height.
-   *
-   * @return the height
-   */
-  public Integer getHeight() {
-    return this.height;
-  }
-
-  /**
-   * Gets depth.
-   *
-   * @return the depth
-   */
-  public Integer getDepth() {
-    return this.depth;
+    super(width, height, depth);
+    this.recipient = recipient;
   }
 
   /**
@@ -101,9 +48,9 @@ public class MailItem {
       return false;
     }
     MailItem mailItem = (MailItem) o;
-    return this.width.equals(mailItem.width) &&
-        this.height.equals(mailItem.height) &&
-        this.depth.equals(mailItem.depth) &&
+    return this.getWidth().equals(mailItem.getWidth()) &&
+        this.getHeight().equals(mailItem.getHeight()) &&
+        this.getDepth().equals(mailItem.getDepth()) &&
         this.recipient.equals(mailItem.recipient);
   }
 
@@ -114,6 +61,6 @@ public class MailItem {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(this.width, this.height, this.depth, this.recipient);
+    return Objects.hash(this.getWidth(), this.getHeight(), this.getDepth(), this.recipient);
   }
 }
