@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class ScheduleTest {
+
   Lunch lunch;
   Dinner dinner;
   Schedule schedule1;
@@ -13,7 +14,7 @@ public class ScheduleTest {
   @Before
   public void setUp() throws Exception {
     lunch = new Lunch("C", 50);
-    dinner = new Dinner("B",40);
+    dinner = new Dinner("B", 40);
     schedule1 = new Schedule();
   }
 
@@ -49,26 +50,26 @@ public class ScheduleTest {
 
   @Test
   public void getLunchBooked() {
-    assertEquals(false,schedule1.getLunchBooked());
+    assertEquals(false, schedule1.getLunchBooked());
   }
 
   @Test
   public void getDinnerBooked() {
-    assertEquals(false,schedule1.getDinnerBooked());
+    assertEquals(false, schedule1.getDinnerBooked());
   }
 
   @Test
   public void getLunch() throws EventCannotBookedException, NoEventException {
     Lunch lunch1 = new Lunch("A", 30);
     schedule1.bookingLunch(lunch1);
-    assertEquals(lunch1,schedule1.getLunch());
+    assertEquals(lunch1, schedule1.getLunch());
   }
 
   @Test
   public void getDinner() throws EventCannotBookedException, NoEventException {
     Dinner dinner1 = new Dinner("A", 30);
     schedule1.bookingDinner(dinner1);
-    assertEquals(dinner1,schedule1.getDinner());
+    assertEquals(dinner1, schedule1.getDinner());
   }
 
   @Test(expected = NoEventException.class)

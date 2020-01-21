@@ -56,9 +56,9 @@ public class DinnerTest {
 
   @Test
   public void testHashcode() {
-    assertEquals(dinner1.hashCode(),dinner4.hashCode());
-    assertEquals(dinner1.hashCode(),dinner1.hashCode());
-    assertNotEquals(dinner1.hashCode(),dinner2.hashCode());
-    assertNotEquals(dinner1.hashCode(),dinner3.hashCode());
+    assertEquals(dinner1.hashCode(), dinner4.hashCode());
+    assertEquals(dinner1.hashCode(), dinner1.hashCode());
+    assertNotEquals(dinner1.hashCode(), dinner2.hashCode());
+    assertNotEquals(dinner1.hashCode(), dinner3.hashCode());
   }
 }

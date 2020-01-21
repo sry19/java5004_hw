@@ -29,8 +29,9 @@ public class Locker extends Cube {
   public void addMail(MailItem mailItem) throws Exception {
     if (this.mailItem != null) {
       throw new LockerOccupiedException();
-    } else if (mailItem.getWidth() > this.getWidth() || mailItem.getHeight() > this.getHeight()
-        || mailItem.getDepth() > this.getDepth()) {
+    } else if (mailItem.getWidth() > this.getMaxWidth() || mailItem.getHeight() > this
+        .getMaxHeight()
+        || mailItem.getDepth() > this.getMaxDepth()) {
       throw new ExceedDimensionException();
     } else {
       this.mailItem = mailItem;
