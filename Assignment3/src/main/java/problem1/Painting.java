@@ -1,5 +1,8 @@
 package problem1;
 
+/**
+ * The type Painting.
+ */
 public class Painting extends AbstractInterior {
 
   private static final Integer INI_VAL_INT = 0;

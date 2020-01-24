@@ -1,8 +1,12 @@
 package problem1;
 
+/**
+ * The type Gardening.
+ */
 public class Gardening extends AbstractExterior{
 
   private static final Integer WASTE_REMOVAL_FEE = 20;
+
   /**
    * constructor that initializes an instance
    *

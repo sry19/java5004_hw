@@ -1,6 +1,10 @@
 package problem1;
 
+/**
+ * The interface Basic service.
+ */
 public interface BasicService {
+
   /**
    * calculates the hours needed
    *

@@ -1,5 +1,8 @@
 package problem1;
 
+/**
+ * The type Cleaning.
+ */
 public class Cleaning extends AbstractInterior {
 
   /**

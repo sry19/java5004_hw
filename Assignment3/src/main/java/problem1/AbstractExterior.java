@@ -1,5 +1,8 @@
 package problem1;
 
+/**
+ * The type Abstract exterior.
+ */
 public abstract class AbstractExterior extends AbstractBasicService {
 
   /**

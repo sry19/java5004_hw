@@ -1,5 +1,8 @@
 package problem1;
 
+/**
+ * The type Abstract specialist service.
+ */
 public abstract class AbstractSpecialistService extends AbstractService {
 
   private static final Integer BASE_RATE = 200;
@@ -12,6 +15,8 @@ public abstract class AbstractSpecialistService extends AbstractService {
    * @param address         the address of the property
    * @param size            the size of the property
    * @param carryOutMonthly true if it is carried out monthly, false otherwise
+   * @param pets            the pets
+   * @param floors          the floors
    * @param employees       the number of employees
    * @param complex         true if it is complex, false otherwise
    */
@@ -19,13 +24,23 @@ public abstract class AbstractSpecialistService extends AbstractService {
       Integer pets, Integer floors,
       Integer employees, boolean complex) {
     super(address, size, carryOutMonthly, pets, floors);
-    this.complex = true;
+    this.complex = complex;
     this.employees = this.isValidEmployee(employees);
     this.setBaseRate(BASE_RATE);
   }
 
   private Integer isValidEmployee(Integer employees) {
     final Integer MIN_EMPLOYEE = 1;
+    final Integer S_M_MIN_EMPLOYEE = 2;
+    final Integer L_MIN_EMPLOYEE = 3;
+    if (this.complex) {
+      if (this.getSize() == PropertySize.SMALL || this.getSize() == PropertySize.MEDIUM) {
+        return Math.max(employees,S_M_MIN_EMPLOYEE);
+      }
+      else if (this.getSize() == PropertySize.LARGE){
+        return Math.max(employees, L_MIN_EMPLOYEE);
+      }
+    }
     if (employees < MIN_EMPLOYEE) {
       return MIN_EMPLOYEE;
     } else {
@@ -33,14 +48,29 @@ public abstract class AbstractSpecialistService extends AbstractService {
     }
   }
 
+  /**
+   * Is complex boolean.
+   *
+   * @return the boolean
+   */
   public boolean isComplex() {
     return this.complex;
   }
 
+  /**
+   * Gets employees.
+   *
+   * @return the employees
+   */
   public Integer getEmployees() {
     return this.employees;
   }
 
+  /**
+   * Sets employees.
+   *
+   * @param employees the employees
+   */
   public void setEmployees(Integer employees) {
     this.employees = employees;
   }

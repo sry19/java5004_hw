@@ -55,6 +55,9 @@ public abstract class AbstractBasicService extends AbstractService implements Ba
     return INI_VAL_INT;
   }
 
+  /**
+   * Update discount.
+   */
   public void updateDiscount() {
     final Integer TEN_TH_SERVICE = 10;
     final double TEN_TH_DISCOUNT = 0.5;

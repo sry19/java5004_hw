@@ -21,6 +21,8 @@ public abstract class AbstractService implements Service {
    * @param address         the address of the property
    * @param size            the size of the property
    * @param carryOutMonthly true if it is carried out monthly, false otherwise
+   * @param pets            the pets
+   * @param floors          the floors
    */
   public AbstractService(String address, PropertySize size, boolean carryOutMonthly, Integer pets, Integer floors) {
     this.address = address;
@@ -52,18 +54,38 @@ public abstract class AbstractService implements Service {
     }
   }
 
+  /**
+   * Gets pets.
+   *
+   * @return the pets
+   */
   public Integer getPets() {
     return this.pets;
   }
 
+  /**
+   * Gets floors.
+   *
+   * @return the floors
+   */
   public Integer getFloors() {
     return this.floors;
   }
 
+  /**
+   * Gets extra fee.
+   *
+   * @return the extra fee
+   */
   public Integer getExtraFee() {
     return this.extraFee;
   }
 
+  /**
+   * Sets extra fee.
+   *
+   * @param extraFee the extra fee
+   */
   public void setExtraFee(Integer extraFee) {
     this.extraFee = extraFee;
   }

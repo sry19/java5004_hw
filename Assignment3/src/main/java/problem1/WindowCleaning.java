@@ -1,5 +1,8 @@
 package problem1;
 
+/**
+ * The type Window cleaning.
+ */
 public class WindowCleaning extends AbstractExterior {
 
   private static final Integer MAX_FLOOR = 3;
@@ -12,6 +15,7 @@ public class WindowCleaning extends AbstractExterior {
    * @param carryOutMonthly true if it is carried out monthly, false otherwise
    * @param pets            the pets
    * @param floors          the floors
+   * @throws FloorExceedException the floor exceed exception
    */
   public WindowCleaning(String address, PropertySize size, boolean carryOutMonthly,
       Integer pets, Integer floors) throws FloorExceedException{
