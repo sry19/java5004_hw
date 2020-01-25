@@ -1,5 +1,7 @@
 package problem1;
 
+import java.util.Objects;
+
 /**
  * The type Gardening.
  */
@@ -39,5 +41,37 @@ public class Gardening extends AbstractExterior{
   @Override
   public void calculateExtraFeeRate() {
     return;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || o.getClass() != this.getClass()) {
+      return false;
+    }
+    Gardening gardening = (Gardening) o;
+    return (this.getAddress() == gardening.getAddress()
+        && gardening.getSize() == gardening.getSize()
+        && this.isCarryOutMonthly() == gardening.isCarryOutMonthly()
+        && this.getPets() == gardening.getPets()
+        && this.getPreCarryOutTimes() == gardening
+        .getPreCarryOutTimes() && this.getFloors() == gardening.getFloors());
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects
+        .hash(this.getAddress(), this.getSize(), this.isCarryOutMonthly(), this.getPets(),
+            this.getPreCarryOutTimes(), this.getFloors());
+  }
+
+  @Override
+  public String toString() {
+    return "Gardening { Address = " + this.getAddress() + ", Size = " + this.getSize()
+        + ", CarryOutMonthly = " + this.isCarryOutMonthly() + ", Pets = " + this.getPets()
+        + "Previous services = " + this.getPreCarryOutTimes() + ", Floors = " + this.getFloors()
+        + "}";
   }
 }

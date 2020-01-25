@@ -59,4 +59,22 @@ public class WindowCleaningTest {
     assertFalse(windowCleaning3.equals(null));
     assertFalse(windowCleaning3.equals(cleaning));
   }
+
+  @Test
+  public void testHashCode() {
+    assertTrue(windowCleaning1.hashCode()==windowCleaning1.hashCode());
+    assertTrue(windowCleaning1.hashCode()==windowCleaning5.hashCode());
+    assertFalse(windowCleaning1.hashCode()==windowCleaning6.hashCode());
+    assertFalse(windowCleaning1.hashCode()==windowCleaning7.hashCode());
+    assertFalse(windowCleaning1.hashCode()==windowCleaning4.hashCode());
+  }
+
+  @Test
+  public void testToString() {
+    assertEquals(windowCleaning1.toString(),windowCleaning1.toString());
+    assertEquals(windowCleaning1.toString(),windowCleaning5.toString());
+    assertNotEquals(windowCleaning1.toString(),windowCleaning4.toString());
+    assertNotEquals(windowCleaning1.toString(),windowCleaning6.toString());
+    assertNotEquals(windowCleaning1.toString(),windowCleaning7.toString());
+  }
 }
