@@ -66,12 +66,4 @@ public abstract class AbstractSpecialistService extends AbstractService {
     return this.employees;
   }
 
-  /**
-   * Sets employees.
-   *
-   * @param employees the employees
-   */
-  public void setEmployees(Integer employees) {
-    this.employees = employees;
-  }
 }

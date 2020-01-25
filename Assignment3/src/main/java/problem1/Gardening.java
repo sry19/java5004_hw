@@ -53,7 +53,7 @@ public class Gardening extends AbstractExterior{
     }
     Gardening gardening = (Gardening) o;
     return (this.getAddress() == gardening.getAddress()
-        && gardening.getSize() == gardening.getSize()
+        && this.getSize() == gardening.getSize()
         && this.isCarryOutMonthly() == gardening.isCarryOutMonthly()
         && this.getPets() == gardening.getPets()
         && this.getPreCarryOutTimes() == gardening

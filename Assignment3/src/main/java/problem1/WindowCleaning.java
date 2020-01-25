@@ -61,7 +61,7 @@ public class WindowCleaning extends AbstractExterior {
     }
     WindowCleaning windowCleaning = (WindowCleaning) o;
     return (this.getAddress() == windowCleaning.getAddress()
-        && windowCleaning.getSize() == windowCleaning.getSize()
+        && this.getSize() == windowCleaning.getSize()
         && this.isCarryOutMonthly() == windowCleaning.isCarryOutMonthly()
         && this.getPets() == windowCleaning.getPets()
         && this.getPreCarryOutTimes() == windowCleaning
