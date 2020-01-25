@@ -5,7 +5,7 @@ import java.util.Objects;
 /**
  * The type Gardening.
  */
-public class Gardening extends AbstractExterior{
+public class Gardening extends AbstractExterior {
 
   private static final Integer WASTE_REMOVAL_FEE = 20;
 

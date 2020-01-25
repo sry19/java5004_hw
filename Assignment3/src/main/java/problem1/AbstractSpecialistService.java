@@ -35,9 +35,8 @@ public abstract class AbstractSpecialistService extends AbstractService {
     final Integer L_MIN_EMPLOYEE = 3;
     if (this.complex) {
       if (this.getSize() == PropertySize.SMALL || this.getSize() == PropertySize.MEDIUM) {
-        return Math.max(employees,S_M_MIN_EMPLOYEE);
-      }
-      else if (this.getSize() == PropertySize.LARGE){
+        return Math.max(employees, S_M_MIN_EMPLOYEE);
+      } else if (this.getSize() == PropertySize.LARGE) {
         return Math.max(employees, L_MIN_EMPLOYEE);
       }
     }

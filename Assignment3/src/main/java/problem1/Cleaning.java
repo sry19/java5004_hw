@@ -32,13 +32,15 @@ public class Cleaning extends AbstractInterior {
     Cleaning cleaning = (Cleaning) o;
     return (this.getAddress() == cleaning.getAddress() && this.getSize() == cleaning.getSize()
         && this.isCarryOutMonthly() == cleaning.isCarryOutMonthly()
-        && this.getPets() == cleaning.getPets() && this.getPreCarryOutTimes()==cleaning.getPreCarryOutTimes());
+        && this.getPets() == cleaning.getPets() && this.getPreCarryOutTimes() == cleaning
+        .getPreCarryOutTimes());
   }
 
   @Override
   public int hashCode() {
     return Objects
-        .hash(this.getAddress(), this.getSize(), this.isCarryOutMonthly(), this.getPets(),this.getPreCarryOutTimes());
+        .hash(this.getAddress(), this.getSize(), this.isCarryOutMonthly(), this.getPets(),
+            this.getPreCarryOutTimes());
   }
 
   @Override

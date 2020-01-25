@@ -5,7 +5,7 @@ import java.util.Objects;
 /**
  * The type Abstract interior.
  */
-public abstract class AbstractInterior extends AbstractBasicService{
+public abstract class AbstractInterior extends AbstractBasicService {
 
 
   /**
@@ -48,7 +48,8 @@ public abstract class AbstractInterior extends AbstractBasicService{
   @Override
   public double calculatePrice() {
     this.updateDiscount();
-    return (this.getBaseRate() * this.getHour() * (1+this.getExtraFeeRate())) * this.getDiscount();
+    return (this.getBaseRate() * this.getHour() * (1 + this.getExtraFeeRate())) * this
+        .getDiscount();
   }
 
 }

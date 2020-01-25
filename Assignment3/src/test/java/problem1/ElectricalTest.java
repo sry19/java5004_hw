@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class ElectricalTest {
+
   Electrical electrical1;
   Electrical electrical2;
   Electrical electrical3;
@@ -19,21 +20,22 @@ public class ElectricalTest {
 
   @Before
   public void setUp() throws Exception {
-    electrical1 = new Electrical("225 Terry Ave.",PropertySize.SMALL,true,3,3,2,true);
-    electrical2 = new Electrical("401 Terry Ave.",PropertySize.SMALL,true,3,3,2,true);
-    electrical3 = new Electrical("225 Terry Ave.",PropertySize.MEDIUM,true,3,3,2,true);
-    electrical4 = new Electrical("225 Terry Ave.",PropertySize.SMALL,false,3,3,2,true);
-    electrical5 = new Electrical("225 Terry Ave.",PropertySize.SMALL,true,5,3,2,true);
-    electrical6 = new Electrical("225 Terry Ave.",PropertySize.SMALL,true,3,2,2,true);
-    electrical7 = new Electrical("225 Terry Ave.",PropertySize.SMALL,true,3,3,3,true);
-    electrical8 = new Electrical("225 Terry Ave.",PropertySize.SMALL,true,3,3,2,false);
-    electrical9 = new Electrical("225 Terry Ave.",PropertySize.SMALL,true,3,3,2,true);
-    cleaning = new Cleaning("225 Terry Ave.",PropertySize.SMALL,true,3,3);
+    electrical1 = new Electrical("225 Terry Ave.", PropertySize.SMALL, true, 3, 3, 2, true);
+    electrical2 = new Electrical("401 Terry Ave.", PropertySize.SMALL, true, 3, 3, 2, true);
+    electrical3 = new Electrical("225 Terry Ave.", PropertySize.MEDIUM, true, 3, 3, 2, true);
+    electrical4 = new Electrical("225 Terry Ave.", PropertySize.SMALL, false, 3, 3, 2, true);
+    electrical5 = new Electrical("225 Terry Ave.", PropertySize.SMALL, true, 5, 3, 2, true);
+    electrical6 = new Electrical("225 Terry Ave.", PropertySize.SMALL, true, 3, 2, 2, true);
+    electrical7 = new Electrical("225 Terry Ave.", PropertySize.SMALL, true, 3, 3, 3, true);
+    electrical8 = new Electrical("225 Terry Ave.", PropertySize.SMALL, true, 3, 3, 2, false);
+    electrical9 = new Electrical("225 Terry Ave.", PropertySize.SMALL, true, 3, 3, 2, true);
+    cleaning = new Cleaning("225 Terry Ave.", PropertySize.SMALL, true, 3, 3);
   }
 
   @Test(expected = EmployeeExceedException.class)
   public void invalidEmployees() {
-    Electrical electrical10 = new Electrical("225 Terry Ave.",PropertySize.SMALL,true,3,3,8,true);
+    Electrical electrical10 = new Electrical("225 Terry Ave.", PropertySize.SMALL, true, 3, 3, 8,
+        true);
   }
 
   @Test
@@ -43,12 +45,12 @@ public class ElectricalTest {
 
   @Test
   public void getEmployees() {
-    assertEquals((Integer)2,electrical1.getEmployees());
+    assertEquals((Integer) 2, electrical1.getEmployees());
   }
 
   @Test
   public void getExtraFee() {
-    assertTrue(50==electrical1.getExtraFee());
+    assertTrue(50 == electrical1.getExtraFee());
   }
 
   @Test
@@ -72,21 +74,21 @@ public class ElectricalTest {
 
   @Test
   public void testHashCode() {
-    assertEquals(electrical1.hashCode(),electrical1.hashCode());
-    assertEquals(electrical1.hashCode(),electrical9.hashCode());
-    assertNotEquals(electrical1.hashCode(),electrical2.hashCode());
-    assertNotEquals(electrical1.hashCode(),electrical3.hashCode());
-    assertNotEquals(electrical1.hashCode(),electrical4.hashCode());
-    assertNotEquals(electrical1.hashCode(),electrical5.hashCode());
-    assertNotEquals(electrical1.hashCode(),electrical6.hashCode());
-    assertNotEquals(electrical1.hashCode(),electrical7.hashCode());
-    assertNotEquals(electrical1.hashCode(),electrical8.hashCode());
+    assertEquals(electrical1.hashCode(), electrical1.hashCode());
+    assertEquals(electrical1.hashCode(), electrical9.hashCode());
+    assertNotEquals(electrical1.hashCode(), electrical2.hashCode());
+    assertNotEquals(electrical1.hashCode(), electrical3.hashCode());
+    assertNotEquals(electrical1.hashCode(), electrical4.hashCode());
+    assertNotEquals(electrical1.hashCode(), electrical5.hashCode());
+    assertNotEquals(electrical1.hashCode(), electrical6.hashCode());
+    assertNotEquals(electrical1.hashCode(), electrical7.hashCode());
+    assertNotEquals(electrical1.hashCode(), electrical8.hashCode());
   }
 
   @Test
   public void testToString() {
-    assertEquals(electrical1.toString(),electrical1.toString());
-    assertEquals(electrical1.toString(),electrical9.toString());
-    assertNotEquals(electrical1.toString(),electrical2.toString());
+    assertEquals(electrical1.toString(), electrical1.toString());
+    assertEquals(electrical1.toString(), electrical9.toString());
+    assertNotEquals(electrical1.toString(), electrical2.toString());
   }
 }

@@ -21,17 +21,17 @@ public class PlumbingTest {
 
   @Before
   public void setUp() throws Exception {
-    plumbing1 = new Plumbing("225 Terry Ave.",PropertySize.SMALL,true,3,3,2,true);
-    plumbing2 = new Plumbing("401 Terry Ave.",PropertySize.SMALL,true,3,3,2,true);
-    plumbing3 = new Plumbing("225 Terry Ave.",PropertySize.MEDIUM,true,3,3,2,true);
-    plumbing4 = new Plumbing("225 Terry Ave.",PropertySize.SMALL,false,3,3,2,true);
-    plumbing5 = new Plumbing("225 Terry Ave.",PropertySize.SMALL,true,5,3,2,true);
-    plumbing6 = new Plumbing("225 Terry Ave.",PropertySize.SMALL,true,3,2,2,true);
-    plumbing7 = new Plumbing("225 Terry Ave.",PropertySize.SMALL,true,3,3,3,true);
-    plumbing8 = new Plumbing("225 Terry Ave.",PropertySize.SMALL,true,3,3,2,false);
-    plumbing9 = new Plumbing("225 Terry Ave.",PropertySize.SMALL,true,3,3,2,true);
-    plumbing10 = new Plumbing("225 Terry Ave.",PropertySize.LARGE,true,3,3,1,true);
-    cleaning = new Cleaning("225 Terry Ave.",PropertySize.SMALL,true,3,3);
+    plumbing1 = new Plumbing("225 Terry Ave.", PropertySize.SMALL, true, 3, 3, 2, true);
+    plumbing2 = new Plumbing("401 Terry Ave.", PropertySize.SMALL, true, 3, 3, 2, true);
+    plumbing3 = new Plumbing("225 Terry Ave.", PropertySize.MEDIUM, true, 3, 3, 2, true);
+    plumbing4 = new Plumbing("225 Terry Ave.", PropertySize.SMALL, false, 3, 3, 2, true);
+    plumbing5 = new Plumbing("225 Terry Ave.", PropertySize.SMALL, true, 5, 3, 2, true);
+    plumbing6 = new Plumbing("225 Terry Ave.", PropertySize.SMALL, true, 3, 2, 2, true);
+    plumbing7 = new Plumbing("225 Terry Ave.", PropertySize.SMALL, true, 3, 3, 3, true);
+    plumbing8 = new Plumbing("225 Terry Ave.", PropertySize.SMALL, true, 3, 3, 2, false);
+    plumbing9 = new Plumbing("225 Terry Ave.", PropertySize.SMALL, true, 3, 3, 2, true);
+    plumbing10 = new Plumbing("225 Terry Ave.", PropertySize.LARGE, true, 3, 3, 1, true);
+    cleaning = new Cleaning("225 Terry Ave.", PropertySize.SMALL, true, 3, 3);
   }
 
   @Test
@@ -55,21 +55,21 @@ public class PlumbingTest {
 
   @Test
   public void testHashCode() {
-    assertEquals(plumbing1.hashCode(),plumbing1.hashCode());
-    assertEquals(plumbing1.hashCode(),plumbing9.hashCode());
-    assertNotEquals(plumbing1.hashCode(),plumbing2.hashCode());
-    assertNotEquals(plumbing1.hashCode(),plumbing3.hashCode());
-    assertNotEquals(plumbing1.hashCode(),plumbing4.hashCode());
-    assertNotEquals(plumbing1.hashCode(),plumbing5.hashCode());
-    assertNotEquals(plumbing1.hashCode(),plumbing6.hashCode());
-    assertNotEquals(plumbing1.hashCode(),plumbing7.hashCode());
-    assertNotEquals(plumbing1.hashCode(),plumbing8.hashCode());
+    assertEquals(plumbing1.hashCode(), plumbing1.hashCode());
+    assertEquals(plumbing1.hashCode(), plumbing9.hashCode());
+    assertNotEquals(plumbing1.hashCode(), plumbing2.hashCode());
+    assertNotEquals(plumbing1.hashCode(), plumbing3.hashCode());
+    assertNotEquals(plumbing1.hashCode(), plumbing4.hashCode());
+    assertNotEquals(plumbing1.hashCode(), plumbing5.hashCode());
+    assertNotEquals(plumbing1.hashCode(), plumbing6.hashCode());
+    assertNotEquals(plumbing1.hashCode(), plumbing7.hashCode());
+    assertNotEquals(plumbing1.hashCode(), plumbing8.hashCode());
   }
 
   @Test
   public void testToString() {
-    assertEquals(plumbing1.toString(),plumbing1.toString());
-    assertEquals(plumbing1.toString(),plumbing9.toString());
-    assertNotEquals(plumbing1.toString(),plumbing2.toString());
+    assertEquals(plumbing1.toString(), plumbing1.toString());
+    assertEquals(plumbing1.toString(), plumbing9.toString());
+    assertNotEquals(plumbing1.toString(), plumbing2.toString());
   }
 }

@@ -20,32 +20,32 @@ public class PaintingTest {
 
   @Before
   public void setUp() throws Exception {
-    painting1 = new Painting("225 Terry Ave.",PropertySize.SMALL,true,3,3);
-    painting2 = new Painting("225 Terry Ave.",PropertySize.SMALL,true,3,3);
-    painting3 = new Painting("225 Terry Ave.",PropertySize.MEDIUM,true,3,3);
-    painting4 = new Painting("225 Terry Ave.",PropertySize.LARGE,true,3,3);
-    painting5 = new Painting("401 Terry Ave.",PropertySize.SMALL,true,3,3);
-    painting6 = new Painting("225 Terry Ave.",PropertySize.SMALL,true,1,3);
-    painting7 = new Painting("225 Terry Ave.",PropertySize.SMALL,true,0,3);
-    painting7 = new Painting("225 Terry Ave.",PropertySize.SMALL,true,-1,-3);
-    cleaning = new Cleaning("225 Terry Ave.",PropertySize.SMALL,true,0,3);
+    painting1 = new Painting("225 Terry Ave.", PropertySize.SMALL, true, 3, 3);
+    painting2 = new Painting("225 Terry Ave.", PropertySize.SMALL, true, 3, 3);
+    painting3 = new Painting("225 Terry Ave.", PropertySize.MEDIUM, true, 3, 3);
+    painting4 = new Painting("225 Terry Ave.", PropertySize.LARGE, true, 3, 3);
+    painting5 = new Painting("401 Terry Ave.", PropertySize.SMALL, true, 3, 3);
+    painting6 = new Painting("225 Terry Ave.", PropertySize.SMALL, true, 1, 3);
+    painting7 = new Painting("225 Terry Ave.", PropertySize.SMALL, true, 0, 3);
+    painting7 = new Painting("225 Terry Ave.", PropertySize.SMALL, true, -1, -3);
+    cleaning = new Cleaning("225 Terry Ave.", PropertySize.SMALL, true, 0, 3);
   }
 
   @Test
   public void calculateExtraFeeRate() {
     painting5.calculateExtraFeeRate();
-    assertTrue(painting5.getExtraFeeRate()==0.07);
+    assertTrue(painting5.getExtraFeeRate() == 0.07);
     painting6.calculateExtraFeeRate();
-    assertTrue(painting6.getExtraFeeRate()==0.05);
+    assertTrue(painting6.getExtraFeeRate() == 0.05);
     painting7.calculateExtraFeeRate();
-    assertTrue(painting7.getExtraFeeRate()==0.0);
+    assertTrue(painting7.getExtraFeeRate() == 0.0);
   }
 
   @Test
   public void calculatePrice() {
-    assertTrue(Math.abs((Double)painting1.calculatePrice()-(Double)1232.64 )< PRECISION);
-    assertTrue(Math.abs((Double)painting3.calculatePrice()-(Double)1232.64 )< PRECISION);
-    assertTrue(Math.abs((Double)painting4.calculatePrice()-(Double)1848.96 )< PRECISION);
+    assertTrue(Math.abs((Double) painting1.calculatePrice() - (Double) 1232.64) < PRECISION);
+    assertTrue(Math.abs((Double) painting3.calculatePrice() - (Double) 1232.64) < PRECISION);
+    assertTrue(Math.abs((Double) painting4.calculatePrice() - (Double) 1848.96) < PRECISION);
   }
 
   @Test
@@ -69,25 +69,25 @@ public class PaintingTest {
 
   @Test
   public void testToString() {
-    assertEquals(painting1.toString(),painting2.toString());
-    assertEquals(painting1.toString(),painting1.toString());
-    assertNotEquals(painting1.toString(),painting3.toString());
+    assertEquals(painting1.toString(), painting2.toString());
+    assertEquals(painting1.toString(), painting1.toString());
+    assertNotEquals(painting1.toString(), painting3.toString());
   }
 
   @Test
   public void calculateHour() {
-    assertEquals((Integer)16,painting1.calculateHour());
-    assertEquals((Integer)16,painting3.calculateHour());
-    assertEquals((Integer)24,painting4.calculateHour());
+    assertEquals((Integer) 16, painting1.calculateHour());
+    assertEquals((Integer) 16, painting3.calculateHour());
+    assertEquals((Integer) 24, painting4.calculateHour());
   }
 
   @Test
   public void updateDiscount() {
     painting1.updateDiscount();
-    assertTrue(Math.abs((Double)painting1.getDiscount()-(Double)0.9 )< PRECISION);
+    assertTrue(Math.abs((Double) painting1.getDiscount() - (Double) 0.9) < PRECISION);
     painting1.setPreCarryOutTimes(9);
     painting1.updateDiscount();
-    assertTrue(Math.abs((Double)painting1.getDiscount()-(Double)0.5 )< PRECISION);
+    assertTrue(Math.abs((Double) painting1.getDiscount() - (Double) 0.5) < PRECISION);
   }
 
   @Test
@@ -103,39 +103,39 @@ public class PaintingTest {
 
   @Test
   public void getDiscount() {
-    assertTrue(Math.abs((Double)painting1.getDiscount()-(Double)1.0 )< PRECISION);
+    assertTrue(Math.abs((Double) painting1.getDiscount() - (Double) 1.0) < PRECISION);
   }
 
   @Test
   public void setDiscount() {
     painting1.setDiscount(0.8);
-    assertTrue(Math.abs((Double)painting1.getDiscount()-(Double)0.8 )< PRECISION);
+    assertTrue(Math.abs((Double) painting1.getDiscount() - (Double) 0.8) < PRECISION);
   }
 
   @Test
   public void getExtraFeeRate() {
-    assertTrue(Math.abs((Double)painting5.getExtraFeeRate()-(Double)0.07 )< PRECISION);
-    assertTrue(Math.abs((Double)painting6.getExtraFeeRate()-(Double)0.05 )< PRECISION);
-    assertTrue(Math.abs((Double)painting7.getExtraFeeRate()-(Double)0.0 )< PRECISION);
+    assertTrue(Math.abs((Double) painting5.getExtraFeeRate() - (Double) 0.07) < PRECISION);
+    assertTrue(Math.abs((Double) painting6.getExtraFeeRate() - (Double) 0.05) < PRECISION);
+    assertTrue(Math.abs((Double) painting7.getExtraFeeRate() - (Double) 0.0) < PRECISION);
   }
 
   @Test
   public void setExtraFeeRate() {
     painting1.setExtraFeeRate(0.1);
-    assertTrue(Math.abs((Double)painting1.getExtraFeeRate()-(Double)0.1 )< PRECISION);
+    assertTrue(Math.abs((Double) painting1.getExtraFeeRate() - (Double) 0.1) < PRECISION);
   }
 
   @Test
   public void getHour() {
-    assertEquals((Double)16.0,(Double)painting1.getHour());
-    assertEquals((Double)16.0,(Double)painting3.getHour());
-    assertEquals((Double)24.0,(Double)painting4.getHour());
+    assertEquals((Double) 16.0, (Double) painting1.getHour());
+    assertEquals((Double) 16.0, (Double) painting3.getHour());
+    assertEquals((Double) 24.0, (Double) painting4.getHour());
   }
 
   @Test
   public void setHour() {
     painting1.setHour(9.0);
-    assertEquals((Double)9.0,(Double)painting1.getHour());
+    assertEquals((Double) 9.0, (Double) painting1.getHour());
   }
 
   @Test
@@ -150,13 +150,13 @@ public class PaintingTest {
 
   @Test
   public void getExtraFee() {
-    assertTrue(0==painting1.getExtraFee());
+    assertTrue(0 == painting1.getExtraFee());
   }
 
   @Test
   public void setExtraFee() {
     painting1.setExtraFee(50);
-    assertTrue(50==painting1.getExtraFee());
+    assertTrue(50 == painting1.getExtraFee());
   }
 
   @Test
@@ -178,7 +178,7 @@ public class PaintingTest {
 
   @Test
   public void getSize() {
-    assertEquals(PropertySize.SMALL,painting1.getSize());
+    assertEquals(PropertySize.SMALL, painting1.getSize());
   }
 
   @Test
@@ -188,12 +188,12 @@ public class PaintingTest {
 
   @Test
   public void getPreCarryOutTimes() {
-    assertEquals((Integer)0,painting1.getPreCarryOutTimes());
+    assertEquals((Integer) 0, painting1.getPreCarryOutTimes());
   }
 
   @Test
   public void getBaseRate() {
-    assertTrue(painting1.getBaseRate()==80);
+    assertTrue(painting1.getBaseRate() == 80);
   }
 
 }

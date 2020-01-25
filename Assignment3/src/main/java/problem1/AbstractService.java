@@ -26,7 +26,8 @@ public abstract class AbstractService implements Service {
    * @param pets            the pets
    * @param floors          the floors
    */
-  public AbstractService(String address, PropertySize size, boolean carryOutMonthly, Integer pets, Integer floors) {
+  public AbstractService(String address, PropertySize size, boolean carryOutMonthly, Integer pets,
+      Integer floors) {
     this.address = address;
     this.size = size;
     this.carryOutMonthly = carryOutMonthly;
@@ -40,8 +41,7 @@ public abstract class AbstractService implements Service {
   private Integer isValidPets(Integer pets) {
     if (pets < MIN_VAL) {
       return MIN_VAL;
-    }
-    else {
+    } else {
       return pets;
     }
   }
@@ -50,8 +50,7 @@ public abstract class AbstractService implements Service {
     final Integer MIN_FLOOR = 1;
     if (floors < MIN_FLOOR) {
       return MIN_FLOOR;
-    }
-    else {
+    } else {
       return floors;
     }
   }
