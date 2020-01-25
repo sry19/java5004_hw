@@ -181,8 +181,7 @@ public class CleaningTest {
 
   @Test
   public void testToString() {
-    assertEquals(cleaning1.toString(), cleaning5.toString());
-    assertEquals(cleaning1.toString(), cleaning1.toString());
-    assertNotEquals(cleaning1.toString(), cleaning2.toString());
+    String expected = "Cleaning { Address = 225 Terry Ave., Size = SMALL, CarryOutMonthly = true, Pets = 0, Previous services = 0}";
+    assertEquals(expected, cleaning1.toString());
   }
 }

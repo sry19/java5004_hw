@@ -66,7 +66,7 @@ public class Plumbing extends AbstractSpecialistService {
   public String toString() {
     return "Plumbing { Address = " + this.getAddress() + ", Size = " + this.getSize()
         + ", CarryOutMonthly = " + this.isCarryOutMonthly() + ", Pets = " + this.getPets()
-        + "Previous services = " + this.getPreCarryOutTimes() + ", Floors = " + this.getFloors()
+        + ", Previous services = " + this.getPreCarryOutTimes() + ", Floors = " + this.getFloors()
         + ", isComplex = " + this.isComplex() + ", Employees = " + this.getEmployees() + "}";
   }
 }

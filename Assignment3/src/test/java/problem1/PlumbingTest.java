@@ -18,6 +18,7 @@ public class PlumbingTest {
   Plumbing plumbing9;
   Plumbing plumbing10;
   Cleaning cleaning;
+  final double PRECISION = 0.00001;
 
   @Before
   public void setUp() throws Exception {
@@ -36,6 +37,8 @@ public class PlumbingTest {
 
   @Test
   public void calculatePrice() {
+    assertTrue(Math.abs((Double) plumbing1.calculatePrice() - (Double) 420.0) < PRECISION);
+    assertTrue(Math.abs((Double) plumbing10.calculatePrice() - (Double) 620.0) < PRECISION);
   }
 
   @Test
@@ -68,8 +71,7 @@ public class PlumbingTest {
 
   @Test
   public void testToString() {
-    assertEquals(plumbing1.toString(), plumbing1.toString());
-    assertEquals(plumbing1.toString(), plumbing9.toString());
-    assertNotEquals(plumbing1.toString(), plumbing2.toString());
+    String expected = "Plumbing { Address = 225 Terry Ave., Size = SMALL, CarryOutMonthly = true, Pets = 3, Previous services = 0, Floors = 3, isComplex = true, Employees = 2}";
+    assertEquals(expected, plumbing1.toString());
   }
 }

@@ -72,6 +72,6 @@ public class Painting extends AbstractInterior {
   public String toString() {
     return "Painting { Address = " + this.getAddress() + ", Size = " + this.getSize()
         + ", CarryOutMonthly = " + this.isCarryOutMonthly() + ", Pets = " + this.getPets()
-        + "Previous services = " + this.getPreCarryOutTimes() + "}";
+        + ", Previous services = " + this.getPreCarryOutTimes() + "}";
   }
 }

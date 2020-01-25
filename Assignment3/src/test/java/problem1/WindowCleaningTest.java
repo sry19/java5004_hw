@@ -72,10 +72,7 @@ public class WindowCleaningTest {
 
   @Test
   public void testToString() {
-    assertEquals(windowCleaning1.toString(), windowCleaning1.toString());
-    assertEquals(windowCleaning1.toString(), windowCleaning5.toString());
-    assertNotEquals(windowCleaning1.toString(), windowCleaning4.toString());
-    assertNotEquals(windowCleaning1.toString(), windowCleaning6.toString());
-    assertNotEquals(windowCleaning1.toString(), windowCleaning7.toString());
+    String expected = "Window Cleaning { Address = 225 Terry Ave., Size = SMALL, CarryOutMonthly = true, Pets = 3, Previous services = 0, Floors = 3}";
+    assertEquals(expected, windowCleaning1.toString());
   }
 }

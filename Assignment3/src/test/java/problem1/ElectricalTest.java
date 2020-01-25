@@ -17,6 +17,7 @@ public class ElectricalTest {
   Electrical electrical8;
   Electrical electrical9;
   Cleaning cleaning;
+  final double PRECISION = 0.00001;
 
   @Before
   public void setUp() throws Exception {
@@ -55,6 +56,8 @@ public class ElectricalTest {
 
   @Test
   public void calculatePrice() {
+    assertTrue(Math.abs((Double) electrical1.calculatePrice() - (Double) 450.0) < PRECISION);
+    assertTrue(Math.abs((Double) electrical3.calculatePrice() - (Double) 450.0) < PRECISION);
   }
 
   @Test
@@ -87,8 +90,7 @@ public class ElectricalTest {
 
   @Test
   public void testToString() {
-    assertEquals(electrical1.toString(), electrical1.toString());
-    assertEquals(electrical1.toString(), electrical9.toString());
-    assertNotEquals(electrical1.toString(), electrical2.toString());
+    String expected = "Electrical { Address = 225 Terry Ave., Size = SMALL, CarryOutMonthly = true, Pets = 3, Previous services = 0, Floors = 3, isComplex = true, Employees = 2}";
+    assertEquals(expected, electrical1.toString());
   }
 }

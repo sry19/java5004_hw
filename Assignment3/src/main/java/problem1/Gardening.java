@@ -71,7 +71,7 @@ public class Gardening extends AbstractExterior {
   public String toString() {
     return "Gardening { Address = " + this.getAddress() + ", Size = " + this.getSize()
         + ", CarryOutMonthly = " + this.isCarryOutMonthly() + ", Pets = " + this.getPets()
-        + "Previous services = " + this.getPreCarryOutTimes() + ", Floors = " + this.getFloors()
+        + ", Previous services = " + this.getPreCarryOutTimes() + ", Floors = " + this.getFloors()
         + "}";
   }
 }

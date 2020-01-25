@@ -64,10 +64,7 @@ public class GardeningTest {
 
   @Test
   public void testToString() {
-    assertEquals(gardening1.toString(),gardening1.toString());
-    assertEquals(gardening1.toString(),gardening5.toString());
-    assertNotEquals(gardening1.toString(),gardening4.toString());
-    assertNotEquals(gardening1.toString(),gardening6.toString());
-    assertNotEquals(gardening1.toString(),gardening7.toString());
+    String expected = "Gardening { Address = 225 Terry Ave., Size = SMALL, CarryOutMonthly = true, Pets = 3, Previous services = 0, Floors = 3}";
+    assertEquals(expected, gardening1.toString());
   }
 }

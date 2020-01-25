@@ -80,7 +80,7 @@ public class WindowCleaning extends AbstractExterior {
   public String toString() {
     return "Window Cleaning { Address = " + this.getAddress() + ", Size = " + this.getSize()
         + ", CarryOutMonthly = " + this.isCarryOutMonthly() + ", Pets = " + this.getPets()
-        + "Previous services = " + this.getPreCarryOutTimes() + ", Floors = " + this.getFloors()
+        + ", Previous services = " + this.getPreCarryOutTimes() + ", Floors = " + this.getFloors()
         + "}";
   }
 }
