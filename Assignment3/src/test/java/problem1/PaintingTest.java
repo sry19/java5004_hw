@@ -14,6 +14,7 @@ public class PaintingTest {
   Painting painting5;
   Painting painting6;
   Painting painting7;
+  Painting painting8;
   Cleaning cleaning;
   final double PRECISION = 0.00001;
 
@@ -26,6 +27,7 @@ public class PaintingTest {
     painting5 = new Painting("401 Terry Ave.",PropertySize.SMALL,true,3,3);
     painting6 = new Painting("225 Terry Ave.",PropertySize.SMALL,true,1,3);
     painting7 = new Painting("225 Terry Ave.",PropertySize.SMALL,true,0,3);
+    painting7 = new Painting("225 Terry Ave.",PropertySize.SMALL,true,-1,-3);
     cleaning = new Cleaning("225 Terry Ave.",PropertySize.SMALL,true,0,3);
   }
 

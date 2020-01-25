@@ -31,6 +31,11 @@ public class ElectricalTest {
     cleaning = new Cleaning("225 Terry Ave.",PropertySize.SMALL,true,3,3);
   }
 
+  @Test(expected = EmployeeExceedException.class)
+  public void invalidEmployees() {
+    Electrical electrical10 = new Electrical("225 Terry Ave.",PropertySize.SMALL,true,3,3,8,true);
+  }
+
   @Test
   public void isComplex() {
     assertTrue(electrical1.isComplex());
@@ -43,6 +48,7 @@ public class ElectricalTest {
 
   @Test
   public void getExtraFee() {
+    assertTrue(50==electrical1.getExtraFee());
   }
 
   @Test
