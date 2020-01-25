@@ -10,6 +10,6 @@ public interface Service {
    *
    * @return the price of the service
    */
-  public double calculatePrice();
+  double calculatePrice();
 
 }

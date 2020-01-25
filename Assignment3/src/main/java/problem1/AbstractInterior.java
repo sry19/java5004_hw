@@ -1,5 +1,7 @@
 package problem1;
 
+import java.util.Objects;
+
 /**
  * The type Abstract interior.
  */
@@ -48,4 +50,5 @@ public abstract class AbstractInterior extends AbstractBasicService{
     this.updateDiscount();
     return (this.getBaseRate() * this.getHour() * (1+this.getExtraFeeRate())) * this.getDiscount();
   }
+
 }

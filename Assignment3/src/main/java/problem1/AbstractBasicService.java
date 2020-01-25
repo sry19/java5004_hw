@@ -1,9 +1,11 @@
 package problem1;
 
+import java.util.Objects;
+
 /**
  * The type Abstract basic service.
  */
-public abstract class AbstractBasicService extends AbstractService implements BasicService{
+public abstract class AbstractBasicService extends AbstractService implements BasicService {
 
   private static final Integer BASE_RATE = 80;
   private static final double INI_VAL = 0;
@@ -23,28 +25,28 @@ public abstract class AbstractBasicService extends AbstractService implements Ba
    * @param pets            the pets
    * @param floors          the floors
    */
-  public AbstractBasicService(String address, PropertySize size, boolean carryOutMonthly, Integer pets, Integer floors) {
+  public AbstractBasicService(String address, PropertySize size, boolean carryOutMonthly,
+      Integer pets, Integer floors) {
     super(address, size, carryOutMonthly, pets, floors);
     this.setBaseRate(BASE_RATE);
     this.discount = ORI_DISCOUNT;
     this.extraFeeRate = INI_VAL;
     this.baseFee = INI_VAL;
-    this.hour = this.calculateHour(size);
+    this.hour = this.calculateHour();
   }
 
   /**
    * calculates the hours needed
    *
-   * @param size property size
    * @return the hours needed
    */
   @Override
-  public Integer calculateHour(PropertySize size) {
+  public Integer calculateHour() {
     final Integer S_ONE_HOUR = 1;
     final Integer M_TWO_HOUR = 2;
     final Integer L_FOUR_HOUR = 4;
 
-    switch (size) {
+    switch (this.getSize()) {
       case SMALL:
         return S_ONE_HOUR;
       case MEDIUM:
@@ -65,8 +67,7 @@ public abstract class AbstractBasicService extends AbstractService implements Ba
 
     if (this.getPreCarryOutTimes() % TEN_TH_SERVICE == TEN_TH_SERVICE - 1) {
       this.discount = TEN_TH_DISCOUNT;
-    }
-    else if (isCarryOutMonthly()) {
+    } else if (isCarryOutMonthly()) {
       this.discount = MONTHLY_DISCOUNT;
     }
   }
@@ -142,4 +143,5 @@ public abstract class AbstractBasicService extends AbstractService implements Ba
   public void setHour(double hour) {
     this.hour = hour;
   }
+
 }
