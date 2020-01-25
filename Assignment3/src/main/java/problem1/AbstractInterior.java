@@ -28,15 +28,18 @@ public abstract class AbstractInterior extends AbstractBasicService {
    */
   @Override
   public void calculateExtraFeeRate() {
+    final double LESS_FEE_RATE = 0.05;
+    final double MORE_FEE_RATE = 0.07;
+
     switch (this.getPets()) {
       case 0:
         break;
       case 1:
       case 2:
-        this.setExtraFeeRate(0.05);
+        this.setExtraFeeRate(LESS_FEE_RATE);
         break;
       default:
-        this.setExtraFeeRate(0.07);
+        this.setExtraFeeRate(MORE_FEE_RATE);
     }
   }
 

@@ -46,7 +46,8 @@ public class WindowCleaning extends AbstractExterior {
   @Override
   public void calculateExtraFeeRate() {
     final double EXTRA_FLOOR_FEE_RATE = 0.05;
-    if (this.getFloors() > 1) {
+    final Integer MIN_FLOOR = 1;
+    if (this.getFloors() > MIN_FLOOR) {
       this.setExtraFeeRate(EXTRA_FLOOR_FEE_RATE);
     }
   }
