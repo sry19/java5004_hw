@@ -27,7 +27,7 @@ public class PaintingTest {
     painting5 = new Painting("401 Terry Ave.", PropertySize.SMALL, true, 3, 3);
     painting6 = new Painting("225 Terry Ave.", PropertySize.SMALL, true, 1, 3);
     painting7 = new Painting("225 Terry Ave.", PropertySize.SMALL, true, 0, 3);
-    painting7 = new Painting("225 Terry Ave.", PropertySize.SMALL, true, -1, -3);
+    painting8 = new Painting("225 Terry Ave.", PropertySize.SMALL, true, -1, -3);
     cleaning = new Cleaning("225 Terry Ave.", PropertySize.SMALL, true, 0, 3);
   }
 
