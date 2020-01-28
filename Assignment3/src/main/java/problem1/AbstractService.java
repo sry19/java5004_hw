@@ -183,5 +183,4 @@ public abstract class AbstractService implements Service {
         + ", Previous services = " + this.getPreCarryOutTimes() + ", Floors = " + this.getFloors()
         + "}";
   }
-
 }
