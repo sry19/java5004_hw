@@ -30,12 +30,15 @@ public abstract class AbstractInterior extends AbstractBasicService {
   public void calculateExtraFeeRate() {
     final double LESS_FEE_RATE = 0.05;
     final double MORE_FEE_RATE = 0.07;
+    final int ZERO = 0;
+    final int ONE = 1;
+    final int TWO = 2;
 
-    switch (this.getPets()) {
-      case 0:
+    switch ((int)this.getPets()) {
+      case ZERO:
         break;
-      case 1:
-      case 2:
+      case ONE:
+      case TWO:
         this.setExtraFeeRate(LESS_FEE_RATE);
         break;
       default:
@@ -53,16 +56,6 @@ public abstract class AbstractInterior extends AbstractBasicService {
     this.updateDiscount();
     return (this.getBaseRate() * this.getHour() * (1 + this.getExtraFeeRate())) * this
         .getDiscount();
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    return super.equals(o);
-  }
-
-  @Override
-  public int hashCode() {
-    return super.hashCode();
   }
 
   @Override
