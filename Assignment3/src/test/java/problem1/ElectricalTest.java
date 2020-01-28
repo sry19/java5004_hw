@@ -16,6 +16,7 @@ public class ElectricalTest {
   Electrical electrical7;
   Electrical electrical8;
   Electrical electrical9;
+  Electrical electrical10;
   Cleaning cleaning;
   final double PRECISION = 0.00001;
 
@@ -30,6 +31,7 @@ public class ElectricalTest {
     electrical7 = new Electrical("225 Terry Ave.", PropertySize.SMALL, true, 3, 3, 3, true);
     electrical8 = new Electrical("225 Terry Ave.", PropertySize.SMALL, true, 3, 3, 2, false);
     electrical9 = new Electrical("225 Terry Ave.", PropertySize.SMALL, true, 3, 3, 2, true);
+    electrical10 = new Electrical("225 Terry Ave.", PropertySize.SMALL, true, 3, 3, 0, false);
     cleaning = new Cleaning("225 Terry Ave.", PropertySize.SMALL, true, 3, 3);
   }
 
@@ -90,7 +92,7 @@ public class ElectricalTest {
 
   @Test
   public void testToString() {
-    String expected = "Electrical { Address = 225 Terry Ave., Size = SMALL, CarryOutMonthly = true, Pets = 3, Previous services = 0, Floors = 3, isComplex = true, Employees = 2}";
+    String expected = "Electrical {Specialist Service {Service { Address = 225 Terry Ave., Size = SMALL, CarryOutMonthly = true, Pets = 3, Previous services = 0, Floors = 3}, isComplex = true, Employees = 2}}";
     assertEquals(expected, electrical1.toString());
   }
 }

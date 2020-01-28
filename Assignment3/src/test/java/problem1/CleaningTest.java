@@ -181,7 +181,7 @@ public class CleaningTest {
 
   @Test
   public void testToString() {
-    String expected = "Cleaning { Address = 225 Terry Ave., Size = SMALL, CarryOutMonthly = true, Pets = 0, Previous services = 0}";
+    String expected = "Cleaning {Interior {Basic Service {Service { Address = 225 Terry Ave., Size = SMALL, CarryOutMonthly = true, Pets = 0, Previous services = 0, Floors = 3}}}}";
     assertEquals(expected, cleaning1.toString());
   }
 }

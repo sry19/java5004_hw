@@ -45,33 +45,16 @@ public class Gardening extends AbstractExterior {
 
   @Override
   public boolean equals(Object o) {
-    if (this == o) {
-      return true;
-    }
-    if (o == null || o.getClass() != this.getClass()) {
-      return false;
-    }
-    Gardening gardening = (Gardening) o;
-    return (this.getAddress() == gardening.getAddress()
-        && this.getSize() == gardening.getSize()
-        && this.isCarryOutMonthly() == gardening.isCarryOutMonthly()
-        && this.getPets() == gardening.getPets()
-        && this.getPreCarryOutTimes() == gardening
-        .getPreCarryOutTimes() && this.getFloors() == gardening.getFloors());
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects
-        .hash(this.getAddress(), this.getSize(), this.isCarryOutMonthly(), this.getPets(),
-            this.getPreCarryOutTimes(), this.getFloors());
+    return super.hashCode();
   }
 
   @Override
   public String toString() {
-    return "Gardening { Address = " + this.getAddress() + ", Size = " + this.getSize()
-        + ", CarryOutMonthly = " + this.isCarryOutMonthly() + ", Pets = " + this.getPets()
-        + ", Previous services = " + this.getPreCarryOutTimes() + ", Floors = " + this.getFloors()
-        + "}";
+    return "Gardening {" + super.toString() + "}";
   }
 }

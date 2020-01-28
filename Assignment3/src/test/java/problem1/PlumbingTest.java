@@ -71,7 +71,7 @@ public class PlumbingTest {
 
   @Test
   public void testToString() {
-    String expected = "Plumbing { Address = 225 Terry Ave., Size = SMALL, CarryOutMonthly = true, Pets = 3, Previous services = 0, Floors = 3, isComplex = true, Employees = 2}";
+    String expected = "Plumbing {Specialist Service {Service { Address = 225 Terry Ave., Size = SMALL, CarryOutMonthly = true, Pets = 3, Previous services = 0, Floors = 3}, isComplex = true, Employees = 2}}";
     assertEquals(expected, plumbing1.toString());
   }
 }

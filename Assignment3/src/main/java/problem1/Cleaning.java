@@ -23,30 +23,16 @@ public class Cleaning extends AbstractInterior {
 
   @Override
   public boolean equals(Object o) {
-    if (this == o) {
-      return true;
-    }
-    if (o == null || o.getClass() != this.getClass()) {
-      return false;
-    }
-    Cleaning cleaning = (Cleaning) o;
-    return (this.getAddress() == cleaning.getAddress() && this.getSize() == cleaning.getSize()
-        && this.isCarryOutMonthly() == cleaning.isCarryOutMonthly()
-        && this.getPets() == cleaning.getPets() && this.getPreCarryOutTimes() == cleaning
-        .getPreCarryOutTimes());
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects
-        .hash(this.getAddress(), this.getSize(), this.isCarryOutMonthly(), this.getPets(),
-            this.getPreCarryOutTimes());
+    return super.hashCode();
   }
 
   @Override
   public String toString() {
-    return "Cleaning { Address = " + this.getAddress() + ", Size = " + this.getSize()
-        + ", CarryOutMonthly = " + this.isCarryOutMonthly() + ", Pets = " + this.getPets()
-        + ", Previous services = " + this.getPreCarryOutTimes() + "}";
+    return "Cleaning {" + super.toString() + "}";
   }
 }

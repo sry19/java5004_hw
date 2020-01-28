@@ -154,4 +154,34 @@ public abstract class AbstractService implements Service {
     return this.baseRate;
   }
 
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || o.getClass() != this.getClass()) {
+      return false;
+    }
+    AbstractService service = (AbstractService) o;
+    return (this.getAddress() == service.getAddress() && this.getSize() == service.getSize()
+        && this.isCarryOutMonthly() == service.isCarryOutMonthly()
+        && this.getPets() == service.getPets() && this.getPreCarryOutTimes() == service
+        .getPreCarryOutTimes() && this.getFloors() == service.getFloors());
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects
+        .hash(this.getAddress(), this.getSize(), this.isCarryOutMonthly(), this.getPets(),
+            this.getPreCarryOutTimes(), this.getFloors());
+  }
+
+  @Override
+  public String toString() {
+    return "Service { Address = " + this.getAddress() + ", Size = " + this.getSize()
+        + ", CarryOutMonthly = " + this.isCarryOutMonthly() + ", Pets = " + this.getPets()
+        + ", Previous services = " + this.getPreCarryOutTimes() + ", Floors = " + this.getFloors()
+        + "}";
+  }
+
 }

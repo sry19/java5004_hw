@@ -44,35 +44,17 @@ public class Electrical extends AbstractSpecialistService {
 
   @Override
   public boolean equals(Object o) {
-    if (this == o) {
-      return true;
-    }
-    if (o == null || o.getClass() != this.getClass()) {
-      return false;
-    }
-    Electrical electrical = (Electrical) o;
-    return (this.getAddress() == electrical.getAddress()
-        && this.getSize() == electrical.getSize()
-        && this.isCarryOutMonthly() == electrical.isCarryOutMonthly()
-        && this.getPets() == electrical.getPets()
-        && this.getPreCarryOutTimes() == electrical
-        .getPreCarryOutTimes() && this.getFloors() == electrical.getFloors()
-        && this.getEmployees() == electrical.getEmployees() && this.isComplex() == electrical
-        .isComplex());
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects
-        .hash(this.getAddress(), this.getSize(), this.isCarryOutMonthly(), this.getPets(),
-            this.getPreCarryOutTimes(), this.getFloors(), this.isComplex(), this.getEmployees());
+    return super.hashCode();
   }
 
   @Override
   public String toString() {
-    return "Electrical { Address = " + this.getAddress() + ", Size = " + this.getSize()
-        + ", CarryOutMonthly = " + this.isCarryOutMonthly() + ", Pets = " + this.getPets()
-        + ", Previous services = " + this.getPreCarryOutTimes() + ", Floors = " + this.getFloors()
-        + ", isComplex = " + this.isComplex() + ", Employees = " + this.getEmployees() + "}";
+    return "Electrical {" + super.toString() + "}";
   }
+
 }

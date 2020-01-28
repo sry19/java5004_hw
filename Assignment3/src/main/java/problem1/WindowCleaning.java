@@ -54,33 +54,16 @@ public class WindowCleaning extends AbstractExterior {
 
   @Override
   public boolean equals(Object o) {
-    if (this == o) {
-      return true;
-    }
-    if (o == null || o.getClass() != this.getClass()) {
-      return false;
-    }
-    WindowCleaning windowCleaning = (WindowCleaning) o;
-    return (this.getAddress() == windowCleaning.getAddress()
-        && this.getSize() == windowCleaning.getSize()
-        && this.isCarryOutMonthly() == windowCleaning.isCarryOutMonthly()
-        && this.getPets() == windowCleaning.getPets()
-        && this.getPreCarryOutTimes() == windowCleaning
-        .getPreCarryOutTimes() && this.getFloors() == windowCleaning.getFloors());
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects
-        .hash(this.getAddress(), this.getSize(), this.isCarryOutMonthly(), this.getPets(),
-            this.getPreCarryOutTimes(), this.getFloors());
+    return super.hashCode();
   }
 
   @Override
   public String toString() {
-    return "Window Cleaning { Address = " + this.getAddress() + ", Size = " + this.getSize()
-        + ", CarryOutMonthly = " + this.isCarryOutMonthly() + ", Pets = " + this.getPets()
-        + ", Previous services = " + this.getPreCarryOutTimes() + ", Floors = " + this.getFloors()
-        + "}";
+    return "Window Cleaning {" + super.toString() + "}";
   }
 }

@@ -48,30 +48,16 @@ public class Painting extends AbstractInterior {
 
   @Override
   public boolean equals(Object o) {
-    if (this == o) {
-      return true;
-    }
-    if (o == null || o.getClass() != this.getClass()) {
-      return false;
-    }
-    Painting painting = (Painting) o;
-    return (this.getAddress() == painting.getAddress() && this.getSize() == painting.getSize()
-        && this.isCarryOutMonthly() == painting.isCarryOutMonthly()
-        && this.getPets() == painting.getPets() && this.getPreCarryOutTimes() == painting
-        .getPreCarryOutTimes());
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects
-        .hash(this.getAddress(), this.getSize(), this.isCarryOutMonthly(), this.getPets(),
-            this.getPreCarryOutTimes());
+    return super.hashCode();
   }
 
   @Override
   public String toString() {
-    return "Painting { Address = " + this.getAddress() + ", Size = " + this.getSize()
-        + ", CarryOutMonthly = " + this.isCarryOutMonthly() + ", Pets = " + this.getPets()
-        + ", Previous services = " + this.getPreCarryOutTimes() + "}";
+    return "Painting {" + super.toString() + "}";
   }
 }

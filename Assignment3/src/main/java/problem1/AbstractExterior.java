@@ -21,4 +21,19 @@ public abstract class AbstractExterior extends AbstractBasicService {
     super(address, size, carryOutMonthly, pets, floors);
   }
 
+  @Override
+  public boolean equals(Object o) {
+    return super.equals(o);
+  }
+
+  @Override
+  public int hashCode() {
+    return super.hashCode();
+  }
+
+  @Override
+  public String toString() {
+    return "Exterior {" + super.toString() + "}";
+  }
+
 }
