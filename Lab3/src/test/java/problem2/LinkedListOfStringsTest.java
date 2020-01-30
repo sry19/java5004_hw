@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-public class ListOfStringsTest {
+public class LinkedListOfStringsTest {
 
   @Before
   public void setUp() throws Exception {
@@ -16,15 +16,7 @@ public class ListOfStringsTest {
   }
 
   @Test
-  public void add() {
-  }
-
-  @Test
-  public void insert() {
-  }
-
-  @Test
-  public void get() {
+  public void isEmpty() {
   }
 
   @Test
@@ -32,11 +24,23 @@ public class ListOfStringsTest {
   }
 
   @Test
-  public void filter() {
+  public void contains() {
   }
 
   @Test
-  public void reverse() {
+  public void containsAll() {
+  }
+
+  @Test
+  public void filterLargerThan() {
+  }
+
+  @Test
+  public void hasDuplicates() {
+  }
+
+  @Test
+  public void removeDuplicates() {
   }
 
   @Test
@@ -45,5 +49,9 @@ public class ListOfStringsTest {
 
   @Test
   public void testHashCode() {
+  }
+
+  @Test
+  public void testToString() {
   }
 }
