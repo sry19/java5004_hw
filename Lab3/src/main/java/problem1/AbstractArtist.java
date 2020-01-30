@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * The type Abstract artist.
  */
-public class AbstractArtist implements Artist {
+public abstract class AbstractArtist implements Artist {
   private Name name;
   private Integer age;
   private String[] genre;

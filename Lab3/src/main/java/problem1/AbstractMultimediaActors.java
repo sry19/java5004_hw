@@ -3,7 +3,7 @@ package problem1;
 /**
  * The type Abstract multimedia actors.
  */
-public class AbstractMultimediaActors extends AbstractArtist{
+public abstract class AbstractMultimediaActors extends AbstractArtist{
 
   private String[] movies;
   private String[] series;

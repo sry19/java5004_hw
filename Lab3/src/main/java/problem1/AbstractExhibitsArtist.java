@@ -3,7 +3,7 @@ package problem1;
 /**
  * The type Abstract exhibits artist.
  */
-public class AbstractExhibitsArtist extends AbstractArtist{
+public abstract class AbstractExhibitsArtist extends AbstractArtist{
 
   private String[] exhibits;
 
