@@ -18,24 +18,44 @@ public class SetTest {
 
   @Before
   public void setUp() throws Exception {
-    Integer[] arr1 = {};
-    set1 = new Set(arr1, 0);
-    Integer[] arr2 = {3, 4};
-    set2 = new Set(arr2, 2);
-    Integer[] arr5 = {3, 4, 5};
-    set5 = new Set(arr5, 3);
-    Integer[] arr6 = {4, 3, 5};
-    set6 = new Set(arr6, 3);
-    Integer[] arr7 = {4, 3, 8};
-    set7 = new Set(arr7, 3);
-    Integer[] arr8 = {8,0,4};
-    set8 = new Set(arr8, 3);
+    set1 = new Set();
+
+    set2 = new Set();
+    set2 = set2.add(3);
+    set2 = set2.add(4);
+
+    set5 = new Set();
+    set5 = set5.add(3);
+    set5 = set5.add(4);
+    set5 = set5.add(5);
+
+    set6 = new Set();
+    set6 = set6.add(4);
+    set6 = set6.add(3);
+    set6 = set6.add(5);
+
+    set7 = new Set();
+    set7 = set7.add(4);
+    set7 = set7.add(3);
+    set7 = set7.add(8);
+
+    set8 = new Set();
+    set8 = set8.add(8);
+    set8 = set8.add(0);
+    set8 = set8.add(4);
   }
 
   @Test
+  public void getSet() {
+    Set s = new Set();
+    s = s.add(3);
+    s = s.add(4);
+    Integer[] a = {3,4};
+    assertArrayEquals(a,s.getSet());
+  }
+  @Test
   public void emptySet() {
-    Integer[] arr = {};
-    Set tSet = new Set(arr, 0);
+    Set tSet = new Set();
     assertTrue(set2.emptySet().equals(tSet));
   }
 
@@ -47,8 +67,10 @@ public class SetTest {
 
   @Test
   public void add() {
-    Integer[] tArr = {3, 8, 4};
-    Set tSet = new Set(tArr, 3);
+    Set tSet = new Set();
+    tSet = tSet.add(3);
+    tSet = tSet.add(8);
+    tSet = tSet.add(4);
     Set newSet = set2.add(8);
     assertEquals(newSet, tSet);
     assertEquals(set2.add(4),set2);
@@ -62,12 +84,17 @@ public class SetTest {
 
   @Test
   public void remove() {
-    Integer[] arr4 = {3};
-    Set set4 = new Set(arr4, 1);
-    Integer[] arr7 = {4};
-    Set set7 = new Set(arr7, 1);
-    Integer[] arr9 = {4, 3, 8,0};
-    Set set9 = new Set(arr9, 4);
+    Set set4 = new Set();
+    set4 = set4.add(3);
+
+    Set set7 = new Set();
+    set7 = set7.add(4);
+
+    Set set9 = new Set();
+    set9 = set9.add(4);
+    set9 = set9.add(3);
+    set9 = set9.add(8);
+    set9 = set9.add(0);
     assertTrue(set2.remove(4).equals(set4));
     assertTrue(set2.remove(7).equals(set2));
     assertTrue(set2.remove(3).equals(set7));

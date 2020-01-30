@@ -3,13 +3,37 @@ package problem2;
 import java.util.Arrays;
 import java.util.Objects;
 
+/**
+ * The type Set.
+ */
 public class Set implements ISet {
 
   private Integer[] set;
   private Integer size;
 
-  public Set(Integer[] set, int size) {
+  /**
+   * Instantiates a new Set.
+   */
+  public Set() {
+    Integer[] arr = {};
+    this.set = arr;
+    this.size = 0;
+  }
+
+  /**
+   * Get set integer [ ].
+   *
+   * @return the integer [ ]
+   */
+  public Integer[] getSet() {
+    return this.set;
+  }
+
+  private void setSet(Integer[] set) {
     this.set = set;
+  }
+
+  private void setSize(Integer size) {
     this.size = size;
   }
 
@@ -21,7 +45,7 @@ public class Set implements ISet {
   @Override
   public Set emptySet() {
     Integer[] empty = {};
-    Set newSet = new Set(empty, 0);
+    Set newSet = new Set();
     return newSet;
   }
 
@@ -46,13 +70,17 @@ public class Set implements ISet {
    */
   @Override
   public Set add(Integer n) {
-    if (this.contains(n)){return this;}
+    if (this.contains(n)) {
+      return this;
+    }
     Integer[] newArray = new Integer[this.size + 1];
     for (int i = 0; i < this.size; i++) {
       newArray[i] = this.set[i];
     }
     newArray[this.size] = n;
-    Set newSet = new Set(newArray, this.size + 1);
+    Set newSet = new Set();
+    newSet.setSize(this.size + 1);
+    newSet.setSet(newArray);
     return newSet;
   }
 
@@ -88,7 +116,10 @@ public class Set implements ISet {
           for (int j = i; j < this.size - 1; j++) {
             newArray[j] = this.set[j + 1];
           }
-          return new Set(newArray, this.size - 1);
+          Set newSet = new Set();
+          newSet.setSet(newArray);
+          newSet.setSize(this.size - 1);
+          return newSet;
         } else {
           newArray[i] = this.set[i];
         }
