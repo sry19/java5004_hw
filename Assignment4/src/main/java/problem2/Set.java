@@ -29,10 +29,20 @@ public class Set implements ISet {
     return this.set;
   }
 
+  /**
+   * sets the set
+   *
+   * @param set
+   */
   private void setSet(Integer[] set) {
     this.set = set;
   }
 
+  /**
+   * sets the size of the set
+   *
+   * @param size
+   */
   private void setSize(Integer size) {
     this.size = size;
   }

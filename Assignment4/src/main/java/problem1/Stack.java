@@ -2,10 +2,17 @@ package problem1;
 
 import java.util.EmptyStackException;
 
-public class Stack implements IStack{
+/**
+ * The type Stack.
+ */
+public class Stack implements IStack {
+
   private Integer size;
   private Integer[] arr;
 
+  /**
+   * Instantiates a new Stack.
+   */
   public Stack() {
     Integer[] a = {};
     this.arr = a;
@@ -20,8 +27,8 @@ public class Stack implements IStack{
    */
   @Override
   public void push(Integer item) {
-    Integer[] n = new Integer[this.size+1];
-    for (int i=0;i<this.size;i++) {
+    Integer[] n = new Integer[this.size + 1];
+    for (int i = 0; i < this.size; i++) {
       n[i] = this.arr[i];
     }
     n[this.size] = item;
@@ -41,9 +48,9 @@ public class Stack implements IStack{
     if (this.size == 0) {
       throw new EmptyStackException();
     }
-    Integer[] n = new Integer[this.size-1];
-    Integer tmp = this.arr[this.size-1];
-    for(int i=0;i<this.size-1;i++){
+    Integer[] n = new Integer[this.size - 1];
+    Integer tmp = this.arr[this.size - 1];
+    for (int i = 0; i < this.size - 1; i++) {
       n[i] = this.arr[i];
     }
     this.arr = n;
@@ -60,10 +67,10 @@ public class Stack implements IStack{
    */
   @Override
   public Integer top() throws EmptyStackException {
-    if (this.size==0) {
+    if (this.size == 0) {
       throw new EmptyStackException();
     }
-    return this.arr[this.size-1];
+    return this.arr[this.size - 1];
   }
 
   /**
@@ -73,7 +80,7 @@ public class Stack implements IStack{
    */
   @Override
   public boolean isEmpty() {
-    if (this.size == 0){
+    if (this.size == 0) {
       return true;
     }
     return false;

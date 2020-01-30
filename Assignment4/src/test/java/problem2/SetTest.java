@@ -14,7 +14,7 @@ public class SetTest {
   Set set6;
   Set set7;
   Set set8;
-  Integer[] arr = {3,4,5};
+  Integer[] arr = {3, 4, 5};
 
   @Before
   public void setUp() throws Exception {
@@ -50,9 +50,10 @@ public class SetTest {
     Set s = new Set();
     s = s.add(3);
     s = s.add(4);
-    Integer[] a = {3,4};
-    assertArrayEquals(a,s.getSet());
+    Integer[] a = {3, 4};
+    assertArrayEquals(a, s.getSet());
   }
+
   @Test
   public void emptySet() {
     Set tSet = new Set();
@@ -73,7 +74,7 @@ public class SetTest {
     tSet = tSet.add(4);
     Set newSet = set2.add(8);
     assertEquals(newSet, tSet);
-    assertEquals(set2.add(4),set2);
+    assertEquals(set2.add(4), set2);
   }
 
   @Test

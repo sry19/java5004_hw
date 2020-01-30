@@ -1,10 +1,16 @@
 package problem1;
 
-public class Queue implements IQueue{
+/**
+ * The type Queue.
+ */
+public class Queue implements IQueue {
 
   private Integer size;
   private Integer[] arr;
 
+  /**
+   * Instantiates a new Queue.
+   */
   public Queue() {
     Integer[] a = {};
     this.size = 0;
@@ -18,8 +24,8 @@ public class Queue implements IQueue{
    */
   @Override
   public void enqueue(Integer item) {
-    Integer[] n = new Integer[this.size+1];
-    for(int i=0;i<this.size;i++) {
+    Integer[] n = new Integer[this.size + 1];
+    for (int i = 0; i < this.size; i++) {
       n[i] = this.arr[i];
     }
     n[this.size] = item;
@@ -35,13 +41,13 @@ public class Queue implements IQueue{
    */
   @Override
   public Integer dequeue() throws EmptyQueueException {
-    if (this.size==0) {
+    if (this.size == 0) {
       throw new EmptyQueueException();
     }
     Integer tmp = this.arr[0];
-    Integer[] n = new Integer[this.size-1];
-    for (int i =0;i<this.size-1;i++) {
-      n[i] = this.arr[i+1];
+    Integer[] n = new Integer[this.size - 1];
+    for (int i = 0; i < this.size - 1; i++) {
+      n[i] = this.arr[i + 1];
     }
     this.arr = n;
     this.size -= 1;
@@ -56,7 +62,7 @@ public class Queue implements IQueue{
    */
   @Override
   public Integer front() throws EmptyQueueException {
-    if (this.size==0) {
+    if (this.size == 0) {
       throw new EmptyQueueException();
     }
     return this.arr[0];

@@ -8,44 +8,43 @@ import org.junit.Test;
 
 public class IStackTest {
 
-  Stack stack1;
+  IStack stack1;
 
   @Before
   public void setUp() throws Exception {
-    stack1 = new Stack();
   }
 
   @Test
   public void push() {
     stack1.push(3);
-    assertEquals((Integer)3,stack1.top());
+    assertEquals((Integer) 3, stack1.top());
     stack1.push(2);
-    assertEquals((Integer)2, stack1.top());
+    assertEquals((Integer) 2, stack1.top());
   }
 
   @Test
-  public void pop() throws EmptyStackException{
+  public void pop() throws EmptyStackException {
     stack1.push(3);
     stack1.push(4);
     stack1.push(5);
     stack1.push(6);
-    assertEquals((Integer)6, stack1.pop());
-    assertEquals((Integer)5, stack1.pop());
+    assertEquals((Integer) 6, stack1.pop());
+    assertEquals((Integer) 5, stack1.pop());
   }
 
   @Test(expected = EmptyStackException.class)
-  public void invalidPop() throws EmptyStackException{
+  public void invalidPop() throws EmptyStackException {
     stack1.pop();
   }
 
   @Test
-  public void top() throws EmptyStackException{
+  public void top() throws EmptyStackException {
     stack1.push(4);
-    assertEquals((Integer)4, stack1.top());
+    assertEquals((Integer) 4, stack1.top());
   }
 
   @Test(expected = EmptyStackException.class)
-  public void invalidTop() throws EmptyStackException{
+  public void invalidTop() throws EmptyStackException {
     stack1.top();
   }
 
