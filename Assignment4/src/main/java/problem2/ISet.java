@@ -22,7 +22,7 @@ public interface ISet {
    * @param n an Integer
    * @return a set
    */
-  Set add(Integer n)​;
+  Set add(Integer n);
 
   /**
    * checks if there exists an Integer in the set
@@ -30,7 +30,7 @@ public interface ISet {
    * @param n an Integer
    * @return true if the given Integer is in the Set, false otherwise.
    */
-  Boolean contains(Integer n)​;
+  Boolean contains(Integer n);
 
   /**
    * removes an Integer from the set
@@ -39,7 +39,7 @@ public interface ISet {
    * @return Returns a copy of the Set with the given Integer removed. If the given Integer is not
    * in the Set, returns the Set as is.
    */
-  Set remove(Integer n)​
+  Set remove(Integer n);
 
   /**
    * Gets the number of items in the Set

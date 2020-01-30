@@ -1,8 +1,12 @@
 package problem2;
 
-public class Set implements ISet{
+import java.util.Arrays;
+import java.util.Objects;
+
+public class Set implements ISet {
+
   private Integer[] set;
-  private int size;
+  private Integer size;
 
   public Set(Integer[] set, int size) {
     this.set = set;
@@ -17,7 +21,7 @@ public class Set implements ISet{
   @Override
   public Set emptySet() {
     Integer[] empty = {};
-    Set newSet = new Set(empty,0);
+    Set newSet = new Set(empty, 0);
     return newSet;
   }
 
@@ -28,7 +32,10 @@ public class Set implements ISet{
    */
   @Override
   public Boolean isEmpty() {
-    return null;
+    if (this.size == 0) {
+      return true;
+    }
+    return false;
   }
 
   /**
@@ -39,7 +46,14 @@ public class Set implements ISet{
    */
   @Override
   public Set add(Integer n) {
-    return null;
+    if (this.contains(n)){return this;}
+    Integer[] newArray = new Integer[this.size + 1];
+    for (int i = 0; i < this.size; i++) {
+      newArray[i] = this.set[i];
+    }
+    newArray[this.size] = n;
+    Set newSet = new Set(newArray, this.size + 1);
+    return newSet;
   }
 
   /**
@@ -50,7 +64,12 @@ public class Set implements ISet{
    */
   @Override
   public Boolean contains(Integer n) {
-    return null;
+    for (int i = 0; i < this.size; i++) {
+      if (n == this.set[i]) {
+        return true;
+      }
+    }
+    return false;
   }
 
   /**
@@ -62,7 +81,20 @@ public class Set implements ISet{
    */
   @Override
   public Set remove(Integer n) {
-    return null;
+    if (this.contains(n)) {
+      Integer[] newArray = new Integer[this.size - 1];
+      for (int i = 0; i < this.size; i++) {
+        if (n == this.set[i]) {
+          for (int j = i; j < this.size - 1; j++) {
+            newArray[j] = this.set[j + 1];
+          }
+          return new Set(newArray, this.size - 1);
+        } else {
+          newArray[i] = this.set[i];
+        }
+      }
+    }
+    return this;
   }
 
   /**
@@ -72,6 +104,46 @@ public class Set implements ISet{
    */
   @Override
   public Integer size() {
-    return null;
+    return this.size;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+
+    Set set1 = (Set) o;
+
+    if (!size.equals(set1.size)) {
+      return false;
+    }
+    for (int i = 0; i < this.size; i++) {
+      if (!this.contains(set1.set[i])) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  @Override
+  public int hashCode() {
+    int result = Objects.hash(size);
+    result = 31 * result;
+    for (int i = 0; i < this.size; i++) {
+      result += Objects.hash(this.set[i]);
+    }
+    return result;
+  }
+
+  @Override
+  public String toString() {
+    return "Set{" +
+        "set=" + Arrays.toString(set) +
+        ", size=" + size +
+        '}';
   }
 }
