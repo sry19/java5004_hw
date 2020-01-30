@@ -1,18 +1,37 @@
 package problem1;
 
+/**
+ * The type Name.
+ */
 public class Name {
     private String firstName;
     private String lastName;
 
-    public Name(String firstName, String lastName) {
+  /**
+   * Instantiates a new Name.
+   *
+   * @param firstName the first name
+   * @param lastName  the last name
+   */
+  public Name(String firstName, String lastName) {
       this.firstName = firstName;
       this.lastName = lastName;
     }
 
+  /**
+   * Gets first name.
+   *
+   * @return the first name
+   */
   public String getFirstName() {
     return this.firstName;
   }
 
+  /**
+   * Gets last name.
+   *
+   * @return the last name
+   */
   public String getLastName() {
     return this.lastName;
   }

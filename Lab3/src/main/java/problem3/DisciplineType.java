@@ -1,5 +1,23 @@
 package problem3;
 
+/**
+ * The enum Discipline type.
+ */
 public enum DisciplineType {
-  BUTTERFLY, FREESTYLE, BREASTSTROKE, BACKSTROKE;
+  /**
+   * Butterfly discipline type.
+   */
+  BUTTERFLY,
+  /**
+   * Freestyle discipline type.
+   */
+  FREESTYLE,
+  /**
+   * Breaststroke discipline type.
+   */
+  BREASTSTROKE,
+  /**
+   * Backstroke discipline type.
+   */
+  BACKSTROKE;
 }

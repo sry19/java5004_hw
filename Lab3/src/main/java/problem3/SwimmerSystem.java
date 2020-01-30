@@ -2,11 +2,17 @@ package problem3;
 
 import java.util.ArrayList;
 
+/**
+ * The type Swimmer system.
+ */
 public class SwimmerSystem implements IInterface{
 
   private Swimmer[] swimmerList;
   private int num;
 
+  /**
+   * Instantiates a new Swimmer system.
+   */
   public SwimmerSystem() {
     this.swimmerList = new Swimmer[1];
     this.num = 0;

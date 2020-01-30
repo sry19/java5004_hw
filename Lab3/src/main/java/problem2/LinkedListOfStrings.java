@@ -3,15 +3,26 @@ package problem2;
 import java.util.HashSet;
 import java.util.Objects;
 
+/**
+ * The type Linked list of strings.
+ */
 public class LinkedListOfStrings implements IInterface{
   private Node head;
   private int numNodes;
 
+  /**
+   * Instantiates a new Linked list of strings.
+   */
   public LinkedListOfStrings() {
     this.head = null;
     this.numNodes = 0;
   }
 
+  /**
+   * Create empty linked list of strings.
+   *
+   * @return the linked list of strings
+   */
   public static LinkedListOfStrings createEmpty() {
     return new LinkedListOfStrings();
   }
