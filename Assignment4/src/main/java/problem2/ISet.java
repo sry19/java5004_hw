@@ -3,13 +3,6 @@ package problem2;
 public interface ISet {
 
   /**
-   * Creates and returns an empty Set
-   *
-   * @return an empty set
-   */
-  Set emptySet();
-
-  /**
    * Checks if the Set is empty. Returns true if the Set contains no items, false otherwise.
    *
    * @return true if the Set contains no items, false otherwise.

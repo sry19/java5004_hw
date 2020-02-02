@@ -52,9 +52,7 @@ public class Set implements ISet {
    *
    * @return an empty set
    */
-  @Override
-  public Set emptySet() {
-    Integer[] empty = {};
+  public static Set emptySet() {
     Set newSet = new Set();
     return newSet;
   }

@@ -57,7 +57,7 @@ public class SetTest {
   @Test
   public void emptySet() {
     Set tSet = new Set();
-    assertTrue(set2.emptySet().equals(tSet));
+    assertTrue(Set.emptySet().equals(tSet));
   }
 
   @Test
@@ -69,6 +69,7 @@ public class SetTest {
   @Test
   public void add() {
     Set tSet = new Set();
+    tSet = tSet.add(3);
     tSet = tSet.add(3);
     tSet = tSet.add(8);
     tSet = tSet.add(4);
