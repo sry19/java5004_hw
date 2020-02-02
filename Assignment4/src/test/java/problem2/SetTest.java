@@ -126,7 +126,6 @@ public class SetTest {
   @Test
   public void testToString() {
     String str = "Set{set=[3, 4], size=2}";
-    System.out.print(set2.toString());
     assertEquals(str, set2.toString());
   }
 }
