@@ -23,6 +23,12 @@ public class AuthorTest {
   }
 
   @Test
+  public void match() {
+    assertTrue(author.match(author));
+    assertFalse(author.match(author2));
+  }
+
+  @Test
   public void testEquals() {
     assertTrue(author.equals(author1));
     assertFalse(author.equals(author2));

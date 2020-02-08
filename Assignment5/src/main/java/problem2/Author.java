@@ -16,6 +16,16 @@ public class Author extends Individual {
   }
 
   @Override
+  public Boolean match(Creators creator) {
+    if (creator instanceof Author) {
+      if (this.equals(creator)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  @Override
   public String toString() {
     return "Author{" + super.toString() + "}";
   }

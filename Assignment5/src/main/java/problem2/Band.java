@@ -27,9 +27,9 @@ public class Band extends Group {
    * @param recordingArtist the recording artist
    * @return the boolean
    */
-  public boolean containsArtist(RecordingArtist recordingArtist) {
+  public Boolean match(Creators creators) {
     for (RecordingArtist ra : this.members) {
-      if (ra.equals(recordingArtist)) {
+      if (creators instanceof RecordingArtist && ra.equals(creators)) {
         return true;
       }
     }

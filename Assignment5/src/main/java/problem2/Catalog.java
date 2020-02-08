@@ -79,7 +79,7 @@ public class Catalog {
   public ArrayList<Item> search(Author author) {
     ArrayList<Item> result = new ArrayList<>();
     for (Item item : this.items) {
-      if (author.equals(item.getCreators())) {
+      if (item.getCreators().match(author)) {
         result.add(item);
       }
     }
@@ -95,10 +95,7 @@ public class Catalog {
   public ArrayList<Item> search(RecordingArtist recordingArtist) {
     ArrayList<Item> result = new ArrayList<>();
     for (Item item : this.items) {
-      if (item.getCreators().equals(recordingArtist)) {
-        result.add(item);
-      } else if (item.getCreators() instanceof Band && ((Band) item.getCreators())
-          .containsArtist(recordingArtist)) {
+      if (item.getCreators().match(recordingArtist)) {
         result.add(item);
       }
     }

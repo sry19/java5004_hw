@@ -49,9 +49,9 @@ public class BandTest {
   }
 
   @Test
-  public void containsArtist() {
-    assertTrue(band.containsArtist(recordingArtist));
-    assertFalse(band.containsArtist(recordingArtist2));
+  public void match() {
+    assertTrue(band.match(recordingArtist));
+    assertFalse(band.match(recordingArtist2));
   }
 
   @Test
