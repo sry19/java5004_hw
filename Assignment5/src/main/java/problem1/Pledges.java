@@ -16,7 +16,8 @@ public class Pledges extends Donation {
    * @param localDate    the local date
    * @param donationDate the donation date
    */
-  public Pledges(Integer amount, LocalDate localDate, LocalDate donationDate) throws InvalidDateException{
+  public Pledges(Integer amount, LocalDate localDate, LocalDate donationDate)
+      throws InvalidDateException {
     super(amount, localDate);
     if (donationDate.isBefore(LocalDate.now())) {
       throw new InvalidDateException();
@@ -95,8 +96,8 @@ public class Pledges extends Donation {
 
     Pledges pledges = (Pledges) o;
 
-    if (donationDate==null || pledges.donationDate==null) {
-      return donationDate==null && pledges.donationDate == null;
+    if (donationDate == null || pledges.donationDate == null) {
+      return donationDate == null && pledges.donationDate == null;
     }
     return donationDate.equals(pledges.donationDate);
   }
@@ -104,7 +105,7 @@ public class Pledges extends Donation {
   @Override
   public int hashCode() {
     int result = super.hashCode();
-    if (donationDate==null) {
+    if (donationDate == null) {
       return result;
     }
     result = 31 * result + donationDate.hashCode();

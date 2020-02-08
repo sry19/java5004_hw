@@ -85,24 +85,26 @@ public class MonthlyDonationTest {
     assertTrue(monthlyDonation5.equals(monthlyDonation5));
     assertFalse(monthlyDonation1.equals(monthlyDonation2));
     assertFalse(monthlyDonation1.equals(null));
-    assertFalse(monthlyDonation1.equals(LocalDate.of(2020,1,1)));
+    assertFalse(monthlyDonation1.equals(LocalDate.of(2020, 1, 1)));
     assertFalse(monthlyDonation6.equals(monthlyDonation7));
     assertFalse(monthlyDonation3.equals(monthlyDonation1));
-    monthlyDonation6.setCancellationDate(LocalDate.of(2021,5,5));
-    monthlyDonation5.setCancellationDate(LocalDate.of(2020,12,20));
+    monthlyDonation6.setCancellationDate(LocalDate.of(2021, 5, 5));
+    monthlyDonation5.setCancellationDate(LocalDate.of(2020, 12, 20));
     assertFalse(monthlyDonation5.equals(monthlyDonation6));
   }
 
   @Test
   public void testHashcode() {
     assertEquals(monthlyDonation5.hashCode(), monthlyDonation6.hashCode());
-    monthlyDonation6.setCancellationDate(LocalDate.of(2021,5,5));
-    monthlyDonation5.setCancellationDate(LocalDate.of(2020,12,20));
-    assertNotEquals(monthlyDonation5.hashCode(),monthlyDonation6.hashCode());
+    monthlyDonation6.setCancellationDate(LocalDate.of(2021, 5, 5));
+    monthlyDonation5.setCancellationDate(LocalDate.of(2020, 12, 20));
+    assertNotEquals(monthlyDonation5.hashCode(), monthlyDonation6.hashCode());
   }
 
   @Test
   public void testToString() {
-    assertEquals("MonthlyDonation{Donation{amount=30, localDate=2020-04-04}, cancellationDate=null}", monthlyDonation1.toString());
+    assertEquals(
+        "MonthlyDonation{Donation{amount=30, localDate=2020-04-04}, cancellationDate=null}",
+        monthlyDonation1.toString());
   }
 }

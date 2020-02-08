@@ -94,8 +94,8 @@ public class MonthlyDonation extends Donation {
 
     MonthlyDonation that = (MonthlyDonation) o;
 
-    if (cancellationDate==null || that.cancellationDate==null) {
-      return (cancellationDate==null && that.cancellationDate==null);
+    if (cancellationDate == null || that.cancellationDate == null) {
+      return (cancellationDate == null && that.cancellationDate == null);
     }
     return cancellationDate.equals(that.cancellationDate);
   }
@@ -103,7 +103,7 @@ public class MonthlyDonation extends Donation {
   @Override
   public int hashCode() {
     int result = super.hashCode();
-    if (cancellationDate==null) {
+    if (cancellationDate == null) {
       return result;
     }
     result = 31 * result + cancellationDate.hashCode();

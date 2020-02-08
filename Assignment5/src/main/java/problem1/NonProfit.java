@@ -6,6 +6,7 @@ import java.util.ArrayList;
  * The type Non profit.
  */
 public class NonProfit {
+
   private String organizationName;
   private ArrayList<Donation> donations;
 
@@ -45,7 +46,7 @@ public class NonProfit {
    */
   public Integer getTotalDonationsForYear(Integer year) {
     Integer sum = 0;
-    for (Donation donation: this.donations) {
+    for (Donation donation : this.donations) {
       sum += donation.getExpectedDonation(year);
     }
     return sum;

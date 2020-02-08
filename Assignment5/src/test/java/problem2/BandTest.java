@@ -23,7 +23,7 @@ public class BandTest {
 
   @Before
   public void setUp() throws Exception {
-    recordingArtist = new RecordingArtist("aa","bb");
+    recordingArtist = new RecordingArtist("aa", "bb");
     recordingArtist1 = new RecordingArtist("cc", "dd");
     recordingArtist2 = new RecordingArtist("ee", "ff");
     members = new ArrayList<>();
@@ -83,6 +83,8 @@ public class BandTest {
 
   @Test
   public void testToString() {
-    assertEquals("Band{name='name', members=[RecordingArtist{Individual{firstName='aa', lastName='bb'}}, RecordingArtist{Individual{firstName='cc', lastName='dd'}}]}", band.toString());
+    assertEquals(
+        "Band{name='name', members=[RecordingArtist{Individual{firstName='aa', lastName='bb'}}, RecordingArtist{Individual{firstName='cc', lastName='dd'}}]}",
+        band.toString());
   }
 }

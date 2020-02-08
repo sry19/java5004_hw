@@ -27,7 +27,7 @@ public class NonProfitTest {
   public void getDonations() {
     ArrayList<Donation> arrayList = new ArrayList<>();
     arrayList.add(donation1);
-    //assertArrayEquals(arrayList, nonProfit.getDonations());
+    assertEquals(arrayList, nonProfit.getDonations());
   }
 
   @Test

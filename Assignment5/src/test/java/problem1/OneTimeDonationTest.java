@@ -21,7 +21,7 @@ public class OneTimeDonationTest {
     oneTimeDonation1 = new OneTimeDonation(500, LocalDate.of(2021, 4, 22));
     oneTimeDonation2 = new OneTimeDonation(30);
     oneTimeDonation3 = new OneTimeDonation(500, LocalDate.of(2020, 4, 22));
-    oneTimeDonation4 = new OneTimeDonation(600,LocalDate.of(2020, 4, 22));
+    oneTimeDonation4 = new OneTimeDonation(600, LocalDate.of(2020, 4, 22));
     oneTimeDonation5 = new OneTimeDonation(500, LocalDate.of(2020, 4, 23));
   }
 
@@ -39,16 +39,17 @@ public class OneTimeDonationTest {
     assertFalse(oneTimeDonation.equals(oneTimeDonation4));
     assertFalse(oneTimeDonation.equals(oneTimeDonation5));
     assertFalse(oneTimeDonation.equals(null));
-    assertFalse(oneTimeDonation.equals(LocalDate.of(2020,2,2)));
+    assertFalse(oneTimeDonation.equals(LocalDate.of(2020, 2, 2)));
   }
 
   @Test
   public void testHashcode() {
-    assertEquals(oneTimeDonation.hashCode(),oneTimeDonation3.hashCode());
+    assertEquals(oneTimeDonation.hashCode(), oneTimeDonation3.hashCode());
   }
 
   @Test
   public void testToString() {
-    assertEquals("OneTimeDonation{Donation{amount=500, localDate=2020-04-22}}",oneTimeDonation.toString());
+    assertEquals("OneTimeDonation{Donation{amount=500, localDate=2020-04-22}}",
+        oneTimeDonation.toString());
   }
 }

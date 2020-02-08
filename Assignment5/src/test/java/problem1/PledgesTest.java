@@ -29,18 +29,18 @@ public class PledgesTest {
     pledges4 = new Pledges(29);
     pledges5 = new Pledges(30, LocalDate.of(2020, 2, 7), LocalDate.of(2020, 3, 6));
     pledges6 = new Pledges(50);
-    pledges9 = new Pledges(30, LocalDate.of(2020, 2, 6), LocalDate.of(2020,3,5));
-    oneTimeDonation = new OneTimeDonation(30, LocalDate.of(2020,5,5));
+    pledges9 = new Pledges(30, LocalDate.of(2020, 2, 6), LocalDate.of(2020, 3, 5));
+    oneTimeDonation = new OneTimeDonation(30, LocalDate.of(2020, 5, 5));
   }
 
   @Test(expected = InvalidDateException.class)
   public void invalidDonationDate() throws InvalidDateException {
-    pledges7 = new Pledges(30, LocalDate.of(1999,1,1));
+    pledges7 = new Pledges(30, LocalDate.of(1999, 1, 1));
   }
 
   @Test(expected = InvalidDateException.class)
   public void invalidDonationDate1() throws InvalidDateException {
-    pledges8 = new Pledges(30,LocalDate.now(),LocalDate.of(1000,1,1));
+    pledges8 = new Pledges(30, LocalDate.now(), LocalDate.of(1000, 1, 1));
   }
 
   @Test
@@ -91,12 +91,13 @@ public class PledgesTest {
 
   @Test
   public void testHashcode() {
-    assertEquals(pledges3.hashCode(),pledges6.hashCode());
-    assertNotEquals(pledges1.hashCode(),pledges5.hashCode());
+    assertEquals(pledges3.hashCode(), pledges6.hashCode());
+    assertNotEquals(pledges1.hashCode(), pledges5.hashCode());
   }
 
   @Test
   public void testToString() {
-    assertEquals("Pledges{Donation{amount=30, localDate=2020-02-06}, donationDate=2020-03-06}",pledges1.toString());
+    assertEquals("Pledges{Donation{amount=30, localDate=2020-02-06}, donationDate=2020-03-06}",
+        pledges1.toString());
   }
 }
