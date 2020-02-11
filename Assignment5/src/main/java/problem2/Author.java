@@ -18,9 +18,7 @@ public class Author extends Individual {
   @Override
   public Boolean match(Creators creator) {
     if (creator instanceof Author) {
-      if (this.equals(creator)) {
-        return true;
-      }
+      return this.equals(creator);
     }
     return false;
   }

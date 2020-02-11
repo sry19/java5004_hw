@@ -24,7 +24,7 @@ public class Band extends Group {
   /**
    * Contains artist boolean.
    *
-   * @param recordingArtist the recording artist
+   * @param creators creators
    * @return the boolean
    */
   public Boolean match(Creators creators) {
@@ -89,8 +89,8 @@ public class Band extends Group {
   public int hashCode() {
     int result = name.hashCode();
     int sum = 0;
-    for (int i = 0; i < members.size(); i++) {
-      sum = sum + members.get(i).hashCode();
+    for (RecordingArtist member : members) {
+      sum = sum + member.hashCode();
     }
     return 31 * result + sum;
   }

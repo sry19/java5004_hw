@@ -68,7 +68,6 @@ public class Pledges extends Donation {
     } else if (localDate.isAfter(localDate.now()) && localDate.now().isBefore(this.donationDate)) {
       this.donationDate = localDate;
     }
-    return;
   }
 
   @Override

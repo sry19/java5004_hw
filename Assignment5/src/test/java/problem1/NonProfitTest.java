@@ -47,4 +47,9 @@ public class NonProfitTest {
     nonProfit.addDonation(donation3);
     assertTrue(400 == nonProfit.getTotalDonationsForYear(2020));
   }
+
+  @Test
+  public void getOrganizationName() {
+    assertEquals("NONPROFIT", nonProfit.getOrganizationName());
+  }
 }

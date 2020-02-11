@@ -51,4 +51,8 @@ public class NonProfit {
     }
     return sum;
   }
+
+  public String getOrganizationName() {
+    return this.organizationName;
+  }
 }

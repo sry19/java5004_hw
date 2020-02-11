@@ -1,6 +1,5 @@
 package problem1;
 
-import problem2.Individual;
 
 /**
  * The interface Donation.

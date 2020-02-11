@@ -38,7 +38,7 @@ public class MonthlyDonation extends Donation {
    * @throws InvalidDateException the invalid date exception
    */
   public void setCancellationDate(LocalDate localDate) throws InvalidDateException {
-    if (localDate.compareTo(localDate.now()) < 0 || localDate.isBefore(this.getLocalDate())) {
+    if (localDate.compareTo(LocalDate.now()) < 0 || localDate.isBefore(this.getLocalDate())) {
       throw new InvalidDateException();
     }
     this.cancellationDate = localDate;

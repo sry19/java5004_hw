@@ -28,7 +28,7 @@ public abstract class Donation implements IDonation {
    */
   public Donation(Integer amount) {
     this.amount = amount;
-    this.localDate = localDate.now();
+    this.localDate = LocalDate.now();
   }
 
   /**
