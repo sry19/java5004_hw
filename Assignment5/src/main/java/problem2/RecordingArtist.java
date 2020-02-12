@@ -16,11 +16,8 @@ public class RecordingArtist extends Individual {
   }
 
   @Override
-  public Boolean match(Creators creator) {
-    if (creator instanceof RecordingArtist) {
+  public Boolean match(ICreator creator) {
       return this.equals(creator);
-    }
-    return false;
   }
 
   @Override

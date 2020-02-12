@@ -53,6 +53,8 @@ public class MonthlyDonation extends Donation {
     return this.cancellationDate;
   }
 
+
+  // LIKAI THINKS ITS ENOUGH.
   @Override
   public Integer getExpectedDonation(Integer year) {
     if (this.cancellationDate == null) {

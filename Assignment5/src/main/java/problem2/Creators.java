@@ -5,5 +5,5 @@ package problem2;
  */
 public abstract class Creators implements ICreator {
 
-  public abstract Boolean match(Creators creator);
+  public abstract Boolean match(ICreator creator);
 }

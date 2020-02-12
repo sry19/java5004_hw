@@ -27,13 +27,8 @@ public class Band extends Group {
    * @param creators creators
    * @return the boolean
    */
-  public Boolean match(Creators creators) {
-    for (RecordingArtist ra : this.members) {
-      if (creators instanceof RecordingArtist && ra.equals(creators)) {
-        return true;
-      }
-    }
-    return false;
+  public Boolean match(ICreator creators) {
+    return members.contains(creators);
   }
 
   /**

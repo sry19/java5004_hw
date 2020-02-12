@@ -20,7 +20,7 @@ public abstract class Individual extends Creators {
   }
 
   @Override
-  public abstract Boolean match(Creators creator);
+  public abstract Boolean match(ICreator creator);
 
   @Override
   public boolean equals(Object o) {

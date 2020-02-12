@@ -11,5 +11,6 @@ public interface ICreator {
    * @param creator the creator
    * @return the boolean
    */
-  Boolean match(Creators creator);
+  Boolean match(ICreator creator);
+
 }
