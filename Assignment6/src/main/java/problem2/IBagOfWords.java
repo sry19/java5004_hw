@@ -6,21 +6,21 @@ package problem2;
 public interface IBagOfWords {
 
   /**
-   * Is empty boolean.
+   * If the bag is empty
    *
    * @return the boolean
    */
   Boolean isEmpty();
 
   /**
-   * Size integer.
+   * Size of bag
    *
    * @return the integer
    */
   Integer size();
 
   /**
-   * Add bag of words.
+   * Add string to bag
    *
    * @param s the s
    * @return the bag of words
@@ -28,7 +28,7 @@ public interface IBagOfWords {
   IBagOfWords add(String s);
 
   /**
-   * Contains boolean.
+   * Check if the bag contains the string
    *
    * @param s the s
    * @return the boolean

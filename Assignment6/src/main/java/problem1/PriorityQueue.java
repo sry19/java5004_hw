@@ -2,7 +2,10 @@ package problem1;
 
 import java.util.EmptyStackException;
 
-public class PriorityQueue implements IPriorityQueue{
+/**
+ * The type Priority queue.
+ */
+public class PriorityQueue implements IPriorityQueue {
 
   private ILinkedList front;
 
@@ -14,6 +17,11 @@ public class PriorityQueue implements IPriorityQueue{
     this.front = element;
   }
 
+  /**
+   * Create empty priority queue.
+   *
+   * @return the priority queue
+   */
   public static IPriorityQueue createEmpty() {
     return new PriorityQueue();
   }
@@ -32,7 +40,8 @@ public class PriorityQueue implements IPriorityQueue{
   }
 
   /**
-   * Add an element to priority queue. If multiple elements have the same priority, we add it at the end of these elements
+   * Add an element to priority queue. If multiple elements have the same priority, we add it at the
+   * end of these elements
    *
    * @param priority the priority
    * @param value    the value
@@ -44,7 +53,8 @@ public class PriorityQueue implements IPriorityQueue{
   }
 
   /**
-   * return the string which has the top priority. If multiple elements have the same priority, we select the one which comes in first
+   * return the string which has the top priority. If multiple elements have the same priority, we
+   * select the one which comes in first
    *
    * @return the string
    */
@@ -57,12 +67,13 @@ public class PriorityQueue implements IPriorityQueue{
   }
 
   /**
-   * Pop an element from priority queue. If multiple elements have the same priority, the one which comes in first comes out first
+   * Pop an element from priority queue. If multiple elements have the same priority, the one which
+   * comes in first comes out first
    *
    * @return the priority queue
    */
   @Override
-  public IPriorityQueue pop() throws EmptyPriorityQueueException{
+  public IPriorityQueue pop() throws EmptyPriorityQueueException {
     if (this.isEmpty()) {
       throw new EmptyPriorityQueueException();
     }
