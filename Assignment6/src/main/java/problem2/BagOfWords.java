@@ -69,6 +69,12 @@ public class BagOfWords implements IBagOfWords {
     return this.strings.contains(s);
   }
 
+  /**
+   * Indicates whether some other object is "equal to" this one.
+   *
+   * @param o other object
+   * @return true if they are equal, false otherwise
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -83,11 +89,21 @@ public class BagOfWords implements IBagOfWords {
     return strings.equals(that.strings);
   }
 
+  /**
+   * a hash code value for this object.
+   *
+   * @return a hash code value for this object.
+   */
   @Override
   public int hashCode() {
     return strings.hashCode();
   }
 
+  /**
+   * a string representation of the object.
+   *
+   * @return a string representation of the object.
+   */
   @Override
   public String toString() {
     return "BagOfWords{" +

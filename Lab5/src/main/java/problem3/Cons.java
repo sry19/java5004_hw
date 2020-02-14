@@ -5,6 +5,12 @@ public class Cons implements IList {
   private Integer value;
   private IList rest;
 
+  /**
+   * construct a Cons
+   *
+   * @param value the value of the Cons
+   * @param rest the rest part of the Cons
+   */
   public Cons(Integer value, IList rest) {
     this.value = value;
     this.rest = rest;

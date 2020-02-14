@@ -52,16 +52,33 @@ public class EmptyNode implements ILinkedList {
     return null;
   }
 
+  /**
+   * Checks if the linked list contains n
+   *
+   * @param n the n
+   * @return the boolean
+   */
   @Override
   public boolean contains(String n) {
     return false;
   }
 
+  /**
+   * a hash code value for this object.
+   *
+   * @return a hash code value for this object.
+   */
   @Override
   public int hashCode() {
     return 31;
   }
 
+  /**
+   * Indicates whether some other object is "equal to" this one.
+   *
+   * @param obj other object
+   * @return true if they are equal, false otherwise
+   */
   @Override
   public boolean equals(Object obj) {
     if (this == obj) {
@@ -73,6 +90,11 @@ public class EmptyNode implements ILinkedList {
     return true;
   }
 
+  /**
+   * a string representation of the object.
+   *
+   * @return a string representation of the object.
+   */
   @Override
   public String toString() {
     return "EmptyNode{}";

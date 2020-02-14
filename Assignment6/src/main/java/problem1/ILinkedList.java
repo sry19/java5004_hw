@@ -5,47 +5,47 @@ package problem1;
  */
 public interface ILinkedList {
 
- /**
-  * Count integer.
-  *
-  * @return the integer
-  */
- Integer count();
+  /**
+   * Counts the number of nodes.
+   *
+   * @return the integer
+   */
+  Integer count();
 
- /**
-  * Add nodes to linked list.
-  *
-  * @param priority the priority
-  * @param value    the value
-  * @return the linked list
-  */
- ILinkedList add(Integer priority, String value);
+  /**
+   * Adds nodes to linked list.
+   *
+   * @param priority the priority
+   * @param value    the value
+   * @return the linked list
+   */
+  ILinkedList add(Integer priority, String value);
 
- /**
-  * Gets value.
-  *
-  * @return the value
-  */
- String getValue();
+  /**
+   * Gets value.
+   *
+   * @return the value
+   */
+  String getValue();
 
- /**
-  * Gets priority.
-  *
-  * @return the priority
-  */
- Integer getPriority();
+  /**
+   * Gets priority.
+   *
+   * @return the priority
+   */
+  Integer getPriority();
 
- /**
-  * Gets the rest of the linked list.
-  *
-  * @return the rest
-  */
- ILinkedList getRest();
+  /**
+   * Gets the rest of the linked list.
+   *
+   * @return the rest
+   */
+  ILinkedList getRest();
 
- /**
-  * Pop the element at the head of the linked list.
-  *
-  * @return the linked list
-  */
- ILinkedList pop();
+  /**
+   * Pops the element at the head of the linked list.
+   *
+   * @return the linked list
+   */
+  ILinkedList pop();
 }
