@@ -4,6 +4,7 @@ package problem2;
  * The type Element node.
  */
 public class ElementNode implements ILinkedList {
+
   private String value;
   private ILinkedList rest;
 

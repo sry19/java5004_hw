@@ -32,9 +32,9 @@ public class BagOfWordsTest {
 
   @Test
   public void size() {
-    assertTrue(0==iBagOfWords1.size());
+    assertTrue(0 == iBagOfWords1.size());
     iBagOfWords1 = iBagOfWords1.add("frog");
-    assertTrue(1==iBagOfWords1.size());
+    assertTrue(1 == iBagOfWords1.size());
   }
 
   @Test

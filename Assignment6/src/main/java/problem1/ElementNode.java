@@ -2,12 +2,22 @@ package problem1;
 
 import java.util.EmptyStackException;
 
+/**
+ * The type Element node.
+ */
 public class ElementNode implements ILinkedList {
 
   private Integer priority;
   private String value;
   private ILinkedList rest;
 
+  /**
+   * Instantiates a new Element node.
+   *
+   * @param priority the priority
+   * @param value    the value
+   * @param rest     the rest
+   */
   public ElementNode(Integer priority, String value, ILinkedList rest) {
     this.priority = priority;
     this.value = value;

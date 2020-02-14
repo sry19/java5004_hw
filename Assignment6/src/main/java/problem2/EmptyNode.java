@@ -29,7 +29,7 @@ public class EmptyNode implements ILinkedList {
    */
   @Override
   public ElementNode add(String value) {
-    return new ElementNode(value,this);
+    return new ElementNode(value, this);
   }
 
   /**
@@ -64,7 +64,7 @@ public class EmptyNode implements ILinkedList {
 
   @Override
   public boolean equals(Object obj) {
-    if (this==obj) {
+    if (this == obj) {
       return true;
     }
     if (obj == null || this.getClass() != obj.getClass()) {
