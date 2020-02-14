@@ -2,12 +2,12 @@ package problem3;
 
 import simpleRecursiveList.Cons;
 
-public class List implements IList {
+public class List implements Interface1{
 
   private IList first;
-  private IList rest;
+  private Interface1 rest;
 
-  private List(IList first, IList rest) {
+  public List(IList first, Interface1 rest) {
     this.first =first;
     this.rest = rest;
   }
@@ -17,25 +17,22 @@ public class List implements IList {
    *
    * @return number of elements in this list
    */
-  @Override
+
   public Integer size() {
     return 1 + this.getRest().size();
   }
 
-  @Override
   public Integer length() {
-    return 1 + this.first.size();
+    return this.first.size() + this.rest.length();
   }
 
-  @Override
   public Integer sum() {
-    return this.length() + this.size();
+    return this.first.sum() + this.rest.sum();
   }
 
   /**
    * Returns true if empty and false otherwise
    */
-  @Override
   public Boolean isEmpty() {
     return false;
   }
@@ -46,12 +43,10 @@ public class List implements IList {
    * @param element new element to add to the list
    * @return updated list with {@code element} prependeds
    */
-  @Override
-  public IList add(IList element) {
+  public Interface1 add(IList element) {
     return new List(element, this);
   }
 
-  @Override
   public boolean contains(Integer element) {
     if (this.first.equals(element)) {
       return true;
@@ -59,29 +54,26 @@ public class List implements IList {
     return this.rest.contains(element);
   }
 
-  @Override
-  public IList getRest() {
+  public Interface1 getRest() {
     return this.rest;
   }
 
-  @Override
   public IList getFirst() {
     return this.first;
   }
 
-  @Override
-  public IList removeInteger(Integer n) {
+  public Interface1 removeInteger(Integer n) {
     if (this.first.contains(n)) {
-      this.first.removeInteger(n);
-      return this;
+      return new List(this.first.removeInteger(n), this.rest);
     }
     return this.rest.removeInteger(n);
   }
 
-  public IList removeAllInteger(Integer n) {
+  public Interface1 removeAllInteger(Integer n) {
     if (this.first.contains(n)) {
-      this.first.removeInteger(n);
+      return new List(this.first.removeInteger(n), this.rest.removeAllInteger(n));
+    } else {
+      return new List(this.first, this.rest.removeInteger(n));
     }
-    return new List(this.first, this.rest.removeInteger(n));
   }
 }

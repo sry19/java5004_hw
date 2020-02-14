@@ -1,8 +1,13 @@
 package problem3;
 
-public class Empty implements IList {
+public class Cons implements IList {
 
-  public Empty() {
+  private Integer value;
+  private IList rest;
+
+  public Cons(Integer value, IList rest) {
+    this.value = value;
+    this.rest = rest;
   }
 
   /**
@@ -12,7 +17,7 @@ public class Empty implements IList {
    */
   @Override
   public Integer size() {
-    return 0;
+    return 1 + this.rest.size();
   }
 
   /**
@@ -20,7 +25,7 @@ public class Empty implements IList {
    */
   @Override
   public Boolean isEmpty() {
-    return true;
+    return false;
   }
 
   /**
@@ -31,36 +36,45 @@ public class Empty implements IList {
    */
   @Override
   public IList add(Integer element) {
-    return new Cons(element, this);
+    return new Cons(this.value, this.rest.add(element));
   }
 
   @Override
   public boolean contains(Integer element) {
-    return false;
+    if (this.value==element) {
+      return true;
+    }
+    return this.rest.contains(element);
   }
 
   @Override
   public IList getRest() {
-    return null;
+    return this.rest;
   }
 
   @Override
   public Integer getValue() {
-    return null;
+    return this.value;
   }
 
   @Override
   public IList removeInteger(Integer n) {
-    return null;
+    if (n==this.value) {
+      return this.rest;
+    }
+    return new Cons(this.value, this.rest.removeInteger(n));
   }
 
   @Override
   public IList removeAllInteger(Integer n) {
-    return null;
+    if (n==this.value) {
+      return this.rest.removeAllInteger(n);
+    }
+    return new Cons(this.value, this.rest.removeAllInteger(n));
   }
 
   @Override
   public Integer sum() {
-    return 0;
+    return this.value + this.rest.sum();
   }
 }

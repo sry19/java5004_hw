@@ -10,10 +10,6 @@ public interface IList {
    */
   Integer size();
 
-  Integer length();
-
-  Integer sum();
-
   /**
    * Returns true if empty and false otherwise
    *
@@ -26,16 +22,17 @@ public interface IList {
    * @param element new element to add to the list
    * @return updated list with {@code element} prependeds
    */
-  IList add(IList element);
+  IList add(Integer element);
 
   boolean contains(Integer element);
 
   IList getRest();
 
-  IList getFirst();
+  Integer getValue();
 
   IList removeInteger(Integer n);
 
   IList removeAllInteger(Integer n);
 
+  Integer sum();
 }
