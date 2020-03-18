@@ -5,14 +5,27 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * The type Check phone number.
+ */
 public class CheckPhoneNumber {
 
   private List<String> records;
 
+  /**
+   * Instantiates a new Check phone number.
+   *
+   * @param records the records
+   */
   public CheckPhoneNumber(List<String> records) {
     this.records = records;
   }
 
+  /**
+   * Record parser all list.
+   *
+   * @return the list
+   */
   public List<String> recordParserAll() {
     List<String> result = new ArrayList<String>();
     for (int i = 0; i < this.records.size(); i++) {
@@ -26,6 +39,12 @@ public class CheckPhoneNumber {
     return result;
   }
 
+  /**
+   * Phone number parser string.
+   *
+   * @param originPhoneNumber the origin phone number
+   * @return the string
+   */
   public String phoneNumberParser(String originPhoneNumber) {
     String pattern1 = "\\((\\d{3})\\)\\s(\\d{3})[-](\\d{4})";
     Pattern r1 = Pattern.compile(pattern1);
