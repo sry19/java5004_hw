@@ -101,4 +101,51 @@ public class HomebakeProcessor {
   public String getDebugFlag() {
     return debugFlag;
   }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+
+    HomebakeProcessor processor = (HomebakeProcessor) o;
+
+    if (!operation.equals(processor.operation)) {
+      return false;
+    }
+    if (!formula.equals(processor.formula)) {
+      return false;
+    }
+    if (!warningsFlag.equals(processor.warningsFlag)) {
+      return false;
+    }
+    if (!verboseFlag.equals(processor.verboseFlag)) {
+      return false;
+    }
+    return debugFlag.equals(processor.debugFlag);
+  }
+
+  @Override
+  public int hashCode() {
+    int result = (operation == null ? 0 : operation.hashCode());
+    result = 31 * result + (formula == null ? 0 : formula.hashCode());
+    result = 31 * result + (warningsFlag == null ? 0 : warningsFlag.hashCode());
+    result = 31 * result + (verboseFlag == null ? 0 : verboseFlag.hashCode());
+    result = 31 * result + (debugFlag == null ? 0 : debugFlag.hashCode());
+    return result;
+  }
+
+  @Override
+  public String toString() {
+    return "HomebakeProcessor{" +
+        "operation='" + operation + '\'' +
+        ", formula='" + formula + '\'' +
+        ", warningsFlag='" + warningsFlag + '\'' +
+        ", verboseFlag='" + verboseFlag + '\'' +
+        ", debugFlag='" + debugFlag + '\'' +
+        '}';
+  }
 }

@@ -2,6 +2,7 @@ package problem2;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,6 +16,9 @@ public class HomebakeProcessorTest {
 
   HomebakeProcessor processor3;
   String[] args3;
+
+  HomebakeProcessor processor4;
+  String[] args4;
 
   @Before
   public void setUp() throws Exception {
@@ -40,6 +44,12 @@ public class HomebakeProcessorTest {
     args3[3] = "-d";
     args3[4] = "-dfn";
     args3[5] = "-uninstall";
+
+    processor4 = new HomebakeProcessor();
+    args4 = new String[3];
+    args4[0] = "-install";
+    args4[1] = "-hq";
+    args4[2] = "-v";
   }
 
   @Test(expected = InvalidArgumentException.class)
@@ -108,5 +118,28 @@ public class HomebakeProcessorTest {
   public void getDebugFlag() {
     processor.argumentParser(args);
     assertNull(processor.getDebugFlag());
+  }
+
+  @Test
+  public void testEquals() {
+    processor.argumentParser(args);
+    processor2.argumentParser(args2);
+    processor4.argumentParser(args4);
+    assertFalse(processor.equals(new ArrayList<String>()));
+    assertNotEquals(processor, processor2);
+    assertEquals(processor, processor);
+    assertNotEquals(null, processor);
+    assertNotEquals(processor, processor4);
+  }
+
+  @Test
+  public void testHashcode() {
+    processor.argumentParser(args);
+    assertEquals(processor.hashCode(), processor.hashCode());
+  }
+
+  @Test
+  public void testToString() {
+    assertEquals("HomebakeProcessor{operation='null', formula='null', warningsFlag='null', verboseFlag='null', debugFlag='null'}", processor.toString());
   }
 }

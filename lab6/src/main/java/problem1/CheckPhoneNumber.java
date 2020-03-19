@@ -68,4 +68,29 @@ public class CheckPhoneNumber {
     return "**no match**";
   }
 
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+
+    CheckPhoneNumber that = (CheckPhoneNumber) o;
+
+    return records.equals(that.records);
+  }
+
+  @Override
+  public int hashCode() {
+    return records.hashCode();
+  }
+
+  @Override
+  public String toString() {
+    return "CheckPhoneNumber{" +
+        "records=" + records +
+        '}';
+  }
 }
