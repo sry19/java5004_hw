@@ -4,10 +4,19 @@ import java.util.Iterator;
 import java.util.List;
 import problem2.Swimmer;
 
+/**
+ * The type Swimmers iterator.
+ */
 public class SwimmersIterator implements Iterator<Swimmer> {
+
   private List<Swimmer> swimmerList;
   private int current;
 
+  /**
+   * Instantiates a new Swimmers iterator.
+   *
+   * @param swimmerList the swimmer list
+   */
   public SwimmersIterator(List<Swimmer> swimmerList) {
     this.swimmerList = swimmerList;
     this.current = 0;
@@ -36,6 +45,11 @@ public class SwimmersIterator implements Iterator<Swimmer> {
   }
 
 
+  /**
+   * Gets current.
+   *
+   * @return the current
+   */
   public int getCurrent() {
     return current;
   }
