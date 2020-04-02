@@ -15,14 +15,13 @@ public class FrequencyCount {
    * @param integerList the integer list
    * @return the map
    */
-  public Map<Integer, Double> countFrequency(List<Integer> integerList) {
+  public static Map<Integer, Double> countFrequency(List<Integer> integerList) {
     Map<Integer, Double> map = new HashMap<>();
+    if (integerList == null) {
+      return map;
+    }
     for (Integer integer : integerList) {
-      if (map.containsKey(integer)) {
-        map.put(integer, map.get(integer) + 1);
-      } else {
-        map.put(integer, 1.0);
-      }
+        map.put(integer, map.getOrDefault(integer, 0.0) + 1);
     }
     int n = integerList.size();
     for (Integer key : map.keySet()) {
