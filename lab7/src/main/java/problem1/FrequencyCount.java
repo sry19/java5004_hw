@@ -21,7 +21,7 @@ public class FrequencyCount {
       return map;
     }
     for (Integer integer : integerList) {
-        map.put(integer, map.getOrDefault(integer, 0.0) + 1);
+      map.put(integer, map.getOrDefault(integer, 0.0) + 1);
     }
     int n = integerList.size();
     for (Integer key : map.keySet()) {
