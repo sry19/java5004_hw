@@ -32,12 +32,21 @@ public class Seat {
     if (!name.equals(seat.name)) {
       return false;
     }
+    if (reservedFor == null && seat.reservedFor == null) {
+      return true;
+    }
+    if (reservedFor == null || seat.reservedFor == null) {
+      return false;
+    }
     return reservedFor.equals(seat.reservedFor);
   }
 
   @Override
   public int hashCode() {
     int result = name.hashCode();
+    if (reservedFor == null) {
+      return result;
+    }
     result = 31 * result + reservedFor.hashCode();
     return result;
   }

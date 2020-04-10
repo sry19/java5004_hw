@@ -51,9 +51,6 @@ public class Row extends ArrayList<Seat> {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    if (!super.equals(o)) {
-      return false;
-    }
 
     Row row = (Row) o;
 

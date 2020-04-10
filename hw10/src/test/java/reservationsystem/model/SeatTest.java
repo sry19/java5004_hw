@@ -12,6 +12,7 @@ public class SeatTest {
   Seat seat1;
   Seat seat2;
   Seat seat3;
+  Seat seat4;
 
   @Before
   public void setUp() throws Exception {
@@ -19,6 +20,7 @@ public class SeatTest {
     seat1 = new Seat('A',null);
     seat2 = new Seat('A',"ss");
     seat3 = new Seat('b',null);
+    seat4 = new Seat('A',"sd");
   }
 
   @Test
@@ -34,8 +36,11 @@ public class SeatTest {
 
   @Test
   public void testEquals() {
-    seat.setReservedFor("ad");
+    assertNotEquals(seat4,seat);
+    assertEquals(seat,seat1);
     seat1.setReservedFor("ad");
+    assertNotEquals(seat,seat1);
+    seat.setReservedFor("ad");
     assertEquals(seat,seat);
     assertEquals(seat,seat1);
     assertNotEquals(seat,seat3);
