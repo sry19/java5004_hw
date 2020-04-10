@@ -13,15 +13,15 @@ public class Row extends ArrayList<Seat> {
   private static final int MAX_SEATS = 16;
 
   public Row(Integer rowNumber, boolean wheelchairAccessible) {
-    super(Row.createRow());
+    super(Row.createRow(MAX_SEATS));
     this.rowNumber = rowNumber;
     this.wheelchairAccessible = wheelchairAccessible;
     this.numOfSeats = MAX_SEATS;
   }
 
-  public static List<Seat> createRow() {
+  public static List<Seat> createRow(int rowNumber) {
     List<Seat> seats = new ArrayList<>();
-    for (int i = 0;i<MAX_SEATS;i++) {
+    for (int i = 0;i<rowNumber;i++) {
       seats.add(new Seat((char) (65 + i),null));
     }
     return seats;

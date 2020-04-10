@@ -50,7 +50,7 @@ public class ReservationsService {
     }
   }
 
-  private boolean reserveWithoutWheelchairAccess(int number) {
+  public boolean reserveWithoutWheelchairAccess(int number) {
     int offset = 0;
     while (this.center + offset < this.numOfRows || this.center - offset >= 0) {
       if (this.center + offset < this.numOfRows &&

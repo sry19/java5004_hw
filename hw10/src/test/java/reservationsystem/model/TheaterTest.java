@@ -31,6 +31,11 @@ public class TheaterTest {
     assertFalse(theater.equals(new ArrayList<String>()));
   }
 
+  @Test(expected = IllegalArgumentException.class)
+  public void invalidConstruction() {
+    Theater theater5 = new Theater("s",0);
+  }
+
   @Test
   public void testHashCode() {
     assertEquals(theater.hashCode(),theater1.hashCode());

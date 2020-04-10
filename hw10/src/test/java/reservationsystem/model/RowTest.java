@@ -23,7 +23,7 @@ public class RowTest {
 
   @Test
   public void createRow() {
-    assertTrue(Row.createRow().size() == 16);
+    assertTrue(Row.createRow(16).size() == 16);
   }
 
   @Test
