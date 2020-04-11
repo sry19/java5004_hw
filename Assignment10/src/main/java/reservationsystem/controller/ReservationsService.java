@@ -152,9 +152,6 @@ public class ReservationsService {
     if (!numOfRows.equals(that.numOfRows)) {
       return false;
     }
-    if (!center.equals(that.center)) {
-      return false;
-    }
     return rowList.equals(that.rowList);
   }
 

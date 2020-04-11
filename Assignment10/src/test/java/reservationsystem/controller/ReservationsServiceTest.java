@@ -23,6 +23,7 @@ public class ReservationsServiceTest {
     reservationsService1 = new ReservationsService(theater);
     theater1 = new Theater("r",4);
     reservationsService2 = new ReservationsService(theater1);
+    theater2 = new Theater("rr",5);
   }
 
 //  @Test
@@ -49,6 +50,7 @@ public class ReservationsServiceTest {
     assertNotEquals(reservationsService,reservationsService2);
     assertFalse(reservationsService.equals(null));
     assertFalse(reservationsService.equals(theater));
+    assertNotEquals(reservationsService,reservationsService2);
   }
 
   @Test
