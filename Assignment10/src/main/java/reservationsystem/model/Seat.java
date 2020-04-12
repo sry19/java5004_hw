@@ -1,19 +1,38 @@
 package reservationsystem.model;
 
+/**
+ * The type Seat.
+ */
 public class Seat {
 
   private Character name;
   private String reservedFor;
 
+  /**
+   * Instantiates a new Seat.
+   *
+   * @param name        the name
+   * @param reservedFor the reserved for
+   */
   public Seat(Character name, String reservedFor) {
     this.name = name;
     this.reservedFor = reservedFor;
   }
 
+  /**
+   * Sets reserved for.
+   *
+   * @param reservedFor the reserved for
+   */
   public void setReservedFor(String reservedFor) {
     this.reservedFor = reservedFor;
   }
 
+  /**
+   * Gets reserved for.
+   *
+   * @return the reserved for
+   */
   public String getReservedFor() {
     return reservedFor;
   }

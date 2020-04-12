@@ -7,6 +7,9 @@ import reservationsystem.model.Row;
 import reservationsystem.model.Seat;
 import reservationsystem.model.Theater;
 
+/**
+ * The type Reservations service.
+ */
 public class ReservationsService {
 
   private Theater theater;
@@ -14,6 +17,11 @@ public class ReservationsService {
   private Integer center;
   private List<Row> rowList;
 
+  /**
+   * Instantiates a new Reservations service.
+   *
+   * @param theater the theater
+   */
   public ReservationsService(Theater theater) {
     this.theater = theater;
     this.rowList = this.theater.getRowList();
@@ -21,6 +29,11 @@ public class ReservationsService {
     this.center = (this.numOfRows) / 2;
   }
 
+  /**
+   * Reserve.
+   *
+   * @param value the value
+   */
   public void reserve(String value) {
     try {
       int number = Integer.parseInt(value);
@@ -88,29 +101,12 @@ public class ReservationsService {
     return false;
   }
 
+  /**
+   * Show.
+   */
   public void show() {
     for (Row row: this.rowList) {
       System.out.println(row.toString());
-    }
-  }
-
-  public void performAction(String input) {
-    if (input == null) {
-      System.out.println("Please enter a command. Try again please.");
-      return;
-    }
-    String[] args = input.split(" ");
-    String action = args[0].trim();
-    if (action.equals("reserve")) {
-      if (args.length == 2) {
-        this.reserve(args[1]);
-      } else {
-        System.out.println("You enter a invalid command. Try again please.");
-      }
-    } else if (action.equals("show")) {
-      this.show();
-    } else {
-      System.out.println("You enter a invalid command. Try again please.");
     }
   }
 

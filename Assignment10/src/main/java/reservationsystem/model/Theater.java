@@ -4,12 +4,21 @@ package reservationsystem.model;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The type Theater.
+ */
 public class Theater {
 
   private String name;
   private List<Row> rowList;
   private List<Integer> wheelchairAccessRow;
 
+  /**
+   * Instantiates a new Theater.
+   *
+   * @param name      the name
+   * @param numOfRows the num of rows
+   */
   public Theater(String name, int numOfRows) {
     this.name = name;
     this.rowList = createRowList(numOfRows);
@@ -76,14 +85,29 @@ public class Theater {
         '}';
   }
 
+  /**
+   * Gets name.
+   *
+   * @return the name
+   */
   public String getName() {
     return name;
   }
 
+  /**
+   * Gets row list.
+   *
+   * @return the row list
+   */
   public List<Row> getRowList() {
     return rowList;
   }
 
+  /**
+   * Gets wheelchair access row.
+   *
+   * @return the wheelchair access row
+   */
   public List<Integer> getWheelchairAccessRow() {
     return wheelchairAccessRow;
   }

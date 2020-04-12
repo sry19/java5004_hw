@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+/**
+ * The type Row.
+ */
 public class Row extends ArrayList<Seat> {
 
   private Integer rowNumber;
@@ -12,6 +15,12 @@ public class Row extends ArrayList<Seat> {
   private Integer numOfSeats;
   private static final int MAX_SEATS = 16;
 
+  /**
+   * Instantiates a new Row.
+   *
+   * @param rowNumber            the row number
+   * @param wheelchairAccessible the wheelchair accessible
+   */
   public Row(Integer rowNumber, boolean wheelchairAccessible) {
     super(Row.createRow(MAX_SEATS));
     this.rowNumber = rowNumber;
@@ -19,6 +28,12 @@ public class Row extends ArrayList<Seat> {
     this.numOfSeats = MAX_SEATS;
   }
 
+  /**
+   * Create row list.
+   *
+   * @param rowNumber the row number
+   * @return the list
+   */
   public static List<Seat> createRow(int rowNumber) {
     List<Seat> seats = new ArrayList<>();
     for (int i = 0;i<rowNumber;i++) {
@@ -27,18 +42,38 @@ public class Row extends ArrayList<Seat> {
     return seats;
   }
 
+  /**
+   * Gets row number.
+   *
+   * @return the row number
+   */
   public Integer getRowNumber() {
     return rowNumber;
   }
 
+  /**
+   * Is wheelchair accessible boolean.
+   *
+   * @return the boolean
+   */
   public boolean isWheelchairAccessible() {
     return wheelchairAccessible;
   }
 
+  /**
+   * Gets num of seats.
+   *
+   * @return the num of seats
+   */
   public Integer getNumOfSeats() {
     return numOfSeats;
   }
 
+  /**
+   * Sets num of seats.
+   *
+   * @param numOfSeats the num of seats
+   */
   public void setNumOfSeats(Integer numOfSeats) {
     this.numOfSeats = numOfSeats;
   }
@@ -63,6 +98,11 @@ public class Row extends ArrayList<Seat> {
     return numOfSeats.equals(row.numOfSeats);
   }
 
+  /**
+   * Sets wheelchair accessible.
+   *
+   * @param wheelchairAccessible the wheelchair accessible
+   */
   public void setWheelchairAccessible(boolean wheelchairAccessible) {
     this.wheelchairAccessible = wheelchairAccessible;
   }
