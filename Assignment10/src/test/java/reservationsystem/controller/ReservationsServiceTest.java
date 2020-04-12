@@ -26,21 +26,9 @@ public class ReservationsServiceTest {
     theater2 = new Theater("rr",5);
   }
 
-//  @Test
-//  public void reserve() {
-//  }
-
-//  @Test
-//  public void reserveWithoutWheelchairAccess() {
-//  }
   @Test
   public void show() {
    reservationsService.show();
-  }
-
-  @Test
-  public void performAction() {
-    //reservationsService.performAction("reserve 7");
   }
 
   @Test

@@ -3,6 +3,7 @@ package reservationsystem.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 /**
  * The type Theater.
@@ -30,10 +31,7 @@ public class Theater {
       throw new IllegalArgumentException();
     }
     List<Row> rows = new ArrayList<>();
-    for (int i=1;i<=numOfRows;i++) {
-      Row row = new Row(i,false);
-      rows.add(row);
-    }
+    Stream.iterate(1,i->i+1).limit(numOfRows).map(s->new Row(s,false)).forEach(rows::add);
     rows.get(3).setWheelchairAccessible(true);
     return rows;
   }
