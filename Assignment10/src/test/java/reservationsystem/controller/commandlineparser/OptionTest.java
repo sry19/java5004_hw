@@ -9,7 +9,7 @@ import reservationsystem.controller.commandlineparser.exceptions.InvalidSplitter
 
 public class OptionTest {
   Option option1, option2;
-  Option option3, option4;
+  Option option3, option4,option5,option6,option7,option8,option9,option10;
 
   @Before
   public void setUp() throws Exception {
@@ -31,6 +31,45 @@ public class OptionTest {
         .build();
 
     option4 = new Option(option1,new String[]{"1","3"});
+
+    option5 = new Option.Builder(OptionConstants.RESERVE)
+        .addDescription(OptionConstants.RESERVE_DES)
+        .addRequired(true).addHasSubArg(true).addHasSubArgs(false)
+        .addArgName(OptionConstants.RESERVE_ARG_NAME)
+        .build();
+
+    option6 = new Option.Builder(OptionConstants.RESERVE)
+        .addDescription(OptionConstants.RESERVE_DES)
+        .addRequired(true).addHasSubArg(false).addHasSubArgs(false)
+        .addArgName(OptionConstants.RESERVE_ARG_NAME)
+        .build();
+
+    option7 = new Option.Builder("SDF")
+        .addDescription(OptionConstants.RESERVE_DES)
+        .addRequired(false).addHasSubArg(true).addHasSubArgs(false)
+        .addArgName(OptionConstants.RESERVE_ARG_NAME)
+        .build();
+
+    option8 = new Option.Builder("SDF")
+        .addDescription("sd")
+        .addRequired(false).addHasSubArg(true).addHasSubArgs(false)
+        .addArgName(OptionConstants.RESERVE_ARG_NAME)
+        .build();
+
+    option9 = new Option.Builder("SDF")
+        .addDescription("sd")
+        .addRequired(false).addHasSubArg(true).addHasSubArgs(false)
+        .addArgName(OptionConstants.RESERVE_ARG_NAME)
+        .addArgSplitter(",")
+        .build();
+
+    option10 = new Option.Builder("SDF")
+        .addDescription("sd")
+        .addRequired(false).addHasSubArg(true).addHasSubArgs(false)
+        .addArgName("ewf")
+        .addArgSplitter(",")
+        .build();
+
   }
 
   @Test(expected = InvalidSplitterException.class)
@@ -112,6 +151,13 @@ public class OptionTest {
     assertNotEquals(this.option1, new String[]{});
     assertEquals(this.option1, option3);
     assertNotEquals(this.option1, this.option2);
+    assertNotEquals(this.option1, this.option4);
+    assertNotEquals(this.option1, this.option5);
+    assertNotEquals(this.option5, this.option6);
+    assertNotEquals(this.option7, this.option1);
+    assertNotEquals(this.option7, this.option8);
+    assertNotEquals(this.option9, this.option8);
+    assertNotEquals(this.option9, this.option10);
   }
 
   @Test

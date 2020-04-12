@@ -30,29 +30,7 @@ public class OptionsTest {
     assertNotEquals(this.options1, null);
     assertNotEquals(this.options1, new String[]{});
   }
-  @Test
-  public void addOption() {
-  }
 
-  @Test
-  public void updateOption() {
-  }
-
-  @Test
-  public void hasOption() {
-  }
-
-  @Test
-  public void getOptionValue() {
-  }
-
-  @Test
-  public void getOptionValues() {
-  }
-
-  @Test
-  public void getOption() {
-  }
 
   @Test
   public void printUsage() {
@@ -61,6 +39,7 @@ public class OptionsTest {
 
   @Test
   public void iterator() {
+    options1.iterator();
   }
 
   @Test
