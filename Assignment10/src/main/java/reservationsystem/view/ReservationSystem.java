@@ -20,8 +20,9 @@ public class ReservationSystem {
     Theater theater = new Theater("Roxy", 15);
     ReservationsService reservationsService = new ReservationsService(theater);
     Scanner scanner = new Scanner(System.in);
-    System.out.println("What would you like to do?");
     String action = scanner.nextLine();
+    System.out.println("What would you like to do?");
+    scanner.close();
 
     while (!action.equals("done")) {
       String[] arg = action.split(" ");
@@ -31,7 +32,7 @@ public class ReservationSystem {
       System.out.println("What would you like to do?");
       scanner = new Scanner(System.in);
       action = scanner.nextLine();
-
+      scanner.close();
     }
     System.out.println("Have a nice day!");
   }

@@ -110,7 +110,7 @@ public class ReservationsService {
     }
   }
 
-  private void reserveSeat(int row, int number) {
+  public void reserveSeat(int row, int number) {
     int availableSeats = this.rowList.get(row).getNumOfSeats();
     Scanner scanner = new Scanner(System.in);
     System.out.println("What's your name");
