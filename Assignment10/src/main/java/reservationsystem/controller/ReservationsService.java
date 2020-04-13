@@ -105,11 +105,17 @@ public class ReservationsService {
    * Show.
    */
   public void show() {
-    for (Row row: this.rowList) {
+    for (Row row : this.rowList) {
       System.out.println(row.toString());
     }
   }
 
+  /**
+   * Reserve seat.
+   *
+   * @param row    the row
+   * @param number the number
+   */
   public void reserveSeat(int row, int number) {
     int availableSeats = this.rowList.get(row).getNumOfSeats();
     Scanner scanner = new Scanner(System.in);
