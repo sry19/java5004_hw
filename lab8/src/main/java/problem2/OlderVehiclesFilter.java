@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 public class OlderVehiclesFilter {
 
   private List<Vehicle> vehicles = new ArrayList<>();
+  private static final String PRINT_FORMAT = "make = %s;model = %s;year = %s";
 
   /**
    * Instantiates a new Older vehicles filter.
@@ -40,7 +41,7 @@ public class OlderVehiclesFilter {
    */
   public List<String> filterVWvehilces(){
     List<Vehicle> vehicle = vehicles.stream().filter(v->v.getYear()> 1999).collect(Collectors.toList());
-    List<String> result = vehicle.stream().map(v->String.format("make = %s;model = %s;year = %s",v.getMake(),v.getModel(),v.getYear())).collect(
+    List<String> result = vehicle.stream().map(v->String.format(PRINT_FORMAT,v.getMake(),v.getModel(),v.getYear())).collect(
         Collectors.toList());
     result.stream().forEach(System.out::println);
     return result;
