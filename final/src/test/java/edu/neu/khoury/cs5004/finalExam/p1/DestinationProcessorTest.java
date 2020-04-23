@@ -16,7 +16,6 @@ public class DestinationProcessorTest {
   Destination destination1;
   Destination destination2;
   Destination destination3;
-  Destination destination4;
   List<Destination> destinationList;
   DestinationProcessor destinationProcessor;
 

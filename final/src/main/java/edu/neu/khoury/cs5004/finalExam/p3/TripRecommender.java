@@ -55,6 +55,15 @@ public class TripRecommender {
         Comparator.comparingInt(Entry::getValue)).getKey();
   }
 
+  /**
+   * Gets destination statistics.
+   *
+   * @return the destination statistics
+   */
+  public Map<Destination, Integer> getDestinationStatistics() {
+    return destinationStatistics;
+  }
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
