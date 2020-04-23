@@ -3,6 +3,9 @@ package edu.neu.khoury.cs5004.finalExam.p2;
 import java.util.Iterator;
 import java.util.List;
 
+/**
+ * The type Traveler iterator.
+ */
 public class TravelerIterator implements Iterator<Traveler> {
 
   private int current;
@@ -11,6 +14,11 @@ public class TravelerIterator implements Iterator<Traveler> {
   private static final String GER = "Germany";
   private static final String SWI = "Switzerland";
 
+  /**
+   * Instantiates a new Traveler iterator.
+   *
+   * @param travelerList the traveler list
+   */
   public TravelerIterator(List<Traveler> travelerList) {
     this.current = 0;
     this.travelerList = travelerList;
@@ -55,5 +63,37 @@ public class TravelerIterator implements Iterator<Traveler> {
     Traveler traveler = this.travelerList.get(this.current);
     this.current ++;
     return traveler;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+
+    TravelerIterator that = (TravelerIterator) o;
+
+    if (current != that.current) {
+      return false;
+    }
+    return travelerList.equals(that.travelerList);
+  }
+
+  @Override
+  public int hashCode() {
+    int result = current;
+    result = 31 * result + travelerList.hashCode();
+    return result;
+  }
+
+  @Override
+  public String toString() {
+    return "TravelerIterator{" +
+        "current=" + current +
+        ", travelerList=" + travelerList +
+        '}';
   }
 }

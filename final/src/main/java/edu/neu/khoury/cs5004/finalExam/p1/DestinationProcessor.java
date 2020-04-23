@@ -18,7 +18,9 @@ public class DestinationProcessor {
    *
    * @param destinations the destinations
    */
-  public DestinationProcessor(List<Destination> destinations){this.destinations = destinations;}
+  public DestinationProcessor(List<Destination> destinations) {
+    this.destinations = destinations;
+  }
 
   /**
    * Instantiates a new Destination processor.
@@ -26,7 +28,7 @@ public class DestinationProcessor {
    * @param destination1 the destination 1
    * @param destination2 the destination 2
    */
-  public DestinationProcessor(Destination destination1, Destination destination2){
+  public DestinationProcessor(Destination destination1, Destination destination2) {
     this.destinations.add(destination1);
     this.destinations.add(destination2);
   }
@@ -39,20 +41,48 @@ public class DestinationProcessor {
    * @return the map
    */
   public static Map<Destination, Long> countDestinations(List<Destination> destinations) {
-    return destinations.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+    return destinations.stream()
+        .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
   }
 
 
   /**
-   * Filter by the distance from Seattle and get a list of all destinations that are strictly closer to Seattle than the cutoff distance.
+   * Filter by the distance from Seattle and get a list of all destinations that are strictly closer
+   * to Seattle than the cutoff distance.
    *
    * @param distance the cutoff distance
    * @return the list
    */
-  public List<Destination> filterByDistance(Float distance){
+  public List<Destination> filterByDistance(Float distance) {
     //YOUR CODE HERE
-    List<Destination> result = this.destinations.stream().filter(x->x.getDistanceFromSeattle()<distance).collect(Collectors.toList());
+    List<Destination> result = this.destinations.stream()
+        .filter(x -> x.getDistanceFromSeattle() < distance).collect(Collectors.toList());
     return result;
   }
 
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+
+    DestinationProcessor that = (DestinationProcessor) o;
+
+    return destinations.equals(that.destinations);
+  }
+
+  @Override
+  public int hashCode() {
+    return destinations.hashCode();
+  }
+
+  @Override
+  public String toString() {
+    return "DestinationProcessor{" +
+        "destinations=" + destinations +
+        '}';
+  }
 }
